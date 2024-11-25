@@ -1,0 +1,23 @@
+.map-page {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 100vh;
+
+	background-image: url("../../assets/images/backgrounds/map-background.webp");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	font-size: 50px;
+	font-weight: 700;
+
+	.house-image {
+		position: absolute;
+		width: 96px;
+		top: 40%;
+		left: 33%;
+	}
+}
