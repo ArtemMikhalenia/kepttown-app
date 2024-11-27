@@ -9,7 +9,7 @@ const App = () => {
 	return (
 		<Router>
 			<Header />
-			<main>
+			<main style={{ cursor: "url(snowflake-cursor.svg),auto" }}>
 				<AnimatedRoutes />
 			</main>
 			<Footer />
