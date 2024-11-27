@@ -8,11 +8,11 @@ import "./App.css";
 const App = () => {
 	return (
 		<Router>
-			<Header />
+			<Header/>
 			<main style={{ cursor: "url(snowflake-cursor.svg),auto" }}>
 				<AnimatedRoutes />
 			</main>
-			<Footer />
+			<Footer/>
 		</Router>
 	);
 };

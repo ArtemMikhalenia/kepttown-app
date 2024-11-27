@@ -18,7 +18,10 @@ const Footer = () => {
 	const locationIcon = ["nextpage", "nowpage"];
 
 	return (
-		<footer className="footer">
+		<footer
+			className="footer"
+			style={{ cursor: "url(snowflake-cursor.svg),auto" }}
+		>
 			{locationIcon.includes(currentLocation) && (
 				<Link to={currentLocation === "nextpage" ? "/nowpage" : "/"}>
 					<motion.img
