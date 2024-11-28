@@ -1,16 +1,24 @@
+import { MouseEvent } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import Snowfall from "react-snowfall";
+import MapPopup from "../../components/MapPopup/MapPopup";
 import "./mappage.scss";
 
 import houseImg from "../../assets/images/house.png";
-// import { useState } from "react";
+import mapImg from "../../assets/images/map-page/map-image.webp";
+import { useState } from "react";
 
 const MapPage = () => {
-	// const [isHovered, setIsHovered] = useState(false);
+	const [isHovered, setIsHovered] = useState(false);
+	const [houseName, setHouseName] = useState("");
 
-	// const handleMouseEnter = () => setIsHovered(true);
-	// const handleMouseLeave = () => setIsHovered(false);
+	const handleMouseEnter = (event: MouseEvent) => {
+		const target = event.target as HTMLImageElement;
+		setHouseName(target.id);
+		setIsHovered(true);
+	};
+	const handleMouseLeave = () => setIsHovered(false);
 
 	return (
 		<motion.div
@@ -20,25 +28,24 @@ const MapPage = () => {
 			exit={{ opacity: 0, transition: { duration: 0.2 } }}
 		>
 			<Snowfall snowflakeCount={250} />
-			<Link className="house" to="/nextpage">
-				<motion.img
-					className="house-image"
-					src={houseImg}
-					alt=""
-					// onHoverStart={handleMouseEnter}
-					// onHoverEnd={handleMouseLeave}
-					whileHover={{
-						scale: 1.1,
-					}}
-				/>
-				{/* <p
-					style={{
-						display: isHovered ? "block" : "none",
-					}}
-				>
-					Гадалка
-				</p> */}
-			</Link>
+			{isHovered && <MapPopup name={houseName} />}
+
+			<div className="map-image-block">
+				<img className="map-image" src={mapImg} alt="map-image" />
+				<Link className="house" to="/nextpage">
+					<motion.img
+						className="house-image"
+						id="fortuneteller"
+						src={houseImg}
+						alt=""
+						onMouseEnter={handleMouseEnter}
+						onMouseLeave={handleMouseLeave}
+						whileHover={{
+							scale: 1.1,
+						}}
+					/>
+				</Link>
+			</div>
 		</motion.div>
 	);
 };
