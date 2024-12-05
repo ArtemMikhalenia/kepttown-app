@@ -1,0 +1,15 @@
+.ghosts-page-layout {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 100vh;
+
+	background-image: url("../../assets/images/backgrounds/ghostspage-background.webp");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	font-size: 50px;
+	font-weight: 700;
+}

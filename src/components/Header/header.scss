@@ -1,0 +1,18 @@
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	padding: 0px 20px 10px;
+
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+
+	z-index: 30;
+
+	font-family: "Reggae One", system-ui;
+	font-size: 25px;
+
+	text-align: center;
+	color: white;
+}

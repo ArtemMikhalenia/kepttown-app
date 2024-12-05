@@ -5,7 +5,15 @@ import Snowfall from "react-snowfall";
 import MapPopup from "../../components/MapPopup/MapPopup";
 import "./mappage.scss";
 
-import houseImg from "../../assets/images/house.png";
+import amusementParkImg from "../../assets/images/map-page/amusement-park.png";
+import bayImg from "../../assets/images/map-page/bay.png";
+import fortunetellerImg from "../../assets/images/map-page/fortuneteller.png";
+import hauntedHouseImg from "../../assets/images/map-page/haunted-house.png";
+import researchCenterImg from "../../assets/images/map-page/research-center.png";
+import tavernImg from "../../assets/images/map-page/tavern.png";
+import zooImg from "../../assets/images/map-page/zoo.png";
+import christmasTreeImg from "../../assets/images/map-page/christmas-tree.png";
+
 import mapImg from "../../assets/images/map-page/map-image.webp";
 import { useState } from "react";
 
@@ -20,31 +28,105 @@ const MapPage = () => {
 	};
 	const handleMouseLeave = () => setIsHovered(false);
 
+	const imageData = [
+		{
+			className: "amusement-park",
+			link: "/nextpage",
+			classNameImg: "amusement-park-image",
+			key: 1,
+			id: "amusement-park",
+			src: amusementParkImg,
+			alt: "amusement-park-image",
+		},
+		{
+			className: "bay",
+			link: "/nextpage",
+			classNameImg: "bay-image",
+			key: 2,
+			id: "bay",
+			src: bayImg,
+			alt: "bay-image",
+		},
+		{
+			className: "fortuneteller",
+			link: "/nextpage",
+			classNameImg: "fortuneteller-image",
+			id: "fortuneteller",
+			src: fortunetellerImg,
+			alt: "fortuneteller-image",
+		},
+		{
+			className: "haunted-house",
+			link: "/nextpage",
+			classNameImg: "haunted-house-image",
+			id: "haunted-house",
+			src: hauntedHouseImg,
+			alt: "haunted-house-image",
+		},
+		{
+			className: "research-center",
+			link: "/nextpage",
+			classNameImg: "research-center-image",
+			id: "research-center",
+			src: researchCenterImg,
+			alt: "research-center-image",
+		},
+		{
+			className: "tavern",
+			link: "/nextpage",
+			classNameImg: "tavern-image",
+			id: "tavern",
+			src: tavernImg,
+			alt: "tavern-image",
+		},
+		{
+			className: "zoo",
+			link: "/nextpage",
+			classNameImg: "zoo-image",
+			id: "zoo",
+			src: zooImg,
+			alt: "zoo-image",
+		},
+		{
+			className: "christmas-tree",
+			link: "/map",
+			classNameImg: "christmas-tree-image",
+			id: "christmas-tree",
+			src: christmasTreeImg,
+			alt: "christmas-tree-image",
+		},
+	];
+
 	return (
 		<motion.div
 			className="map-page"
 			initial={{ opacity: 0 }}
-			animate={{ opacity: 1, transition: { duration: 0.2 } }}
-			exit={{ opacity: 0, transition: { duration: 0.2 } }}
+			animate={{ opacity: 1, transition: { duration: 0.5 } }}
+			exit={{ opacity: 0, transition: { duration: 0.5 } }}
 		>
 			<Snowfall snowflakeCount={250} />
-			{isHovered && <MapPopup name={houseName} />}
-
+			<MapPopup name={houseName} isHovered={isHovered} />
 			<div className="map-image-block">
 				<img className="map-image" src={mapImg} alt="map-image" />
-				<Link className="house" to="/nextpage">
-					<motion.img
-						className="house-image"
-						id="fortuneteller"
-						src={houseImg}
-						alt=""
-						onMouseEnter={handleMouseEnter}
-						onMouseLeave={handleMouseLeave}
-						whileHover={{
-							scale: 1.1,
-						}}
-					/>
-				</Link>
+				{imageData.map((element) => (
+					<Link
+						className={element.className}
+						key={element.id}
+						to={element.link}
+					>
+						<motion.img
+							className={element.classNameImg}
+							id={element.id}
+							src={element.src}
+							alt={element.alt}
+							onMouseEnter={handleMouseEnter}
+							onMouseLeave={handleMouseLeave}
+							whileHover={{
+								scale: 1.1,
+							}}
+						/>
+					</Link>
+				))}
 			</div>
 		</motion.div>
 	);

@@ -6,29 +6,37 @@
 	height: 100px;
 	top: 0;
 	left: 0;
-	// text-align: center;
+	z-index: 10;
 
 	.map-popup-image-block {
 		position: relative;
 
 		img {
-			max-width: 200px;
+			max-width: 230px;
 			width: 100%;
 		}
 
-		.map-popup-name {
+		.map-popup-name-container {
 			position: absolute;
-			max-width: 100px;
+			max-width: 230px;
 			width: 100%;
-			top: 80px;
-			left: calc(50% - 50px);
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			top: 70px;
 			text-align: center;
 
 			font-family: "Pangolin", cursive;
 			font-weight: 400;
-			font-size: 20px;
+			font-size: 19px;
+			line-height: 100%;
 			color: rgba(255, 255, 255, 1);
 			text-shadow: 2px 1px rgba(0, 0, 0, 1);
+
+			.map-popup-name {
+				max-width: 120px;
+			}
 		}
 	}
 }

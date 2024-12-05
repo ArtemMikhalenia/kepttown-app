@@ -1,11 +1,31 @@
+import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion } from "motion/react";
+import { motion, Variants } from "motion/react";
 
 import mapIcon from "../../assets/images/icons/footer/map-icon.png";
 import nextPage from "../../assets/images/icons/footer/next-page.gif";
 
 import "./footer.scss";
-import { useEffect } from "react";
+
+const animationVariants: Variants = {
+	offscreenFromLeft: {
+		x: -50,
+		opacity: 0,
+	},
+	offscreenFromRight: {
+		x: 50,
+		opacity: 0,
+	},
+	onscreen: {
+		x: 0,
+		opacity: 1,
+		transition: {
+			duration: 1,
+		},
+	},
+	hover: { scale: 1.15 },
+	tap: { scale: 0.9 },
+};
 
 const Footer = () => {
 	const location = useLocation();
@@ -28,38 +48,30 @@ const Footer = () => {
 						className="next-page-icon"
 						src={nextPage}
 						alt="next-icon"
-						initial={{ opacity: 0, x: -50 }}
-						whileInView={{
-							opacity: 1,
-							x: 0,
-							transition: { duration: 1 },
-						}}
-						whileHover={{
-							scale: 1.15,
-							transition: { duration: 0.5 },
-						}}
+						variants={animationVariants}
+						initial="offscreenFromLeft"
+						whileInView="onscreen"
+						whileHover="hover"
+						whileTap="tap"
+						viewport={{ once: false, amount: 0.1 }}
+					/>
+				</Link>
+			)}
+			{currentLocation !== "map" && (
+				<Link to="/map">
+					<motion.img
+						className="map-icon"
+						src={mapIcon}
+						alt="map-icon"
+						variants={animationVariants}
+						initial="offscreenFromRight"
+						whileInView="onscreen"
+						whileHover="hover"
+						whileTap="tap"
 						viewport={{ once: true, amount: 0.1 }}
 					/>
 				</Link>
 			)}
-			<Link to="/map">
-				<motion.img
-					className="map-icon"
-					src={mapIcon}
-					alt="map-icon"
-					initial={{ opacity: 0, x: 50 }}
-					whileInView={{
-						opacity: 1,
-						x: 0,
-						transition: { duration: 1 },
-					}}
-					whileHover={{
-						scale: 1.15,
-						transition: { duration: 0.5 },
-					}}
-					viewport={{ once: true, amount: 0.1 }}
-				/>
-			</Link>
 		</footer>
 	);
 };
