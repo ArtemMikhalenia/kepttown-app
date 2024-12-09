@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import { useWindowSize } from "@custom-react-hooks/use-window-size";
 import Confetti from "react-confetti";
 
-import boilerImg from "../../assets/images/potions-page/boiler.png";
-import scrollImg from "../../assets/images/potions-page/scroll.png";
+import boilerImg from "../../assets/images/potions-page/boiler.webp";
+import scrollImg from "../../assets/images/potions-page/scroll.webp";
 import boilerSmoke from "../../assets/images/potions-page/smoke.gif";
 
 import winSound from "../../assets/sounds/potions-game/win_sound.wav";
@@ -39,6 +39,7 @@ const PotionsPageGame = () => {
 	const [level, setLevel] = useState<number>(0);
 	const { width, height } = useWindowSize();
 	const [startConfetti, setStartConfetti] = useState(false);
+	// const [disabled, setDisabled] = useState(true);
 
 	let winAudio = new Audio(winSound);
 	let lostAudio = new Audio(lostSound);
@@ -93,7 +94,7 @@ const PotionsPageGame = () => {
 
 		if (isCorrect) {
 			console.log("Правильный ответ!");
-			// setLevel((prevLevel) => prevLevel + 1);
+			setLevel((prevLevel) => prevLevel + 1);
 			winAudio.play();
 			setStartConfetti(true);
 		} else {
@@ -178,24 +179,45 @@ const PotionsPageGame = () => {
 						/>
 					))}
 				</div>
-				<motion.button
-					className="potions-check-answer"
-					onClick={checkAnswer}
-					initial={{ scale: 0 }}
-					animate={{
-						scale: 1,
-						transition: {
-							type: "spring",
-							stiffness: 200,
-							damping: 10,
-							duration: 1,
-						},
-					}}
-					whileHover={{ scale: 1.05 }}
-					whileTap={{ y: "10px", boxShadow: "0 5px 3px 3px rgba(0,0,0,1)" }}
-				>
-					Проверить ответ
-				</motion.button>
+				<div className="potions-buttons-block">
+					<motion.button
+						className="potions-check-answer"
+						onClick={checkAnswer}
+						initial={{ scale: 0 }}
+						animate={{
+							scale: 1,
+							transition: {
+								type: "spring",
+								stiffness: 200,
+								damping: 10,
+								duration: 1,
+							},
+						}}
+						whileHover={{ scale: 1.05 }}
+						whileTap={{ y: "10px", boxShadow: "0 5px 3px 3px rgba(0,0,0,1)" }}
+					>
+						Проверить ответ
+					</motion.button>
+					<motion.button
+						className="potions-next-round"
+						onClick={checkAnswer}
+						initial={{ scale: 0 }}
+						animate={{
+							scale: 1,
+							transition: {
+								type: "spring",
+								stiffness: 200,
+								damping: 10,
+								duration: 1,
+							},
+						}}
+						whileHover={{ scale: 1.05 }}
+						whileTap={{ y: "10px", boxShadow: "0 5px 3px 3px rgba(0,0,0,1)" }}
+					>
+						Следующий раунд
+					</motion.button>
+				</div>
+
 				{startConfetti && <Confetti width={width} height={height} />}
 			</div>
 		</motion.div>

@@ -20,7 +20,7 @@ const Layout = () => {
 	const currentLocation: string = location.pathname.slice(1);
 
 	const potionsPageLinks = ["potionspage", "potionspage/potiongame"];
-	const ghostPageLinks = ["ghostspage", "ghostspage/ghost"];
+	const ghostPageLinks = ["ghostspage", "ghostspage/ghostsgame"];
 	const randomPageLinks = ["nextpage", "nowpage"];
 
 	useEffect(() => {

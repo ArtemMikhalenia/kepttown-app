@@ -11,28 +11,35 @@
 
 		width: 100%;
 
-		.potions-check-answer {
+		.potions-buttons-block {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 			grid-column: 2/3;
 			align-self: center;
 			justify-self: center;
+			gap: 40px;
 
-			max-width: 300px;
+			.potions-check-answer,
+			.potions-next-round {
+				max-width: 300px;
 
-			padding: 10px 20px;
+				padding: 10px 20px;
 
-			border: none;
-			border-radius: 50px;
+				border: none;
+				border-radius: 50px;
 
-			font-family: "Underdog";
-			font-size: 26px;
+				font-family: "Underdog";
+				font-size: 26px;
 
-			color: rgba(255, 255, 255, 1);
-			text-shadow: rgba(0, 0, 0, 1) 1px 0 10px;
+				color: rgba(255, 255, 255, 1);
+				text-shadow: rgba(0, 0, 0, 1) 1px 0 10px;
 
-			background-image: url("../../assets/images/potions-page/button-start-background.jpg");
-			background-size: 50%;
-			box-shadow: 0 0 3px 3px rgba(0, 0, 0, 1);
-			cursor: pointer;
+				background-image: url("../../assets/images/potions-page/button-start-background.webp");
+				background-size: 50%;
+				box-shadow: 0 0 3px 3px rgba(0, 0, 0, 1);
+				cursor: pointer;
+			}
 		}
 
 		.potions-head {

@@ -13,12 +13,12 @@ import FrontPage from "../../pages/FrontPage/FrontPage";
 import MapPage from "../../pages/MapPage/MapPage";
 import NextPage from "../../pages/NextPage/NextPage";
 import NowPage from "../../pages/NowPage/NowPage";
+
 import GhostsPage from "../../pages/GhostsPage/GhostsPage";
+import GhostsPageGame from "../GhostsPageGame/GhostsPageGame";
 
 import PotionsPage from "../../pages/PotionsPage/PotionsPage";
 import PotionsPageGame from "../PotionsPageGame/PotionsPageGame";
-
-import CustomBlock from "../CustomBlock/CustomBlock";
 
 import { AnimatePresence } from "motion/react";
 
@@ -31,7 +31,7 @@ const router = createBrowserRouter(
 			<Route path="nowpage" element={<NowPage />} />
 			<Route path="ghostspage" element={<GhostsPageLayout />}>
 				<Route index element={<GhostsPage />} />
-				<Route path="ghost" element={<CustomBlock />} />
+				<Route path="ghostsgame" element={<GhostsPageGame />} />
 			</Route>
 			<Route path="potionspage" element={<PotionsPageLayout />}>
 				<Route index element={<PotionsPage />} />
