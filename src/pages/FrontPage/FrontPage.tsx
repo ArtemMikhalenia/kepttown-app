@@ -1,10 +1,8 @@
 import { motion } from "motion/react";
-import Snowfall from "react-snowfall";
 import santaHat from "../../assets/images/icons/front-page/santa-hat.png";
 import "./frontpage.scss";
 
 const FrontPage = () => {
-
 	return (
 		<motion.div
 			className="front-page"
@@ -12,7 +10,6 @@ const FrontPage = () => {
 			animate={{ opacity: 1, transition: { duration: 0.5 } }}
 			exit={{ opacity: 0, transition: { duration: 0.5 } }}
 		>
-			<Snowfall snowflakeCount={250} />
 			<motion.div
 				className="front-title-block"
 				initial={{ opacity: 0, scale: 0 }}

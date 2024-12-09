@@ -57,7 +57,7 @@ const MapPage = () => {
 		},
 		{
 			className: "haunted-house",
-			link: "/nextpage",
+			link: "/ghostspage",
 			classNameImg: "haunted-house-image",
 			id: "haunted-house",
 			src: hauntedHouseImg,
@@ -65,7 +65,7 @@ const MapPage = () => {
 		},
 		{
 			className: "research-center",
-			link: "/nextpage",
+			link: "/potionspage",
 			classNameImg: "research-center-image",
 			id: "research-center",
 			src: researchCenterImg,
@@ -106,8 +106,26 @@ const MapPage = () => {
 		>
 			<Snowfall snowflakeCount={250} />
 			<MapPopup name={houseName} isHovered={isHovered} />
-			<div className="map-image-block">
-				<img className="map-image" src={mapImg} alt="map-image" />
+			<motion.div
+				className="map-image-block"
+				initial={{ opacity: 0, scale: 0 }}
+				animate={{
+					opacity: 1,
+					scale: 1,
+					transition: {
+						duration: 2,
+						type: "spring",
+						stiffness: 200,
+						damping: 15,
+					},
+				}}
+				exit={{
+					opacity: 0,
+					scale: 1,
+					transition: { duration: 1 },
+				}}
+			>
+				<motion.img className="map-image" src={mapImg} alt="map-image" />
 				{imageData.map((element) => (
 					<Link
 						className={element.className}
@@ -127,7 +145,7 @@ const MapPage = () => {
 						/>
 					</Link>
 				))}
-			</div>
+			</motion.div>
 		</motion.div>
 	);
 };

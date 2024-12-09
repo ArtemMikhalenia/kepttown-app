@@ -1,1 +1,29 @@
+.potions-page-container {
+	width: 100%;
+	text-align: center;
 
+	.potions-button-container {
+		display: inline-block;
+
+		.potions-button-link {
+			text-decoration: none;
+
+			.potions-button-start {
+				padding: 10px 20px;
+
+				border-radius: 50px;
+
+				font-family: "Underdog";
+				font-weight: 400;
+				font-size: 40px;
+
+				color: rgba(255, 255, 255, 1);
+				text-shadow: rgba(0, 0, 0, 1) 1px 0 10px;
+
+				background-image: url("../../assets/images/potions-page/button-start-background.jpg");
+				background-size: 50%;
+				box-shadow: 0 0 3px 3px rgba(0, 0, 0, 1);
+			}
+		}
+	}
+}

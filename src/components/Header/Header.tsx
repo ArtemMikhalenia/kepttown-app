@@ -11,7 +11,7 @@ const Header = () => {
 		console.log(currentLocation);
 	}, [location]);
 
-	const headerLocations = ["ghostspage", "ghostspage/ghost"];
+	const headerLocations = ["", "ghostspage", "ghostspage/ghost"];
 
 	return (
 		<>
@@ -20,7 +20,7 @@ const Header = () => {
 					className="header"
 					style={{ cursor: "url(snowflake-cursor.svg),auto" }}
 				>
-					Добро пожаловать в мир ужасов! Уа-ха-ха-ха
+					{/* Добро пожаловать в мир ужасов! */}
 				</header>
 			)}
 		</>

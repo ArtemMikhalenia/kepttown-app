@@ -1,14 +1,10 @@
 .map-page {
 	position: relative;
+	flex: 1 1 auto;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	width: 100%;
-	min-height: 100vh;
-
-	background-image: url("../../assets/images/backgrounds/map-background.webp");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	z-index: 0;
 
 	.map-image-block {

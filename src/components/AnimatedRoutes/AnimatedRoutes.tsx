@@ -14,7 +14,9 @@ import MapPage from "../../pages/MapPage/MapPage";
 import NextPage from "../../pages/NextPage/NextPage";
 import NowPage from "../../pages/NowPage/NowPage";
 import GhostsPage from "../../pages/GhostsPage/GhostsPage";
+
 import PotionsPage from "../../pages/PotionsPage/PotionsPage";
+import PotionsPageGame from "../PotionsPageGame/PotionsPageGame";
 
 import CustomBlock from "../CustomBlock/CustomBlock";
 
@@ -33,7 +35,7 @@ const router = createBrowserRouter(
 			</Route>
 			<Route path="potionspage" element={<PotionsPageLayout />}>
 				<Route index element={<PotionsPage />} />
-				<Route path="potion" element={<CustomBlock />} />
+				<Route path="potiongame" element={<PotionsPageGame />} />
 			</Route>
 		</Route>
 	)

@@ -39,7 +39,7 @@ const MapPopup = ({ name, isHovered }: MapPopupTypes) => {
 				y: isHovered ? "-20%" : "-100%",
 				transition: { type: "spring", stiffness: 200, damping: 10 },
 			}}
-			exit={{ opacity: 0, y: "-100%", transition: { duration: 0.2 } }}
+			exit={{ opacity: 0, y: "-100%", transition: { duration: 0.5 } }}
 			transition={{ type: "spring", stiffness: 400, damping: 10 }}
 			style={{ cursor: "url(snowflake-cursor.svg),auto" }}
 		>
