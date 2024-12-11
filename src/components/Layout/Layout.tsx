@@ -8,6 +8,7 @@ import Footer from "../Footer/Footer";
 import frontBackground from "../../assets/images/backgrounds/front-background.webp";
 import mapBackground from "../../assets/images/backgrounds/map-background.webp";
 import ghostPageBackground from "../../assets/images/backgrounds/ghostspage-background.webp";
+// import ghostPageBackgroundRound1 from "../../assets/images/ghosts-page/round1/background.webp";
 import potionsBackground from "../../assets/images/backgrounds/potions-background.webp";
 import randomBackground from "../../assets/images/backgrounds/random-background.webp";
 
@@ -20,7 +21,19 @@ const Layout = () => {
 	const currentLocation: string = location.pathname.slice(1);
 
 	const potionsPageLinks = ["potionspage", "potionspage/potiongame"];
-	const ghostPageLinks = ["ghostspage", "ghostspage/ghostsgame"];
+	const ghostPageLinks = [
+		"ghostspage",
+		"ghostspage/ghostsgame/round1",
+		"ghostspage/ghostsgame/round2",
+		"ghostspage/ghostsgame/round3",
+		"ghostspage/ghostsgame/round4",
+		"ghostspage/ghostsgame/round5",
+		"ghostspage/ghostsgame/round6",
+		"ghostspage/ghostsgame/round7",
+		"ghostspage/ghostsgame/round8",
+		"ghostspage/ghostsgame/round9",
+		"ghostspage/ghostsgame/round10",
+	];
 	const randomPageLinks = ["nextpage", "nowpage"];
 
 	useEffect(() => {

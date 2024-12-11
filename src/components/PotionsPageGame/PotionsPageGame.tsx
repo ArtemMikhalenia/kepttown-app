@@ -10,7 +10,6 @@ import boilerSmoke from "../../assets/images/potions-page/smoke.gif";
 import winSound from "../../assets/sounds/potions-game/win_sound.wav";
 import lostSound from "../../assets/sounds/potions-game/lost_sound.wav";
 
-// import PotionsCard from "./PotionsCard";
 import { potionsData } from "../../data/potionsData.tsx";
 
 import "./potionspagegame.scss";
@@ -65,7 +64,6 @@ const PotionsPageGame = () => {
 				if (potion.roundItems) {
 					const updatedRoundItems = potion.roundItems.map((ingredient) => {
 						if (ingredient.id === id) {
-							console.log(`Текущий clicked для ${id}:`, ingredient.clicked);
 							return {
 								...ingredient,
 								clicked: !ingredient.clicked,
