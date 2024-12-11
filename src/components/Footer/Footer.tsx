@@ -36,6 +36,20 @@ const Footer = () => {
 	}, [location]);
 
 	const locationIcon = ["nextpage", "nowpage"];
+	const locationsWithoutMapIcon = [
+		"map",
+		"ghostsgame",
+		"ghostsgame/round1",
+		"ghostsgame/round2",
+		"ghostsgame/round3",
+		"ghostsgame/round4",
+		"ghostsgame/round5",
+		"ghostsgame/round6",
+		"ghostsgame/round7",
+		"ghostsgame/round8",
+		"ghostsgame/round9",
+		"ghostsgame/round10",
+	];
 
 	return (
 		<footer
@@ -57,7 +71,7 @@ const Footer = () => {
 					/>
 				</Link>
 			)}
-			{currentLocation !== "map" && (
+			{!locationsWithoutMapIcon.includes(currentLocation) && (
 				<Link to="/map">
 					<motion.img
 						className="map-icon"

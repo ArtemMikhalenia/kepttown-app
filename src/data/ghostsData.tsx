@@ -70,6 +70,7 @@ export const ghostsDataLvl1 = {
 			src: lukovoImg,
 			alt: "lukovo-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Пожертвуйте на восстановление храма",
 		},
 		{
@@ -79,6 +80,7 @@ export const ghostsDataLvl1 = {
 			src: belchiteImg,
 			alt: "belchite-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Это что за развалины? Мы тут жить не намерены",
 		},
 		{
@@ -88,6 +90,7 @@ export const ghostsDataLvl1 = {
 			src: pluckleyImg,
 			alt: "pluckley-image",
 			clicked: false,
+			correct: true,
 			cloudText: "Вот наша деревня, вот наш дом родной",
 		},
 		{
@@ -97,6 +100,7 @@ export const ghostsDataLvl1 = {
 			src: borgvattnetImg,
 			alt: "borgvattnet-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Вы чьих будете? У нас все дома",
 		},
 	],
@@ -114,6 +118,7 @@ export const ghostsDataLvl2 = {
 			src: zimnyImg,
 			alt: "zimny-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Это не мои покои!",
 		},
 		{
@@ -123,6 +128,7 @@ export const ghostsDataLvl2 = {
 			src: ekaterynenskyImg,
 			alt: "ekaterynensky-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Это не мои покои!",
 		},
 		{
@@ -132,6 +138,7 @@ export const ghostsDataLvl2 = {
 			src: mikhailovskyImg,
 			alt: "mikhailovsky-image",
 			clicked: false,
+			correct: true,
 			cloudText: "Вот крепость моя, которую не покину",
 		},
 		{
@@ -141,6 +148,7 @@ export const ghostsDataLvl2 = {
 			src: anichkovImg,
 			alt: "anichkov-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Это не мои покои!",
 		},
 	],
@@ -158,6 +166,7 @@ export const ghostsDataLvl3 = {
 			src: cathedralImg,
 			alt: "cathedral-image",
 			clicked: false,
+			correct: true,
 			cloudText: "Раскинем партейку? Оставлю тебя в дураках",
 		},
 		{
@@ -167,6 +176,7 @@ export const ghostsDataLvl3 = {
 			src: cathedralInRomeImg,
 			alt: "cathedral-in-Rome-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Папа Римский не выдавал индульгенцию на азартные игры",
 		},
 		{
@@ -176,6 +186,7 @@ export const ghostsDataLvl3 = {
 			src: cathedralInViennaImg,
 			alt: "cathedral-in-vienna-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Побойтесь Бога, мы приличное заведение",
 		},
 		{
@@ -185,6 +196,7 @@ export const ghostsDataLvl3 = {
 			src: lancasterImg,
 			alt: "lancaster-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Мы прогрессивных взглядов, но не настолько",
 		},
 	],
@@ -202,6 +214,7 @@ export const ghostsDataLvl4 = {
 			src: pensilvaniaImg,
 			alt: "pensilvania-image",
 			clicked: false,
+			correct: true,
 			cloudText: "Вот то место, которое я оберегаю",
 		},
 		{
@@ -211,6 +224,7 @@ export const ghostsDataLvl4 = {
 			src: oxfordImg,
 			alt: "oxford-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Здесь не наша альма-матер!",
 		},
 		{
@@ -220,6 +234,7 @@ export const ghostsDataLvl4 = {
 			src: cambridgeImg,
 			alt: "cambridge-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Здесь не наша альма-матер!",
 		},
 		{
@@ -229,6 +244,7 @@ export const ghostsDataLvl4 = {
 			src: manchesterImg,
 			alt: "manchester-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Здесь не наша альма-матер!",
 		},
 	],
@@ -246,6 +262,7 @@ export const ghostsDataLvl5 = {
 			src: gardenerImg,
 			alt: "gardener-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Господа, я только за цветами присматриваю",
 		},
 		{
@@ -255,6 +272,7 @@ export const ghostsDataLvl5 = {
 			src: camerdinerImg,
 			alt: "camerdiner-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Господа, я только за домом присматриваю",
 		},
 		{
@@ -264,6 +282,7 @@ export const ghostsDataLvl5 = {
 			src: kucherImg,
 			alt: "kucher-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Господа, я только за лошадьми присматриваю",
 		},
 		{
@@ -273,6 +292,7 @@ export const ghostsDataLvl5 = {
 			src: musicianImg,
 			alt: "musician-image",
 			clicked: false,
+			correct: true,
 			cloudText:
 				"Как вы прекрасно выглядите, позвольте я сыграю вам на своей арфе",
 		},
@@ -291,6 +311,7 @@ export const ghostsDataLvl6 = {
 			src: cryingBoyImg,
 			alt: "crying-boy-image",
 			clicked: false,
+			correct: true,
 			cloudText: "Сгори и ты сам!",
 		},
 		{
@@ -300,6 +321,7 @@ export const ghostsDataLvl6 = {
 			src: damaImg,
 			alt: "dama-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Это не я тревожу ваш покой!",
 		},
 		{
@@ -309,6 +331,7 @@ export const ghostsDataLvl6 = {
 			src: orfanaImg,
 			alt: "orfana-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Это не я тревожу ваш покой!",
 		},
 		{
@@ -318,6 +341,7 @@ export const ghostsDataLvl6 = {
 			src: loveImg,
 			alt: "love-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Это не я тревожу ваш покой!",
 		},
 	],
@@ -335,6 +359,7 @@ export const ghostsDataLvl7 = {
 			src: houstonImg,
 			alt: "houston-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Мой 434 был гораздо скромнее",
 		},
 		{
@@ -344,6 +369,7 @@ export const ghostsDataLvl7 = {
 			src: monroeImg,
 			alt: "monroe-image",
 			clicked: false,
+			correct: false,
 			cloudText:
 				"Ищите меня или в бальном зале, или у бассейна, но не в этом отеле",
 		},
@@ -354,6 +380,7 @@ export const ghostsDataLvl7 = {
 			src: cocoImg,
 			alt: "coco-image",
 			clicked: false,
+			correct: true,
 			cloudText: "Ritz — это мой дом",
 		},
 		{
@@ -363,6 +390,7 @@ export const ghostsDataLvl7 = {
 			src: balerinaImg,
 			alt: "balerina-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Я балерина императорского театра, мое место на сцене",
 		},
 	],
@@ -380,6 +408,7 @@ export const ghostsDataLvl8 = {
 			src: notaryImg,
 			alt: "notary-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Не тревожьте меня, господа! Чрезвычайно много работы!",
 		},
 		{
@@ -389,6 +418,7 @@ export const ghostsDataLvl8 = {
 			src: librarianImg,
 			alt: "librarian-image",
 			clicked: false,
+			correct: true,
 			cloudText: "Виновен я! Не будет мне покоя!",
 		},
 		{
@@ -398,6 +428,7 @@ export const ghostsDataLvl8 = {
 			src: watchmakerImg,
 			alt: "watchmaker-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Вы загородили мне свет, милейшие! Прошу вас отойти",
 		},
 		{
@@ -407,6 +438,7 @@ export const ghostsDataLvl8 = {
 			src: jewelerImg,
 			alt: "jeweler-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Хороший мастер ценит честность превыше всего!",
 		},
 	],
@@ -424,6 +456,7 @@ export const ghostsDataLvl9 = {
 			src: kallImg,
 			alt: "kall-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Таких цветов нет в моем саду",
 		},
 		{
@@ -433,6 +466,7 @@ export const ghostsDataLvl9 = {
 			src: violetImg,
 			alt: "violet-image",
 			clicked: false,
+			correct: true,
 			cloudText:
 				"Вдохни аромат и следуй за мной, я приглашаю тебя пожить на моей вилле",
 		},
@@ -443,6 +477,7 @@ export const ghostsDataLvl9 = {
 			src: hydrangeaImg,
 			alt: "hydrangea-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Прекрасный цветок, но, к сожалению, не мой любимый",
 		},
 		{
@@ -452,6 +487,7 @@ export const ghostsDataLvl9 = {
 			src: liliiImg,
 			alt: "lilii-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Хороший выбор, но неправильный",
 		},
 	],
@@ -469,6 +505,7 @@ export const ghostsDataLvl10 = {
 			src: greyImg,
 			alt: "grey-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Не угадали, я прячу свой портрет не здесь",
 		},
 		{
@@ -478,6 +515,7 @@ export const ghostsDataLvl10 = {
 			src: teslaImg,
 			alt: "tesla-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Позвольте, у нас был скромный домик в хорватской деревушке",
 		},
 		{
@@ -487,6 +525,7 @@ export const ghostsDataLvl10 = {
 			src: frankensteinImg,
 			alt: "frankenstein-image",
 			clicked: false,
+			correct: false,
 			cloudText: "Увы, моя скромная обитель в Германии",
 		},
 		{
@@ -496,6 +535,7 @@ export const ghostsDataLvl10 = {
 			src: draculaImg,
 			alt: "dracula-image",
 			clicked: false,
+			correct: true,
 			cloudText: "Хочешь, я подарю тебе вечную жизнь в моем замке Бран?",
 		},
 	],

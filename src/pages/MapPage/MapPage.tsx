@@ -57,7 +57,7 @@ const MapPage = () => {
 		},
 		{
 			className: "haunted-house",
-			link: "/ghostspage",
+			link: "/ghostsgame",
 			classNameImg: "haunted-house-image",
 			id: "haunted-house",
 			src: hauntedHouseImg,
@@ -65,7 +65,7 @@ const MapPage = () => {
 		},
 		{
 			className: "research-center",
-			link: "/potionspage",
+			link: "/potionsgame",
 			classNameImg: "research-center-image",
 			id: "research-center",
 			src: researchCenterImg,

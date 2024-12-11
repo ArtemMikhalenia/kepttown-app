@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 import { useLoaderData, useLocation, Link } from "react-router-dom";
+import ghostHappyImg from "../../assets/images/ghosts-page/ghost-happy.webp";
+import ghostAngryImg from "../../assets/images/ghosts-page/ghost-angry.webp";
 
 import "./ghostspagegame.scss";
 
@@ -12,6 +14,7 @@ interface GhostCard {
 	cloudText: string;
 	text: string;
 	clicked: boolean;
+	correct: boolean;
 }
 
 interface GhostRound {
@@ -90,6 +93,13 @@ const GhostsPageGame = () => {
 						>
 							<div className="card-image-block">
 								<img className="card-img" src={element.src} alt={element.alt} />
+								<img
+									className={
+										element.clicked ? "card-img-ghost active" : "card-img-ghost"
+									}
+									src={element.correct ? ghostHappyImg : ghostAngryImg}
+									alt="ghost-image"
+								/>
 								<p></p>
 							</div>
 							<div
@@ -106,9 +116,7 @@ const GhostsPageGame = () => {
 				<div className="ghost-button-block">
 					<Link
 						to={
-							isLastRound
-								? "/map"
-								: `/ghostspage/ghostsgame/round${ghostCard.round + 1}`
+							isLastRound ? "/map" : `/ghostsgame/round${ghostCard.round + 1}`
 						}
 					>
 						<motion.button

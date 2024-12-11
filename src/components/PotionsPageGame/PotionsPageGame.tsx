@@ -58,7 +58,6 @@ const PotionsPageGame = () => {
 	// };
 
 	const toggleCard = (id: string) => {
-		console.log(setLevel(0));
 		setPotions((prevPotions) => {
 			return prevPotions.map((potion) => {
 				if (potion.roundItems) {
@@ -92,7 +91,7 @@ const PotionsPageGame = () => {
 
 		if (isCorrect) {
 			console.log("Правильный ответ!");
-			setLevel((prevLevel) => prevLevel + 1);
+			// setLevel((prevLevel) => prevLevel + 1);
 			winAudio.play();
 			setStartConfetti(true);
 		} else {
@@ -198,7 +197,7 @@ const PotionsPageGame = () => {
 					</motion.button>
 					<motion.button
 						className="potions-next-round"
-						onClick={checkAnswer}
+						// onClick={checkAnswer}
 						initial={{ scale: 0 }}
 						animate={{
 							scale: 1,

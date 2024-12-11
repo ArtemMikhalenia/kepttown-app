@@ -20,19 +20,19 @@ const Layout = () => {
 	const location = useLocation();
 	const currentLocation: string = location.pathname.slice(1);
 
-	const potionsPageLinks = ["potionspage", "potionspage/potiongame"];
+	const potionsPageLinks = ["potionsgame", "potionsgame/round1"];
 	const ghostPageLinks = [
-		"ghostspage",
-		"ghostspage/ghostsgame/round1",
-		"ghostspage/ghostsgame/round2",
-		"ghostspage/ghostsgame/round3",
-		"ghostspage/ghostsgame/round4",
-		"ghostspage/ghostsgame/round5",
-		"ghostspage/ghostsgame/round6",
-		"ghostspage/ghostsgame/round7",
-		"ghostspage/ghostsgame/round8",
-		"ghostspage/ghostsgame/round9",
-		"ghostspage/ghostsgame/round10",
+		"ghostsgame",
+		"ghostsgame/round1",
+		"ghostsgame/round2",
+		"ghostsgame/round3",
+		"ghostsgame/round4",
+		"ghostsgame/round5",
+		"ghostsgame/round6",
+		"ghostsgame/round7",
+		"ghostsgame/round8",
+		"ghostsgame/round9",
+		"ghostsgame/round10",
 	];
 	const randomPageLinks = ["nextpage", "nowpage"];
 

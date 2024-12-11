@@ -17,7 +17,7 @@ const PotionsPage = () => {
 				animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
 				exit={{ opacity: 0, scale: 0, transition: { duration: 0.5 } }}
 			>
-				<Link to="potiongame" className="potions-button-link">
+				<Link to="round1" className="potions-button-link">
 					<motion.p
 						className="potions-button-start"
 						whileHover={{ scale: 1.05 }}

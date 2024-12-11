@@ -42,62 +42,62 @@ const router = createBrowserRouter(
 			<Route path="map" element={<MapPage />} />
 			<Route path="nextpage" element={<NextPage />} />
 			<Route path="nowpage" element={<NowPage />} />
-			<Route path="ghostspage" element={<GhostsPageLayout />}>
+			<Route path="ghostsgame" element={<GhostsPageLayout />}>
 				<Route index element={<GhostsPage />} />
 				<Route
-					path="ghostsgame/round1"
+					path="round1"
 					loader={() => ghostsDataLvl1}
 					element={<GhostsPageGame />}
 				/>
 				<Route
-					path="ghostsgame/round2"
+					path="round2"
 					loader={() => ghostsDataLvl2}
 					element={<GhostsPageGame />}
 				/>
 				<Route
-					path="ghostsgame/round3"
+					path="round3"
 					loader={() => ghostsDataLvl3}
 					element={<GhostsPageGame />}
 				/>
 				<Route
-					path="ghostsgame/round4"
+					path="round4"
 					loader={() => ghostsDataLvl4}
 					element={<GhostsPageGame />}
 				/>
 				<Route
-					path="ghostsgame/round5"
+					path="round5"
 					loader={() => ghostsDataLvl5}
 					element={<GhostsPageGame />}
 				/>
 				<Route
-					path="ghostsgame/round6"
+					path="round6"
 					loader={() => ghostsDataLvl6}
 					element={<GhostsPageGame />}
 				/>
 				<Route
-					path="ghostsgame/round7"
+					path="round7"
 					loader={() => ghostsDataLvl7}
 					element={<GhostsPageGame />}
 				/>
 				<Route
-					path="ghostsgame/round8"
+					path="round8"
 					loader={() => ghostsDataLvl8}
 					element={<GhostsPageGame />}
 				/>
 				<Route
-					path="ghostsgame/round9"
+					path="round9"
 					loader={() => ghostsDataLvl9}
 					element={<GhostsPageGame />}
 				/>
 				<Route
-					path="ghostsgame/round10"
+					path="round10"
 					loader={() => ghostsDataLvl10}
 					element={<GhostsPageGame />}
 				/>
 			</Route>
-			<Route path="potionspage" element={<PotionsPageLayout />}>
+			<Route path="potionsgame" element={<PotionsPageLayout />}>
 				<Route index element={<PotionsPage />} />
-				<Route path="potiongame" element={<PotionsPageGame />} />
+				<Route path="round1" element={<PotionsPageGame />} />
 			</Route>
 		</Route>
 	)

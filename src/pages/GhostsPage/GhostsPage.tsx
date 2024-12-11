@@ -17,7 +17,7 @@ const GhostsPage = () => {
 				animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
 				exit={{ opacity: 0, scale: 0, transition: { duration: 0.5 } }}
 			>
-				<Link to="ghostsgame/round1" className="ghosts-button-link">
+				<Link to="round1" className="ghosts-button-link">
 					<motion.p
 						className="ghosts-button-start"
 						whileHover={{ scale: 1.05 }}
