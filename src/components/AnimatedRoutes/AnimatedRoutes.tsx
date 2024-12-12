@@ -35,6 +35,8 @@ import {
 	ghostsDataLvl10,
 } from "../../data/ghostsData";
 
+import { potionsDataLvl1, potionsDataLvl2 } from "../../data/potionsData";
+
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path="/" element={<Layout />}>
@@ -97,7 +99,16 @@ const router = createBrowserRouter(
 			</Route>
 			<Route path="potionsgame" element={<PotionsPageLayout />}>
 				<Route index element={<PotionsPage />} />
-				<Route path="round1" element={<PotionsPageGame />} />
+				<Route
+					path="round1"
+					loader={() => potionsDataLvl1}
+					element={<PotionsPageGame />}
+				/>
+				<Route
+					path="round2"
+					loader={() => potionsDataLvl2}
+					element={<PotionsPageGame />}
+				/>
 			</Route>
 		</Route>
 	)

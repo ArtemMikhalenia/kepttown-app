@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
+import { useLoaderData, useLocation, Link } from "react-router-dom";
 import { useWindowSize } from "@custom-react-hooks/use-window-size";
 import Confetti from "react-confetti";
 
@@ -9,8 +10,6 @@ import boilerSmoke from "../../assets/images/potions-page/smoke.gif";
 
 import winSound from "../../assets/sounds/potions-game/win_sound.wav";
 import lostSound from "../../assets/sounds/potions-game/lost_sound.wav";
-
-import { potionsData } from "../../data/potionsData.tsx";
 
 import "./potionspagegame.scss";
 import PotionsCard from "./PotionCard.tsx";
@@ -24,54 +23,34 @@ interface Ingredient {
 	clicked: boolean;
 }
 
-interface Potion {
+interface PotionRound {
 	round: number;
 	potion: string;
 	roundItems: Ingredient[];
 	correctAnswer: string[];
 }
 
-type PotionsData = Potion[];
+type PotionsData = PotionRound;
 
 const PotionsPageGame = () => {
-	const [potions, setPotions] = useState<PotionsData>(potionsData);
-	const [level, setLevel] = useState<number>(0);
+	const location = useLocation();
+	const round = useLoaderData() as PotionsData;
+	const [potions, setPotions] = useState<Ingredient[]>(round.roundItems);
 	const { width, height } = useWindowSize();
 	const [startConfetti, setStartConfetti] = useState(false);
-	// const [disabled, setDisabled] = useState(true);
 
 	let winAudio = new Audio(winSound);
 	let lostAudio = new Audio(lostSound);
 
-	// const toggleCard = (id: string) => {
-	// 	setPotions((prevPotions) => {
-	// 		return prevPotions.map((potion) => {
-	// 			if (potion.id === id) {
-	// 				return {
-	// 					...potion,
-	// 					clicked: !potion.clicked,
-	// 				};
-	// 			}
-	// 			return potion;
-	// 		});
-	// 	});
-	// };
+	useEffect(() => {
+		setPotions(round.roundItems);
+	}, [location.pathname]);
 
-	console.log(setLevel(0));
 	const toggleCard = (id: string) => {
 		setPotions((prevPotions) => {
 			return prevPotions.map((potion) => {
-				if (potion.roundItems) {
-					const updatedRoundItems = potion.roundItems.map((ingredient) => {
-						if (ingredient.id === id) {
-							return {
-								...ingredient,
-								clicked: !ingredient.clicked,
-							};
-						}
-						return ingredient;
-					});
-					return { ...potion, roundItems: updatedRoundItems };
+				if (potion.id === id) {
+					return { ...potion, clicked: !potion.clicked };
 				}
 				return potion;
 			});
@@ -79,41 +58,25 @@ const PotionsPageGame = () => {
 	};
 
 	const checkAnswer = () => {
-		const currentPotionLevel = potions[level];
-		const selectedIngredients = currentPotionLevel.roundItems.filter(
-			(item) => item.clicked
-		);
+		const selectedIngredients = potions.filter((item) => item.clicked);
 		const selectedIds = selectedIngredients.map((item) => item.id);
 		const isCorrect =
-			currentPotionLevel.correctAnswer.every((id) =>
-				selectedIds.includes(id)
-			) &&
-			selectedIds.every((id) => currentPotionLevel.correctAnswer.includes(id));
+			round.correctAnswer.every((id) => selectedIds.includes(id)) &&
+			selectedIds.every((id) => round.correctAnswer.includes(id));
 
 		if (isCorrect) {
-			console.log("Правильный ответ!");
-			// setLevel((prevLevel) => prevLevel + 1);
 			winAudio.play();
 			setStartConfetti(true);
 		} else {
-			console.log("Неправильный ответ!");
 			lostAudio.play();
 		}
 
-		setPotions((prevPotions) =>
-			prevPotions.map((potion) => ({
-				...potion,
-				roundItems: potion.roundItems.map((item) => ({
-					...item,
-					clicked: false,
-				})),
-			}))
-		);
+		setPotions((prevPotions) => {
+			return prevPotions.map((potion) => {
+				return { ...potion, clicked: false };
+			});
+		});
 	};
-
-	useEffect(() => {
-		console.log(potions);
-	}, [potions]);
 
 	return (
 		<motion.div
@@ -142,7 +105,7 @@ const PotionsPageGame = () => {
 						<img className="potions-head-scroll" src={scrollImg} alt="scroll" />
 						<img
 							className="potions-head-clover"
-							src={potions[level].potion}
+							src={round.potion}
 							alt="clover"
 						/>
 					</motion.div>
@@ -165,7 +128,7 @@ const PotionsPageGame = () => {
 					<img className="boiler" src={boilerImg} alt="boiler-image" />
 				</motion.div>
 				<div className="potions-ingredients">
-					{potions[level].roundItems.map((element) => (
+					{potions.map((element) => (
 						<PotionsCard
 							key={element.id}
 							toggleCard={toggleCard}

@@ -1,4 +1,4 @@
-interface PotionsCardProps {
+interface IngredientProps {
 	id: string;
 	src: string;
 	alt: string;
@@ -14,7 +14,7 @@ const PotionsCard = ({
 	name,
 	clicked,
 	toggleCard,
-}: PotionsCardProps) => {
+}: IngredientProps) => {
 	return (
 		<div
 			className={clicked ? "ingredient-card active" : "ingredient-card"}
