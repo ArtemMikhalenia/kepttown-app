@@ -57,6 +57,7 @@ const PotionsPageGame = () => {
 	// 	});
 	// };
 
+	console.log(setLevel(0));
 	const toggleCard = (id: string) => {
 		setPotions((prevPotions) => {
 			return prevPotions.map((potion) => {

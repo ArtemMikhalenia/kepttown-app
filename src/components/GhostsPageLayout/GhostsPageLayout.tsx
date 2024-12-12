@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { motion } from "motion/react";
 
 import "./ghostpagelayout.scss";
+import Spider from "../Spider/Spider";
 
 const GhostsPageLayout = () => {
 	return (
@@ -12,6 +13,7 @@ const GhostsPageLayout = () => {
 			exit={{ opacity: 0, transition: { duration: 0.2 } }}
 			viewport={{ once: true, amount: 0.1 }}
 		>
+			<Spider />
 			<Outlet />
 		</motion.div>
 	);

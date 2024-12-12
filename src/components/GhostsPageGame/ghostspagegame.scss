@@ -18,7 +18,7 @@
 			grid-area: head;
 			max-width: 320px;
 			width: 100%;
-			height: 180px;
+			height: 190px;
 			overflow: hidden;
 			border-radius: 20px;
 
@@ -42,7 +42,7 @@
 			grid-area: content;
 			display: grid;
 			grid-template-columns: repeat(2, 300px);
-			grid-template-rows: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 290px);
 			justify-content: center;
 			gap: 20px;
 			width: 100%;
@@ -60,7 +60,7 @@
 				.card-image-block {
 					position: relative;
 					width: 100%;
-					height: 180px;
+					height: 260px;
 
 					img {
 						width: 100%;
@@ -77,9 +77,9 @@
 
 				.card-img-ghost {
 					position: absolute;
-					max-width: 150px;
-					width: 100%;
-					height: 100%;
+					max-width: 230px;
+					// width: 100%;
+					// height: 100%;
 					top: 0;
 					left: 0;
 					z-index: 0;
