@@ -82,7 +82,7 @@ const BayPageRound2Game = () => {
 					<Link
 						to={
 							isLastTeam
-								? "/bay/round3"
+								? "/bay/preround3"
 								: `/bay/round2/team${roundCard.team + 1}`
 						}
 					>

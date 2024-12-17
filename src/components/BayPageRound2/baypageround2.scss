@@ -15,18 +15,26 @@
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		align-items: stretch;
+		align-items: center;
+		justify-content: center;
 
 		.bay-round2-title {
 			flex: 1 1 auto;
 		}
 
 		.bay-round2-link {
+			max-width: 250px;
+			width: 100%;
+
 			text-decoration: none;
 
 			.bay-round2-button {
+				display: flex;
+				justify-content: center;
 				padding: 10px 20px;
 				font-size: 40px;
+
+				border-radius: 30px;
 
 				color: rgba(255, 255, 255, 1);
 				text-shadow: rgba(255, 255, 255, 1) 1px 0 10px;

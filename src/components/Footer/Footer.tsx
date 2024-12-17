@@ -37,7 +37,7 @@ const Footer = () => {
 	}, [location]);
 
 	const locationIcon = {
-		mapIcon: ["nextpage", "nowpage", ""],
+		mapIcon: ["nextpage", "bay/nextpage", "nowpage", ""],
 		nextPageIcon: ["nextpage", "nowpage"],
 		mermaidIcon: ["bay/bay-video"],
 	};

@@ -16,6 +16,8 @@ import videoBackground from "../../assets/images/backgrounds/video-background.we
 import randomBackground from "../../assets/images/backgrounds/random-background.webp";
 import bayRound1Background from "../../assets/images/bay-page/backgrounds/round1.webp";
 import bayRound2Background from "../../assets/images/bay-page/backgrounds/round2.webp";
+import bayRound3Background from "../../assets/images/bay-page/backgrounds/round3.webp";
+import bayRound4Background from "../../assets/images/bay-page/backgrounds/round4.webp";
 
 import "./layout.scss";
 
@@ -25,7 +27,7 @@ const Layout = () => {
 	const location = useLocation();
 	const currentLocation: string = location.pathname.slice(1);
 
-	const bayPageLinks = ["bay"];
+	const bayPageLinks = ["bay", "bay/preround3"];
 	const bayRound1Links = [
 		"bay/round1",
 		"bay/round1/team1",
@@ -38,6 +40,9 @@ const Layout = () => {
 		"bay/round2/team2",
 		"bay/round2/team3",
 	];
+
+	const bayRound3Links = ["bay/round3"];
+	const bayRound4Links = ["bay/round4", "bay/round4/video"];
 
 	const videoLinks = ["bay/bay-video"];
 
@@ -67,7 +72,7 @@ const Layout = () => {
 		"ghostsgame/round10",
 	];
 
-	const randomPageLinks = ["nextpage", "nowpage"];
+	const randomPageLinks = ["nextpage", "nowpage", "bay/nextpage"];
 
 	useEffect(() => {
 		if (currentLocation === "") {
@@ -91,6 +96,7 @@ const Layout = () => {
 			setSnowfall(false);
 		} else if (randomPageLinks.includes(currentLocation)) {
 			setBackground(randomBackground);
+			setSnowfall(true);
 		} else if (videoLinks.includes(currentLocation)) {
 			setBackground(videoBackground);
 			setSnowfall(false);
@@ -99,6 +105,12 @@ const Layout = () => {
 			setSnowfall(false);
 		} else if (bayRound2Links.includes(currentLocation)) {
 			setBackground(bayRound2Background);
+			setSnowfall(false);
+		} else if (bayRound3Links.includes(currentLocation)) {
+			setBackground(bayRound3Background);
+			setSnowfall(false);
+		} else if (bayRound4Links.includes(currentLocation)) {
+			setBackground(bayRound4Background);
 			setSnowfall(false);
 		}
 	}, [location]);

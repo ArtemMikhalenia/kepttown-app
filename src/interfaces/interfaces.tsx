@@ -54,3 +54,8 @@ export interface BayRound2Round {
 	team: number;
 	roundCards: BayRound2Card[];
 }
+
+export interface BayRound4Card {
+	index: number;
+	url: string;
+}

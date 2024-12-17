@@ -1,8 +1,16 @@
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./baypage.scss";
+import { useEffect } from "react";
 
 const BayPage = () => {
+	const location = useLocation();
+	const currentLocation: string = location.pathname.slice(1);
+
+	useEffect(() => {
+		console.log(location.pathname);
+	}, [location.pathname]);
+
 	return (
 		<motion.div
 			className="bay-page-container"
@@ -25,8 +33,11 @@ const BayPage = () => {
 				animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
 				exit={{ opacity: 0, scale: 0, transition: { duration: 0.5 } }}
 			>
-				<Link to="round1" className="bay-button-link">
-					<motion.p
+				<Link
+					to={currentLocation === "bay" ? "round1" : "/bay/round3"}
+					className="bay-button-link"
+				>
+					<motion.span
 						className="bay-button-start"
 						whileHover={{ scale: 1.05 }}
 						whileTap={{
@@ -34,8 +45,10 @@ const BayPage = () => {
 							boxShadow: "0 5px 3px 3px rgba(255,255,255,1)",
 						}}
 					>
-						Погрузиться в таинственный мир океана
-					</motion.p>
+						{currentLocation === "bay"
+							? "Погрузиться в таинственный мир океана"
+							: "Продолжить путешествие"}
+					</motion.span>
 				</Link>
 			</motion.div>
 		</motion.div>

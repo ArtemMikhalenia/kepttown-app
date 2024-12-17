@@ -22,7 +22,7 @@ const BayPageRound1 = () => {
 					Раунд 1. Что на вечер?
 				</motion.div>
 				<Link className="bay-round1-link" to="team1">
-					<motion.p
+					<motion.span
 						className="bay-round1-button"
 						initial={{ opacity: 0, y: "100%" }}
 						animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
@@ -33,8 +33,8 @@ const BayPageRound1 = () => {
 							boxShadow: "0 5px 3px 3px rgba(255,255,255,1)",
 						}}
 					>
-						Начинаем
-					</motion.p>
+						Начать
+					</motion.span>
 				</Link>
 				<Outlet />
 			</div>

@@ -14,6 +14,8 @@ import FortunePageLayout from "../FortunePageLayout/FortunePageLayout";
 import BayPageLayout from "../BayPageLayout/BayPageLayout";
 import BayGame1Layout from "../BayGame1Layout/BayGame1Layout";
 import BayGame2Layout from "../BayGame2Layout/BayGame2Layout";
+import BayGame3Layout from "../BayGame3Layout/BayGame3Layout";
+import BayGame4Layout from "../BayGame4Layout/BayGame4Layout";
 
 import FrontPage from "../../pages/FrontPage/FrontPage";
 import MapPage from "../../pages/MapPage/MapPage";
@@ -26,6 +28,8 @@ import VideoPage from "../../pages/VideoPage/VideoPage";
 import BayPage from "../../pages/BayPage/BayPage";
 import BayPageRound1 from "../BayPageRound1/BayPageRound1";
 import BayPageRound2 from "../BayPageRound2/BayPageRound2";
+import BayPageRound3 from "../BayPageRound3/BayPageRound3";
+import BayPageRound4 from "../BayPageRound4/BayPageRound4";
 
 import { TailSpin } from "react-loading-icons";
 
@@ -65,6 +69,7 @@ import {
 	bayDataRound2Team1,
 	bayDataRound2Team2,
 	bayDataRound2Team3,
+	bayDataRound4,
 } from "../../data/bayData";
 
 const ghostsDataLevels = [
@@ -111,6 +116,9 @@ const BayPageRound1Game = lazy(
 );
 const BayPageRound2Game = lazy(
 	() => import("../BayPageRound2Game/BayPageRound2Game")
+);
+const BayPageRound4Game = lazy(
+	() => import("../BayPageRound4Game/BayPageRound4Game")
 );
 const FortunePageGame = lazy(
 	() => import("../FortunePageGame/FortunePageGame")
@@ -205,8 +213,28 @@ const router = createBrowserRouter(
 					<Route index element={<BayPageRound2 />} />
 					{generateBayRound2Routes(bayDataRound2Teams)}
 				</Route>
+				<Route path="preround3" element={<BayPage />} />
+				<Route path="round3" element={<BayGame3Layout />}>
+					<Route index element={<BayPageRound3 />} />
+				</Route>
+				<Route path="round4" element={<BayGame4Layout />}>
+					<Route index element={<BayPageRound4 />} />
+					<Route
+						path="video"
+						loader={() => bayDataRound4}
+						element={
+							<Suspense fallback={<TailSpin />}>
+								<BayPageRound4Game />
+							</Suspense>
+						}
+					/>
+				</Route>
+				<Route
+					path="nextpage"
+					element={<NextPage title="Поздравления именинников" />}
+				/>
 			</Route>
-			<Route path="nextpage" element={<NextPage />} />
+			{/* <Route path="nextpage" element={<NextPage />} /> */}
 			<Route path="nowpage" element={<NowPage />} />
 			<Route path="fortunegame" element={<FortunePageLayout />}>
 				<Route index element={<FortunePage />} />

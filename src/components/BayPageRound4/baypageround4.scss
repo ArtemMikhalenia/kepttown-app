@@ -1,4 +1,4 @@
-.bay-page-round1 {
+.bay-page-round4 {
 	width: 100%;
 	height: 100%;
 	text-align: center;
@@ -10,23 +10,23 @@
 
 	color: rgba(255, 255, 255, 1);
 
-	.bay-round1-content {
+	.bay-round4-content {
 		padding: 20px 0px;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		.bay-round1-title {
+		.bay-round4-title {
 			flex: 1 1 auto;
 		}
 
-		.bay-round1-link {
+		.bay-round4-link {
 			max-width: 250px;
 			width: 100%;
 			text-decoration: none;
 
-			.bay-round1-button {
+			.bay-round4-button {
 				display: flex;
 				justify-content: center;
 				padding: 10px 20px;

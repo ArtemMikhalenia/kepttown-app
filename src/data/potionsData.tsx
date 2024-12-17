@@ -48,6 +48,26 @@ import pomegranateImg from "../assets/images/potions-page/round5/pomegranate.web
 import raspberryImg from "../assets/images/potions-page/round5/raspberry.webp";
 import rowanImg from "../assets/images/potions-page/round5/rowan.webp";
 
+import dustImg from "../assets/images/potions-page/round6/dust.webp";
+import bellImg from "../assets/images/potions-page/round6/bell.webp";
+import bulavkaImg from "../assets/images/potions-page/round6/bulavka.webp";
+import horseShoeImg from "../assets/images/potions-page/round6/horse-shoe.webp";
+import keyImg from "../assets/images/potions-page/round6/key.webp";
+import dreamImg from "../assets/images/potions-page/round6/dream.webp";
+import candleImg from "../assets/images/potions-page/round6/candle.webp";
+import watchesImg from "../assets/images/potions-page/round6/watches.webp";
+import mirrorImg from "../assets/images/potions-page/round6/mirror.webp";
+
+import batterflyImg from "../assets/images/potions-page/round7/batterfly.webp";
+import buddaImg from "../assets/images/potions-page/round7/budda.webp";
+import nazarImg from "../assets/images/potions-page/round7/nazar.webp";
+import lepreconImg from "../assets/images/potions-page/round7/leprecon.webp";
+import fairyImg from "../assets/images/potions-page/round7/fairy.webp";
+import edinorogImg from "../assets/images/potions-page/round7/edinorog.webp";
+import dragonImg from "../assets/images/potions-page/round7/dragon.webp";
+import dwarfImg from "../assets/images/potions-page/round7/dwarf.webp";
+import domovoiImg from "../assets/images/potions-page/round7/domovoi.webp";
+
 export const potionsDataLvl1 = {
 	round: 1,
 	potion: cloverImg,
@@ -370,141 +390,142 @@ export const potionsDataLvl5 = {
 
 export const potionsDataLvl6 = {
 	round: 6,
-	potion: barberryImg,
-	correctAnswer: ["carnation", "cardamom", "nutmeg", "cinnamon"],
+	potion: dustImg,
+	correctAnswer: ["key", "horse-shoe", "bell", "dream"],
 	roundItems: [
 		{
-			name: "Тмин",
-			id: "caraway",
-			src: carawayImg,
-			alt: "caraway-image",
+			name: "Колокольчик",
+			id: "bell",
+			src: bellImg,
+			alt: "bell-image",
 			correct: false,
 			clicked: false,
 		},
 		{
-			name: "Кардамон",
-			id: "cardamom",
-			src: cardamomImg,
-			alt: "cardamom-image",
+			name: "Булавка",
+			id: "bulavka",
+			src: bulavkaImg,
+			alt: "bulavka-image",
 			correct: true,
 			clicked: false,
 		},
 		{
-			name: "Гвоздика",
-			id: "carnation",
-			src: carnationImg,
-			alt: "carnation-image",
+			name: "Подкова",
+			id: "horse-shoe",
+			src: horseShoeImg,
+			alt: "horse-shoe-image",
 			correct: true,
 			clicked: false,
 		},
 		{
-			name: "Корица",
-			id: "cinnamon",
-			src: cinnamonImg,
-			alt: "cinnamon-image",
+			name: "Ключ",
+			id: "key",
+			src: keyImg,
+			alt: "key-image",
 			correct: true,
 			clicked: false,
 		},
 		{
-			name: "Мускатный орех",
-			id: "nutmeg",
-			src: nutmegImg,
-			alt: "nutmeg-image",
+			name: "Ловец снов",
+			id: "dream",
+			src: dreamImg,
+			alt: "dream-image",
 			correct: true,
 			clicked: false,
 		},
 		{
-			name: "Розмарин",
-			id: "rosemary",
-			src: rosemaryImg,
-			alt: "rosemary-image",
+			name: "Свеча",
+			id: "candle",
+			src: candleImg,
+			alt: "candle-image",
 			correct: false,
 			clicked: false,
 		},
 		{
-			name: "Кунжут",
-			id: "sesame",
-			src: sesameImg,
-			alt: "sesame-image",
+			name: "Песочные часы",
+			id: "watches",
+			src: watchesImg,
+			alt: "watches-image",
 			correct: false,
 			clicked: false,
 		},
 		{
-			name: "Ваниль",
-			id: "vanilla",
-			src: vanillaImg,
-			alt: "vanilla-image",
+			name: "Зеркало",
+			id: "mirror",
+			src: mirrorImg,
+			alt: "mirror-image",
 			correct: false,
 			clicked: false,
 		},
 	],
 };
+
 export const potionsDataLvl7 = {
 	round: 7,
-	potion: barberryImg,
-	correctAnswer: ["carnation", "cardamom", "nutmeg", "cinnamon"],
+	potion: batterflyImg,
+	correctAnswer: ["domovoi", "dwarf", "dragon", "edinorog"],
 	roundItems: [
 		{
-			name: "Тмин",
-			id: "caraway",
-			src: carawayImg,
-			alt: "caraway-image",
+			name: "Будда",
+			id: "budda",
+			src: buddaImg,
+			alt: "budda-image",
 			correct: false,
 			clicked: false,
 		},
 		{
-			name: "Кардамон",
-			id: "cardamom",
-			src: cardamomImg,
-			alt: "cardamom-image",
+			name: "Назар",
+			id: "nazar",
+			src: nazarImg,
+			alt: "nazar-image",
 			correct: true,
 			clicked: false,
 		},
 		{
-			name: "Гвоздика",
-			id: "carnation",
-			src: carnationImg,
-			alt: "carnation-image",
+			name: "Лепрекон",
+			id: "leprecon",
+			src: lepreconImg,
+			alt: "leprecon-image",
 			correct: true,
 			clicked: false,
 		},
 		{
-			name: "Корица",
-			id: "cinnamon",
-			src: cinnamonImg,
-			alt: "cinnamon-image",
+			name: "Фея",
+			id: "fairy",
+			src: fairyImg,
+			alt: "fairy-image",
 			correct: true,
 			clicked: false,
 		},
 		{
-			name: "Мускатный орех",
-			id: "nutmeg",
-			src: nutmegImg,
-			alt: "nutmeg-image",
+			name: "Единорог",
+			id: "edinorog",
+			src: edinorogImg,
+			alt: "edinorog-image",
 			correct: true,
 			clicked: false,
 		},
 		{
-			name: "Розмарин",
-			id: "rosemary",
-			src: rosemaryImg,
-			alt: "rosemary-image",
+			name: "Дракон",
+			id: "dragon",
+			src: dragonImg,
+			alt: "dragon-image",
 			correct: false,
 			clicked: false,
 		},
 		{
-			name: "Кунжут",
-			id: "sesame",
-			src: sesameImg,
-			alt: "sesame-image",
+			name: "Гном",
+			id: "dwarf",
+			src: dwarfImg,
+			alt: "dwarf-image",
 			correct: false,
 			clicked: false,
 		},
 		{
-			name: "Ваниль",
-			id: "vanilla",
-			src: vanillaImg,
-			alt: "vanilla-image",
+			name: "Домовой",
+			id: "domovoi",
+			src: domovoiImg,
+			alt: "domovoi-image",
 			correct: false,
 			clicked: false,
 		},

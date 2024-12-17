@@ -1,29 +1,29 @@
 import { motion } from "motion/react";
 import { Link, Outlet } from "react-router-dom";
-import "./baypageround2.scss";
+import "./baypageround4.scss";
 
-const BayPageRound2 = () => {
+const BayPageRound4 = () => {
 	return (
 		<motion.div
-			className="bay-page-round2"
-			key="bay-page-round2"
+			className="bay-page-round4"
+			key="bay-page-round4"
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1, transition: { duration: 0.5 } }}
 			exit={{ opacity: 0, transition: { duration: 0.5 } }}
 			viewport={{ once: true, amount: 0.1 }}
 		>
-			<div className="bay-round2-content">
+			<div className="bay-round4-content">
 				<motion.div
-					className="bay-round2-title"
+					className="bay-round4-title"
 					initial={{ opacity: 0, y: "-100%" }}
 					animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
 					exit={{ opacity: 0, transition: { duration: 0.5 } }}
 				>
-					Раунд 2. Искусственная музыка
+					Раунд 4. Смотри в оба
 				</motion.div>
-				<Link className="bay-round2-link" to="team1">
+				<Link className="bay-round4-link" to="video">
 					<motion.span
-						className="bay-round2-button"
+						className="bay-round4-button"
 						initial={{ opacity: 0, y: "100%" }}
 						animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
 						exit={{ opacity: 0, transition: { duration: 0.5 } }}
@@ -42,4 +42,4 @@ const BayPageRound2 = () => {
 	);
 };
 
-export default BayPageRound2;
+export default BayPageRound4;

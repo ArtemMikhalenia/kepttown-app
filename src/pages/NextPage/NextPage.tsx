@@ -3,7 +3,11 @@ import santaHat from "../../assets/images/icons/front-page/santa-hat.png";
 
 import "./nextpage.scss";
 
-const NextPage = () => {
+export type NextPageProps = {
+	title: string;
+};
+
+const NextPage = ({ title }: NextPageProps) => {
 	return (
 		<motion.div
 			className="next-page"
@@ -22,7 +26,7 @@ const NextPage = () => {
 				viewport={{ once: true, amount: 0.1 }}
 			>
 				<img className="santa-hat" src={santaHat} alt="front-santa-hat" />
-				<h1>Далее в эфире - Шатер гадалки</h1>
+				<h1>Далее в эфире - {title}</h1>
 			</motion.div>
 		</motion.div>
 	);
