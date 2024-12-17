@@ -1,0 +1,31 @@
+.fortune-page-container {
+	width: 100%;
+	text-align: center;
+
+	.fortune-button-container {
+		position: relative;
+		top: -200px;
+		display: inline-block;
+
+		.fortune-button-link {
+			text-decoration: none;
+
+			.fortune-button-start {
+				padding: 20px 30px;
+
+				font-family: "Underdog";
+				font-weight: 400;
+				font-size: 40px;
+
+				color: rgba(255, 255, 255, 1);
+				text-shadow: rgb(255, 255, 255) 1px 0 10px;
+
+				background-image: url("../../assets/images/fortune-page/background-button.webp");
+				background-size: cover;
+				background-repeat: no-repeat;
+
+				box-shadow: 0 0 10px 2px rgb(255, 255, 255);
+			}
+		}
+	}
+}

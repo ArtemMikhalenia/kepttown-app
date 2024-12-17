@@ -11,7 +11,7 @@ const MapPopup = ({ name, isHovered }: MapPopupTypes) => {
 		case "bay":
 			name = "Бухта сирен";
 			break;
-		case "fortuneteller":
+		case "fortune":
 			name = "Дом гадалки";
 			break;
 		case "haunted-house":

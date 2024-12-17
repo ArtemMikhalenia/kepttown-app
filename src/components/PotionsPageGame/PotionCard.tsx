@@ -21,7 +21,13 @@ const PotionsCard = ({
 			id={id}
 			onClick={() => toggleCard(id)}
 		>
-			<img className="ingredient-image" id={id} src={src} alt={alt} />
+			<img
+				className="ingredient-image"
+				loading="lazy"
+				id={id}
+				src={src}
+				alt={alt}
+			/>
 			<p className="ingredient-name">{name}</p>
 		</div>
 	);

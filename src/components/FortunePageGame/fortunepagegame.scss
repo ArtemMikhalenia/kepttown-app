@@ -1,0 +1,98 @@
+.fortune-page-game {
+	width: 100%;
+	font-family: Underdog;
+
+	.fortune-content {
+		display: grid;
+		grid-template-columns: repeat(3, 380px);
+		grid-template-rows: repeat(3, 300px);
+		justify-content: center;
+		align-items: center;
+		justify-items: center;
+
+		width: 100%;
+
+		.generation-link {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			border-radius: 20px;
+			overflow: hidden;
+
+			.generation-image {
+				// position: absolute;
+				// max-width: 280px;
+				// height: 280px;
+				width: 100%;
+				// top: 0;
+				// left: 0;
+
+				z-index: 1;
+
+				// &:hover {
+				// 	transform: scale(1.4);
+				// }
+			}
+
+			.generation-text {
+				font-family: Reggae One;
+				// position: absolute;
+				width: 100%;
+				height: 100%;
+				// top: 0;
+				// left: 0;
+				// z-index: 1;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				font-size: 25px;
+
+				letter-spacing: -5px;
+				text-align: center;
+				color: rgba(255, 255, 255, 1);
+				background-color: rgba(0, 0, 0, 0.3);
+			}
+		}
+
+		.generation-image {
+			width: 100%;
+			border-radius: 20px;
+		}
+
+		.baby-boomers {
+			grid-column: 1/2;
+			grid-row: 1/2;
+			width: 100%;
+			height: 100%;
+		}
+		.generationX {
+			grid-column: 3/4;
+			grid-row: 1/2;
+			width: 100%;
+			height: 100%;
+		}
+		.fortune-generations {
+			grid-column: 2/3;
+			grid-row: 2/3;
+		}
+		.millennials {
+			grid-column: 1/2;
+			grid-row: 3/4;
+			width: 100%;
+			height: 100%;
+		}
+		.zoomers {
+			grid-column: 3/4;
+			grid-row: 3/4;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

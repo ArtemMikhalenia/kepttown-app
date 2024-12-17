@@ -3,7 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, Variants } from "motion/react";
 
 import mapIcon from "../../assets/images/icons/footer/map-icon.png";
-import nextPage from "../../assets/images/icons/footer/next-page.gif";
+import nextPageIcon from "../../assets/images/icons/footer/next-page.gif";
+import mermaidIcon from "../../assets/images/icons/footer/mermaid.png";
 
 import "./footer.scss";
 
@@ -35,32 +36,22 @@ const Footer = () => {
 		console.log(currentLocation);
 	}, [location]);
 
-	const locationIcon = ["nextpage", "nowpage"];
-	const locationsWithoutMapIcon = [
-		"map",
-		"ghostsgame",
-		"ghostsgame/round1",
-		"ghostsgame/round2",
-		"ghostsgame/round3",
-		"ghostsgame/round4",
-		"ghostsgame/round5",
-		"ghostsgame/round6",
-		"ghostsgame/round7",
-		"ghostsgame/round8",
-		"ghostsgame/round9",
-		"ghostsgame/round10",
-	];
+	const locationIcon = {
+		mapIcon: ["nextpage", "nowpage", ""],
+		nextPageIcon: ["nextpage", "nowpage"],
+		mermaidIcon: ["bay/bay-video"],
+	};
 
 	return (
 		<footer
 			className="footer"
 			style={{ cursor: "url(snowflake-cursor.svg),auto" }}
 		>
-			{locationIcon.includes(currentLocation) && (
+			{locationIcon.nextPageIcon.includes(currentLocation) && (
 				<Link to={currentLocation === "nextpage" ? "/nowpage" : "/"}>
 					<motion.img
 						className="next-page-icon"
-						src={nextPage}
+						src={nextPageIcon}
 						alt="next-icon"
 						variants={animationVariants}
 						initial="offscreenFromLeft"
@@ -71,12 +62,27 @@ const Footer = () => {
 					/>
 				</Link>
 			)}
-			{!locationsWithoutMapIcon.includes(currentLocation) && (
+			{locationIcon.mapIcon.includes(currentLocation) && (
 				<Link to="/map">
 					<motion.img
 						className="map-icon"
 						src={mapIcon}
 						alt="map-icon"
+						variants={animationVariants}
+						initial="offscreenFromRight"
+						whileInView="onscreen"
+						whileHover="hover"
+						whileTap="tap"
+						viewport={{ once: true, amount: 0.1 }}
+					/>
+				</Link>
+			)}
+			{locationIcon.mermaidIcon.includes(currentLocation) && (
+				<Link to="/bay">
+					<motion.img
+						className="map-icon"
+						src={mermaidIcon}
+						alt="mermaid-icon"
 						variants={animationVariants}
 						initial="offscreenFromRight"
 						whileInView="onscreen"

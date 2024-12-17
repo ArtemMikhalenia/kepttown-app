@@ -19,7 +19,6 @@ interface Ingredient {
 	src: string;
 	name: string;
 	alt: string;
-	correct: boolean;
 	clicked: boolean;
 }
 
@@ -39,11 +38,14 @@ const PotionsPageGame = () => {
 	const { width, height } = useWindowSize();
 	const [startConfetti, setStartConfetti] = useState(false);
 
+	const isLastRound = round.round === 7;
+
 	let winAudio = new Audio(winSound);
 	let lostAudio = new Audio(lostSound);
 
 	useEffect(() => {
 		setPotions(round.roundItems);
+		setStartConfetti(false);
 	}, [location.pathname]);
 
 	const toggleCard = (id: string) => {
@@ -85,6 +87,7 @@ const PotionsPageGame = () => {
 			animate={{ opacity: 1, transition: { duration: 0.2 } }}
 			exit={{ opacity: 0, transition: { duration: 0.2 } }}
 			viewport={{ once: true, amount: 0.1 }}
+			key={round.round}
 		>
 			<div className="potions-content">
 				<div className="potions-head">
@@ -102,9 +105,15 @@ const PotionsPageGame = () => {
 							},
 						}}
 					>
-						<img className="potions-head-scroll" src={scrollImg} alt="scroll" />
+						<img
+							className="potions-head-scroll"
+							loading="lazy"
+							src={scrollImg}
+							alt="scroll"
+						/>
 						<img
 							className="potions-head-clover"
+							loading="lazy"
 							src={round.potion}
 							alt="clover"
 						/>
@@ -124,10 +133,25 @@ const PotionsPageGame = () => {
 						},
 					}}
 				>
-					<img className="smoke" src={boilerSmoke} alt="boiler-smoke-img" />
-					<img className="boiler" src={boilerImg} alt="boiler-image" />
+					<img
+						className="smoke"
+						loading="lazy"
+						src={boilerSmoke}
+						alt="boiler-smoke-img"
+					/>
+					<img
+						className="boiler"
+						loading="lazy"
+						src={boilerImg}
+						alt="boiler-image"
+					/>
 				</motion.div>
-				<div className="potions-ingredients">
+				<motion.div
+					className="potions-ingredients"
+					initial={{ opacity: 0, scale: 0 }}
+					animate={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
+					exit={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
+				>
 					{potions.map((element) => (
 						<PotionsCard
 							key={element.id}
@@ -139,7 +163,7 @@ const PotionsPageGame = () => {
 							clicked={element.clicked}
 						/>
 					))}
-				</div>
+				</motion.div>
 				<div className="potions-buttons-block">
 					<motion.button
 						className="potions-check-answer"
@@ -159,24 +183,27 @@ const PotionsPageGame = () => {
 					>
 						Проверить ответ
 					</motion.button>
-					<motion.button
-						className="potions-next-round"
-						// onClick={checkAnswer}
-						initial={{ scale: 0 }}
-						animate={{
-							scale: 1,
-							transition: {
-								type: "spring",
-								stiffness: 200,
-								damping: 10,
-								duration: 1,
-							},
-						}}
-						whileHover={{ scale: 1.05 }}
-						whileTap={{ y: "10px", boxShadow: "0 5px 3px 3px rgba(0,0,0,1)" }}
+					<Link
+						to={isLastRound ? "/map" : `/potionsgame/round${round.round + 1}`}
 					>
-						Следующий раунд
-					</motion.button>
+						<motion.button
+							className="potions-next-round"
+							initial={{ scale: 0 }}
+							animate={{
+								scale: 1,
+								transition: {
+									type: "spring",
+									stiffness: 200,
+									damping: 10,
+									duration: 1,
+								},
+							}}
+							whileHover={{ scale: 1.05 }}
+							whileTap={{ y: "10px", boxShadow: "0 5px 3px 3px rgba(0,0,0,1)" }}
+						>
+							Следующий раунд
+						</motion.button>
+					</Link>
 				</div>
 
 				{startConfetti && <Confetti width={width} height={height} />}

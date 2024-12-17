@@ -1,0 +1,39 @@
+.bay-page-round2 {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+
+	font-family: Pangolin;
+
+	color: rgba(255, 255, 255, 1);
+
+	.bay-round2-content {
+		padding: 20px 0px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+
+		.bay-round2-title {
+			flex: 1 1 auto;
+		}
+
+		.bay-round2-link {
+			text-decoration: none;
+
+			.bay-round2-button {
+				padding: 10px 20px;
+				font-size: 40px;
+
+				color: rgba(255, 255, 255, 1);
+				text-shadow: rgba(255, 255, 255, 1) 1px 0 10px;
+				background-color: rgba(87, 71, 231, 1);
+
+				box-shadow: 0 0 3px 3px rgba(255, 255, 255, 1);
+			}
+		}
+	}
+}

@@ -7,7 +7,7 @@ import "./mappage.scss";
 
 import amusementParkImg from "../../assets/images/map-page/amusement-park.png";
 import bayImg from "../../assets/images/map-page/bay.png";
-import fortunetellerImg from "../../assets/images/map-page/fortuneteller.png";
+import fortuneImg from "../../assets/images/map-page/fortuneteller.png";
 import hauntedHouseImg from "../../assets/images/map-page/haunted-house.png";
 import researchCenterImg from "../../assets/images/map-page/research-center.png";
 import tavernImg from "../../assets/images/map-page/tavern.png";
@@ -40,7 +40,7 @@ const MapPage = () => {
 		},
 		{
 			className: "bay",
-			link: "/nextpage",
+			link: "/bay/bay-video",
 			classNameImg: "bay-image",
 			key: 2,
 			id: "bay",
@@ -48,12 +48,12 @@ const MapPage = () => {
 			alt: "bay-image",
 		},
 		{
-			className: "fortuneteller",
-			link: "/nextpage",
-			classNameImg: "fortuneteller-image",
-			id: "fortuneteller",
-			src: fortunetellerImg,
-			alt: "fortuneteller-image",
+			className: "fortune",
+			link: "/fortunegame",
+			classNameImg: "fortune-image",
+			id: "fortune",
+			src: fortuneImg,
+			alt: "fortune-image",
 		},
 		{
 			className: "haunted-house",

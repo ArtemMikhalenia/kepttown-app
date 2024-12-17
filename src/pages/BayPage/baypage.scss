@@ -1,0 +1,40 @@
+.bay-page-container {
+	width: 100%;
+	text-align: center;
+	font-family: Pangolin;
+
+	.bay-title {
+		position: relative;
+		top: -250px;
+		font-size: 80px;
+
+		color: rgba(43, 154, 173, 1);
+		text-shadow: rgb(255, 255, 255) 1px 0 15px;
+	}
+
+	.bay-button-container {
+		display: inline-block;
+
+		.bay-button-link {
+			text-decoration: none;
+
+			.bay-button-start {
+				padding: 0px 30px;
+
+				border-radius: 30px;
+				font-weight: 400;
+				font-size: 50px;
+
+				color: rgba(255, 255, 255, 1);
+				text-shadow: rgb(255, 255, 255) 1px 0 10px;
+
+				background-image: url("../../assets/images/bay-page/button-bg.webp");
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+
+				box-shadow: 0 0 3px 3px rgb(255, 255, 255);
+			}
+		}
+	}
+}
