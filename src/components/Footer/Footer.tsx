@@ -3,8 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, Variants } from "motion/react";
 
 import mapIcon from "../../assets/images/icons/footer/map-icon.png";
-import nextPageIcon from "../../assets/images/icons/footer/next-page.gif";
+// import nextPageIcon from "../../assets/images/icons/footer/next-page.gif";
 import mermaidIcon from "../../assets/images/icons/footer/mermaid.png";
+import sphereIcon from "../../assets/images/icons/footer/sphere.png";
 
 import "./footer.scss";
 
@@ -37,9 +38,16 @@ const Footer = () => {
 	}, [location]);
 
 	const locationIcon = {
-		mapIcon: ["nextpage", "bay/nextpage", "nowpage", ""],
-		nextPageIcon: ["nextpage", "nowpage"],
+		mapIcon: [
+			// "nextpage",
+			// "bay/nextpage",
+			// "fortunegame/nextpage",
+			// "nowpage",
+			"",
+		],
+		// nextPageIcon: ["nextpage", "nowpage"],
 		mermaidIcon: ["bay/bay-video"],
+		sphereIcon: ["fortunegame/fortune-video"],
 	};
 
 	return (
@@ -47,7 +55,7 @@ const Footer = () => {
 			className="footer"
 			style={{ cursor: "url(snowflake-cursor.svg),auto" }}
 		>
-			{locationIcon.nextPageIcon.includes(currentLocation) && (
+			{/* {locationIcon.nextPageIcon.includes(currentLocation) && (
 				<Link to={currentLocation === "nextpage" ? "/nowpage" : "/"}>
 					<motion.img
 						className="next-page-icon"
@@ -61,7 +69,7 @@ const Footer = () => {
 						viewport={{ once: false, amount: 0.1 }}
 					/>
 				</Link>
-			)}
+			)} */}
 			{locationIcon.mapIcon.includes(currentLocation) && (
 				<Link to="/map">
 					<motion.img
@@ -83,6 +91,21 @@ const Footer = () => {
 						className="map-icon"
 						src={mermaidIcon}
 						alt="mermaid-icon"
+						variants={animationVariants}
+						initial="offscreenFromRight"
+						whileInView="onscreen"
+						whileHover="hover"
+						whileTap="tap"
+						viewport={{ once: true, amount: 0.1 }}
+					/>
+				</Link>
+			)}
+			{locationIcon.sphereIcon.includes(currentLocation) && (
+				<Link to="/fortunegame">
+					<motion.img
+						className="map-icon"
+						src={sphereIcon}
+						alt="sphere-icon"
 						variants={animationVariants}
 						initial="offscreenFromRight"
 						whileInView="onscreen"

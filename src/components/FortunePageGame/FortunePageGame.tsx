@@ -77,12 +77,16 @@ const FortunePageGame = () => {
 					variants={animationVariants}
 					initial="scaleInitial"
 					whileInView="onscreen"
+					whileHover="hover"
+					whileTap="tap"
 				>
-					<img
-						className="generation-image"
-						src={allGenerationsImg}
-						alt="all-generations-image"
-					/>
+					<Link to="/fortunegame/stevejobs">
+						<img
+							className="generation-image"
+							src={allGenerationsImg}
+							alt="all-generations-image"
+						/>
+					</Link>
 				</motion.div>
 			</div>
 		</motion.div>

@@ -7,7 +7,7 @@ export const fortuneData = [
 	{
 		index: 1,
 		className: "baby-boomers",
-		link: "baby-boomers",
+		link: "",
 		src: babyBoomersImg,
 		alt: "baby-boomers-image",
 		text: "Бэби-бумеры",
@@ -15,7 +15,7 @@ export const fortuneData = [
 	{
 		index: 2,
 		className: "generationX",
-		link: "generationX",
+		link: "",
 		src: generationXImg,
 		alt: "generation-X-image",
 		text: "Поколение Х",
@@ -23,7 +23,7 @@ export const fortuneData = [
 	{
 		index: 3,
 		className: "millennials",
-		link: "millennials",
+		link: "/fortunegame/millennials",
 		src: millennialsImg,
 		alt: "millennials-image",
 		text: "Миллениалы",
@@ -31,7 +31,7 @@ export const fortuneData = [
 	{
 		index: 4,
 		className: "zoomers",
-		link: "zoomers",
+		link: "/fortunegame/zoomers",
 		src: zoomersImg,
 		alt: "zoomers-image",
 		text: "Зумеры",

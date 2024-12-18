@@ -18,6 +18,10 @@ import bayRound1Background from "../../assets/images/bay-page/backgrounds/round1
 import bayRound2Background from "../../assets/images/bay-page/backgrounds/round2.webp";
 import bayRound3Background from "../../assets/images/bay-page/backgrounds/round3.webp";
 import bayRound4Background from "../../assets/images/bay-page/backgrounds/round4.webp";
+import jobsBackground from "../../assets/images/fortune-page/jobs-background.webp";
+
+import millennialsBackground from "../../assets/images/fortune-page/millennials.webp";
+import zoomersBackground from "../../assets/images/fortune-page/zoomers.webp";
 
 import "./layout.scss";
 
@@ -44,7 +48,7 @@ const Layout = () => {
 	const bayRound3Links = ["bay/round3"];
 	const bayRound4Links = ["bay/round4", "bay/round4/video"];
 
-	const videoLinks = ["bay/bay-video"];
+	const videoLinks = ["bay/bay-video", "fortunegame/fortune-video"];
 
 	const fortunePageLinks = ["fortunegame"];
 
@@ -72,7 +76,14 @@ const Layout = () => {
 		"ghostsgame/round10",
 	];
 
-	const randomPageLinks = ["nextpage", "nowpage", "bay/nextpage"];
+	const randomPageLinks = [
+		"nextpage",
+		"nowpage",
+		"bay/nextpage",
+		"fortunegame/nextpage",
+		"ghostsgame/nowpage",
+		"ghostsgame/nextpage",
+	];
 
 	useEffect(() => {
 		if (currentLocation === "") {
@@ -90,6 +101,12 @@ const Layout = () => {
 			setSnowfall(false);
 		} else if (currentLocation === "fortunegame/game") {
 			setBackground(fortuneGameBackground);
+			setSnowfall(false);
+		} else if (currentLocation === "fortunegame/millennials") {
+			setBackground(millennialsBackground);
+			setSnowfall(false);
+		} else if (currentLocation === "fortunegame/zoomers") {
+			setBackground(zoomersBackground);
 			setSnowfall(false);
 		} else if (bayPageLinks.includes(currentLocation)) {
 			setBackground(bayBackground);
@@ -111,6 +128,9 @@ const Layout = () => {
 			setSnowfall(false);
 		} else if (bayRound4Links.includes(currentLocation)) {
 			setBackground(bayRound4Background);
+			setSnowfall(false);
+		} else if (currentLocation === "fortunegame/stevejobs") {
+			setBackground(jobsBackground);
 			setSnowfall(false);
 		}
 	}, [location]);

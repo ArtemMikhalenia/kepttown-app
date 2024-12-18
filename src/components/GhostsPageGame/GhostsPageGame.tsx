@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useLoaderData, useLocation, Link } from "react-router-dom";
 import ghostHappyImg from "../../assets/images/ghosts-page/ghost-happy.webp";
 import ghostAngryImg from "../../assets/images/ghosts-page/ghost-angry.webp";
+import ghostIconImg from "../../assets/images/icons/footer/ghost.webp";
 
 import "./ghostspagegame.scss";
 
@@ -113,41 +114,29 @@ const GhostsPageGame = () => {
 						</div>
 					))}
 				</motion.div>
-				<div className="ghost-button-block">
-					<Link
-						to={
-							isLastRound ? "/map" : `/ghostsgame/round${ghostCard.round + 1}`
-						}
-					>
-						<motion.button
-							className="ghost-button-next-round"
-							initial={{ scale: 0 }}
-							animate={{
-								scale: 1,
-								transition: {
-									type: "spring",
-									stiffness: 200,
-									damping: 10,
-									duration: 1,
-								},
-							}}
-							whileHover={{
-								scale: 1.05,
-								color: "rgba(255,0,0,1)",
-								background: "rgba(255,255,255,1)",
-								transition: { duration: 0.5 },
-							}}
-							whileTap={{
-								y: "10px",
-								boxShadow: "0 5px 3px 3px rgba(255,0,0,1)",
-							}}
-						>
-							{isLastRound
-								? "Завершить и перейти на карту"
-								: "Едем дальше, если хватит духу"}
-						</motion.button>
-					</Link>
-				</div>
+			</div>
+			<div className="ghost-button-block">
+				<Link
+					to={
+						isLastRound
+							? "/ghostsgame/nowpage"
+							: `/ghostsgame/round${ghostCard.round + 1}`
+					}
+				>
+					<motion.img
+						className="ghost-button-next-round"
+						initial={{ opacity: 0, x: "-100%" }}
+						whileInView={{
+							opacity: 1,
+							x: 0,
+							transition: { duration: 1 },
+						}}
+						whileHover={{ scale: 1.15 }}
+						whileTap={{ scale: 0.9 }}
+						src={ghostIconImg}
+						alt="ghost-icon"
+					/>
+				</Link>
 			</div>
 		</motion.div>
 	);

@@ -20,6 +20,14 @@ const BayPageRound4Game = () => {
 			viewport={{ once: false, amount: 0.1 }}
 		>
 			<div className="bay-round4-game-content">
+				<motion.div
+					className="bay-round4-game-title"
+					initial={{ opacity: 0, y: "-100%" }}
+					animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
+					exit={{ opacity: 0, transition: { duration: 0.5 } }}
+				>
+					Раунд 4. Смотри в оба
+				</motion.div>
 				<div className="bay-round4-game-cards">
 					{roundCard.map((element) => (
 						<motion.div

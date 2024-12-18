@@ -1,24 +1,28 @@
 .ghosts-page-game {
-	width: 100%;
 	font-family: Underdog;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
 
 	.ghosts-content {
 		display: grid;
 		grid-template-areas:
 			"head content "
-			"question content"
-			"question button";
-		align-items: center;
+			"question content";
 		justify-items: center;
+		align-items: center;
 		gap: 20px;
 
 		width: 100%;
+		height: 100%;
 
 		.ghosts-head {
 			grid-area: head;
 			max-width: 320px;
 			width: 100%;
-			height: 190px;
+			height: 250px;
 			overflow: hidden;
 			border-radius: 20px;
 
@@ -26,6 +30,7 @@
 				max-width: 100%;
 				width: 100%;
 				object-fit: cover;
+				border-radius: 20px;
 			}
 		}
 
@@ -78,8 +83,6 @@
 				.card-img-ghost {
 					position: absolute;
 					max-width: 230px;
-					// width: 100%;
-					// height: 100%;
 					top: 0;
 					left: 0;
 					z-index: 0;
@@ -133,28 +136,20 @@
 				}
 			}
 		}
+	}
 
-		.ghost-button-block {
-			grid-area: button;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+	.ghost-button-block {
+		padding-right: 20px;
+		display: flex;
+		justify-content: end;
 
-			.ghost-button-next-round {
-				padding: 10px 20px;
+		.ghost-button-next-round {
+			cursor: pointer;
+			max-width: 80px;
 
-				border-radius: 50px;
-
-				font-family: "Underdog";
-				font-weight: 400;
-				font-size: 24px;
-
-				color: rgba(255, 255, 255, 1);
-				text-shadow: rgb(255, 255, 255) 1px 0 10px;
-				background: transparent;
-
-				box-shadow: 0 0 3px 3px rgb(255, 255, 255);
-				cursor: pointer;
+			img {
+				max-width: 80px;
+				width: 100%;
 			}
 		}
 	}

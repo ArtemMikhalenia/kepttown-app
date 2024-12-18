@@ -7,9 +7,7 @@ const Header = () => {
 	const location = useLocation();
 	const currentLocation: string = location.pathname.slice(1);
 
-	useEffect(() => {
-		console.log(currentLocation);
-	}, [location]);
+	useEffect(() => {}, [location]);
 
 	const headerLocations = ["", "ghostspage", "ghostspage/ghost"];
 
@@ -19,9 +17,7 @@ const Header = () => {
 				<header
 					className="header"
 					style={{ cursor: "url(snowflake-cursor.svg),auto" }}
-				>
-					{/* Добро пожаловать в мир ужасов! */}
-				</header>
+				></header>
 			)}
 		</>
 	);

@@ -49,7 +49,7 @@ const MapPage = () => {
 		},
 		{
 			className: "fortune",
-			link: "/fortunegame",
+			link: "/fortunegame/fortune-video",
 			classNameImg: "fortune-image",
 			id: "fortune",
 			src: fortuneImg,

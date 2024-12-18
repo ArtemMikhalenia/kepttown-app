@@ -20,7 +20,7 @@ import BayGame4Layout from "../BayGame4Layout/BayGame4Layout";
 import FrontPage from "../../pages/FrontPage/FrontPage";
 import MapPage from "../../pages/MapPage/MapPage";
 import NextPage from "../../pages/NextPage/NextPage";
-import NowPage from "../../pages/NowPage/NowPage";
+// import NowPage from "../../pages/NowPage/NowPage";
 import GhostsPage from "../../pages/GhostsPage/GhostsPage";
 import PotionsPage from "../../pages/PotionsPage/PotionsPage";
 import FortunePage from "../../pages/FortunePage/FortunePage";
@@ -30,6 +30,9 @@ import BayPageRound1 from "../BayPageRound1/BayPageRound1";
 import BayPageRound2 from "../BayPageRound2/BayPageRound2";
 import BayPageRound3 from "../BayPageRound3/BayPageRound3";
 import BayPageRound4 from "../BayPageRound4/BayPageRound4";
+import JobsPage from "../../pages/JobsPage/JobsPage";
+import MillennialsPage from "../../pages/MillennialsPage/MillennialsPage";
+import ZoomersPage from "../../pages/ZoomersPage/ZoomersPage";
 
 import { TailSpin } from "react-loading-icons";
 
@@ -71,6 +74,7 @@ import {
 	bayDataRound2Team3,
 	bayDataRound4,
 } from "../../data/bayData";
+import NowPage from "../../pages/NowPage/NowPage";
 
 const ghostsDataLevels = [
 	ghostsDataLvl1,
@@ -202,7 +206,7 @@ const router = createBrowserRouter(
 				<Route
 					path="bay-video"
 					element={
-						<VideoPage url="https://youtu.be/UdIF5lpnxPA?si=p17NoHFnQxunO5vf" />
+						<VideoPage url="https://youtu.be/JoDypYhwlcA?si=WELdZfV-IOeVee3f" />
 					}
 				/>
 				<Route path="round1" element={<BayGame1Layout />}>
@@ -231,17 +235,15 @@ const router = createBrowserRouter(
 				</Route>
 				<Route
 					path="nextpage"
-					element={<NextPage title="Поздравления именинников" />}
+					element={<NextPage title="Поздравления именинников" url="/map" />}
 				/>
 			</Route>
-			{/* <Route path="nextpage" element={<NextPage />} /> */}
-			<Route path="nowpage" element={<NowPage />} />
 			<Route path="fortunegame" element={<FortunePageLayout />}>
 				<Route index element={<FortunePage />} />
 				<Route
 					path="fortune-video"
 					element={
-						<VideoPage url="https://www.youtube.com/watch?v=FoSgDtqb0Zc" />
+						<VideoPage url="https://www.youtube.com/watch?v=A1agUoAGCnc" />
 					}
 				/>
 				<Route
@@ -251,16 +253,33 @@ const router = createBrowserRouter(
 							<FortunePageGame />
 						</Suspense>
 					}
-				>
-					<Route path="baby-boomers" element={<FortunePageGame />} />
-					<Route path="generationX" element={<FortunePageGame />} />
-					<Route path="millennials" element={<FortunePageGame />} />
-					<Route path="zoomers" element={<FortunePageGame />} />
-				</Route>
+				/>
+				<Route path="millennials" element={<MillennialsPage />} />
+				<Route path="zoomers" element={<ZoomersPage />} />
+				<Route
+					path="nextpage"
+					element={<NextPage title="Дом с призраками" url="/map" />}
+				/>
+				<Route path="stevejobs" element={<JobsPage />} />
 			</Route>
 			<Route path="ghostsgame" element={<GhostsPageLayout />}>
 				<Route index element={<GhostsPage />} />
 				{generateGhostRoutes(ghostsDataLevels)}
+				<Route
+					path="nowpage"
+					element={
+						<NowPage
+							title="Подсчет знатоков призраков"
+							url="/ghostsgame/nextpage"
+						/>
+					}
+				/>
+				<Route
+					path="nextpage"
+					element={
+						<NextPage title="Поздравление от кучерявой бабушки" url="/map" />
+					}
+				/>
 			</Route>
 			<Route path="potionsgame" element={<PotionsPageLayout />}>
 				<Route index element={<PotionsPage />} />
