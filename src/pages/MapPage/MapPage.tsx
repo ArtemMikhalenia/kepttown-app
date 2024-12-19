@@ -80,12 +80,12 @@ const MapPage = () => {
 			alt: "tavern-image",
 		},
 		{
-			className: "zoo",
-			link: "/nextpage",
+			className: "beasts",
+			link: "/beastsgame",
 			classNameImg: "zoo-image",
-			id: "zoo",
+			id: "beasts",
 			src: zooImg,
-			alt: "zoo-image",
+			alt: "beasts-image",
 		},
 		{
 			className: "christmas-tree",

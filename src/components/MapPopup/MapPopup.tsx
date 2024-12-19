@@ -23,7 +23,7 @@ const MapPopup = ({ name, isHovered }: MapPopupTypes) => {
 		case "tavern":
 			name = 'Страўня "Сябры"';
 			break;
-		case "zoo":
+		case "beasts":
 			name = "Зоопарк";
 			break;
 		case "christmas-tree":

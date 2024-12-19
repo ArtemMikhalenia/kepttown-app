@@ -67,6 +67,7 @@ const BayPageRound1Game = () => {
 									duration: 1,
 								},
 							}}
+							whileHover={{ scale: 1.1 }}
 							exit={{ opacity: 0, scale: 1, transition: { duration: 0.5 } }}
 						>
 							<img

@@ -59,7 +59,8 @@ const BayPageRound2Game = () => {
 							initial={{ opacity: 0, scale: 0 }}
 							animate={{
 								opacity: 1,
-								scale: 1,
+								scale: element.clicked ? 1.8 : 1,
+								zIndex: element.clicked ? 4 : 1,
 								transition: {
 									type: "spring",
 									stiffness: 200,
@@ -67,7 +68,6 @@ const BayPageRound2Game = () => {
 									duration: 1,
 								},
 							}}
-							whileHover={{ scale: 1.8, zIndex: 4 }}
 							exit={{ opacity: 0, scale: 1, transition: { duration: 0.5 } }}
 						>
 							<img

@@ -5,11 +5,30 @@ import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import "./baypageround4game.scss";
 
 import { BayRound4Card } from "../../interfaces/interfaces";
+import { useState } from "react";
+
+// export interface BayRound4Card {
+// 	index: number;
+// 	url: string;
+// 	clicked: boolean;
+// }
 
 type BayRound4Data = BayRound4Card[];
 
 const BayPageRound4Game = () => {
 	const roundCard = useLoaderData() as BayRound4Data;
+	const [videos, setVideos] = useState<BayRound4Card[]>(roundCard);
+
+	const toggleVideo = (id: string) => {
+		setVideos((prevVideo) => {
+			return prevVideo.map((video) => {
+				if (video.id === id) {
+					return { ...video, clicked: !video.clicked };
+				}
+				return video;
+			});
+		});
+	};
 
 	return (
 		<motion.div
@@ -29,11 +48,12 @@ const BayPageRound4Game = () => {
 					Раунд 4. Смотри в оба
 				</motion.div>
 				<div className="bay-round4-game-cards">
-					{roundCard.map((element) => (
+					{videos.map((element) => (
 						<motion.div
 							className="bay-round4-game-card"
 							key={element.index}
 							initial={{ opacity: 0, scale: 0 }}
+							onClick={() => toggleVideo(element.id)}
 							animate={{
 								opacity: 1,
 								scale: 1,
@@ -44,6 +64,7 @@ const BayPageRound4Game = () => {
 									duration: 1,
 								},
 							}}
+							style={{ filter: element.clicked ? "blur(0px)" : "blur(15px)" }}
 							exit={{ opacity: 0, scale: 1, transition: { duration: 0.5 } }}
 						>
 							<VideoPlayer url={element.url} />

@@ -1,0 +1,29 @@
+.beasts-page-container {
+	width: 100%;
+	text-align: center;
+
+	.beasts-button-container {
+		display: inline-block;
+
+		.beasts-button-link {
+			text-decoration: none;
+
+			.beasts-button-start {
+				display: block;
+				padding: 10px 20px;
+
+				border-radius: 50px;
+
+				font-family: "Underdog";
+				font-weight: 400;
+				font-size: 40px;
+
+				color: rgba(255, 255, 255, 1);
+				text-shadow: rgba(255, 255, 255, 1) 1px 0 10px;
+
+				box-shadow: 0 0 3px 3px rgba(255, 255, 255, 1);
+				background-color: rgba(54, 10, 33, 1);
+			}
+		}
+	}
+}

@@ -16,11 +16,12 @@ import BayGame1Layout from "../BayGame1Layout/BayGame1Layout";
 import BayGame2Layout from "../BayGame2Layout/BayGame2Layout";
 import BayGame3Layout from "../BayGame3Layout/BayGame3Layout";
 import BayGame4Layout from "../BayGame4Layout/BayGame4Layout";
+import BeastsPageLayout from "../BeastsPageLayout/BeastsPageLayout";
 
 import FrontPage from "../../pages/FrontPage/FrontPage";
 import MapPage from "../../pages/MapPage/MapPage";
 import NextPage from "../../pages/NextPage/NextPage";
-// import NowPage from "../../pages/NowPage/NowPage";
+import NowPage from "../../pages/NowPage/NowPage";
 import GhostsPage from "../../pages/GhostsPage/GhostsPage";
 import PotionsPage from "../../pages/PotionsPage/PotionsPage";
 import FortunePage from "../../pages/FortunePage/FortunePage";
@@ -33,6 +34,7 @@ import BayPageRound4 from "../BayPageRound4/BayPageRound4";
 import JobsPage from "../../pages/JobsPage/JobsPage";
 import MillennialsPage from "../../pages/MillennialsPage/MillennialsPage";
 import ZoomersPage from "../../pages/ZoomersPage/ZoomersPage";
+import BeastsPage from "../../pages/BeastsPage/BeastsPage";
 
 import { TailSpin } from "react-loading-icons";
 
@@ -40,6 +42,7 @@ import {
 	PotionData,
 	GhostsData,
 	BayRound1Round,
+	BeastsData,
 } from "../../interfaces/interfaces";
 
 import {
@@ -74,7 +77,16 @@ import {
 	bayDataRound2Team3,
 	bayDataRound4,
 } from "../../data/bayData";
-import NowPage from "../../pages/NowPage/NowPage";
+
+import {
+	beastsDataLvl1,
+	beastsDataLvl2,
+	beastsDataLvl3,
+	beastsDataLvl4,
+	beastsDataLvl5,
+	beastsDataLvl6,
+	beastsDataLvl7,
+} from "../../data/beastsData";
 
 const ghostsDataLevels = [
 	ghostsDataLvl1,
@@ -111,6 +123,16 @@ const bayDataRound2Teams = [
 	bayDataRound2Team3,
 ];
 
+const beastsDataLevels = [
+	beastsDataLvl1,
+	beastsDataLvl2,
+	beastsDataLvl3,
+	beastsDataLvl4,
+	beastsDataLvl5,
+	beastsDataLvl6,
+	beastsDataLvl7,
+];
+
 const GhostsPageGame = lazy(() => import("../GhostsPageGame/GhostsPageGame"));
 const PotionsPageGame = lazy(
 	() => import("../PotionsPageGame/PotionsPageGame")
@@ -127,6 +149,7 @@ const BayPageRound4Game = lazy(
 const FortunePageGame = lazy(
 	() => import("../FortunePageGame/FortunePageGame")
 );
+const BeastsPageGame = lazy(() => import("../BeastsPageGame/BeastsPageGame"));
 
 const generateGhostRoutes = (levelsData: GhostsData[]) => {
 	return levelsData.map((data, index) => (
@@ -190,6 +213,23 @@ const generateBayRound2Routes = (levelsData: BayRound1Round[]) => {
 			element={
 				<Suspense fallback={<TailSpin />}>
 					<BayPageRound2Game />
+				</Suspense>
+			}
+		/>
+	));
+};
+
+const generateBeastsRoutes = (levelsData: BeastsData[]) => {
+	return levelsData.map((data, index) => (
+		<Route
+			key={`beasts-level-${index + 1}`}
+			path={`level${index + 1}`}
+			loader={() => {
+				return data;
+			}}
+			element={
+				<Suspense fallback={<TailSpin />}>
+					<BeastsPageGame />
 				</Suspense>
 			}
 		/>
@@ -276,14 +316,29 @@ const router = createBrowserRouter(
 				/>
 				<Route
 					path="nextpage"
-					element={
-						<NextPage title="Поздравление от кучерявой бабушки" url="/map" />
-					}
+					element={<NextPage title="Поздравление от кого-то там" url="/map" />}
 				/>
 			</Route>
 			<Route path="potionsgame" element={<PotionsPageLayout />}>
 				<Route index element={<PotionsPage />} />
 				{generatePotionsRoutes(potionsDataLevels)}
+			</Route>
+			<Route path="beastsgame" element={<BeastsPageLayout />}>
+				<Route index element={<BeastsPage />} />
+				{generateBeastsRoutes(beastsDataLevels)}
+				<Route
+					path="nowpage"
+					element={
+						<NowPage
+							title="Поиск лучшего детектива"
+							url="/beastsgame/nextpage"
+						/>
+					}
+				/>
+				<Route
+					path="nextpage"
+					element={<NextPage title="Поздравление от кого-то там" url="/map" />}
+				/>
 			</Route>
 		</Route>
 	)

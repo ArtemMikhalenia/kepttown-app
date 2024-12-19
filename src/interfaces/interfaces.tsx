@@ -57,5 +57,21 @@ export interface BayRound2Round {
 
 export interface BayRound4Card {
 	index: number;
+	id: string;
 	url: string;
+	clicked: boolean;
+}
+
+export interface BeastsCard {
+	index: number;
+	id: string;
+	classNameCard: string;
+	src: string;
+	alt: string;
+	clicked: boolean;
+	correct: boolean;
+}
+export interface BeastsData {
+	level: number;
+	levelCards: BeastsCard[];
 }

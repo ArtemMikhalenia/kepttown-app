@@ -19,7 +19,14 @@ import bayRound2Background from "../../assets/images/bay-page/backgrounds/round2
 import bayRound3Background from "../../assets/images/bay-page/backgrounds/round3.webp";
 import bayRound4Background from "../../assets/images/bay-page/backgrounds/round4.webp";
 import jobsBackground from "../../assets/images/fortune-page/jobs-background.webp";
-
+import beastsBackground from "../../assets/images/backgrounds/beasts-background.webp";
+import beastsLvl1Background from "../../assets/images/beasts-page/level1/zastavka1.webp";
+import beastsLvl2Background from "../../assets/images/beasts-page/level2/zastavka2.webp";
+import beastsLvl3Background from "../../assets/images/beasts-page/level3/zastavka3.webp";
+import beastsLvl4Background from "../../assets/images/beasts-page/level4/zastavka4.webp";
+import beastsLvl5Background from "../../assets/images/beasts-page/level5/zastavka5.webp";
+import beastsLvl6Background from "../../assets/images/beasts-page/level6/zastavka6.webp";
+import beastsLvl7Background from "../../assets/images/beasts-page/level7/zastavka7.webp";
 import millennialsBackground from "../../assets/images/fortune-page/millennials.webp";
 import zoomersBackground from "../../assets/images/fortune-page/zoomers.webp";
 
@@ -83,6 +90,8 @@ const Layout = () => {
 		"fortunegame/nextpage",
 		"ghostsgame/nowpage",
 		"ghostsgame/nextpage",
+		"beastsgame/nowpage",
+		"beastsgame/nextpage",
 	];
 
 	useEffect(() => {
@@ -132,6 +141,30 @@ const Layout = () => {
 		} else if (currentLocation === "fortunegame/stevejobs") {
 			setBackground(jobsBackground);
 			setSnowfall(false);
+		} else if (currentLocation === "beastsgame") {
+			setBackground(beastsBackground);
+			setSnowfall(true);
+		} else if (currentLocation === "beastsgame/level1") {
+			setBackground(beastsLvl1Background);
+			setSnowfall(true);
+		} else if (currentLocation === "beastsgame/level2") {
+			setBackground(beastsLvl2Background);
+			setSnowfall(true);
+		} else if (currentLocation === "beastsgame/level3") {
+			setBackground(beastsLvl3Background);
+			setSnowfall(true);
+		} else if (currentLocation === "beastsgame/level4") {
+			setBackground(beastsLvl4Background);
+			setSnowfall(true);
+		} else if (currentLocation === "beastsgame/level5") {
+			setBackground(beastsLvl5Background);
+			setSnowfall(true);
+		} else if (currentLocation === "beastsgame/level6") {
+			setBackground(beastsLvl6Background);
+			setSnowfall(true);
+		} else if (currentLocation === "beastsgame/level7") {
+			setBackground(beastsLvl7Background);
+			setSnowfall(true);
 		}
 	}, [location]);
 
