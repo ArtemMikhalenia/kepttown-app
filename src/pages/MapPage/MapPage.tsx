@@ -13,6 +13,7 @@ import researchCenterImg from "../../assets/images/map-page/research-center.png"
 import tavernImg from "../../assets/images/map-page/tavern.png";
 import zooImg from "../../assets/images/map-page/zoo.png";
 import christmasTreeImg from "../../assets/images/map-page/christmas-tree.png";
+import mountainImg from "../../assets/images/map-page/mountain.png";
 
 import mapImg from "../../assets/images/map-page/map-image.webp";
 import { useState } from "react";
@@ -73,7 +74,7 @@ const MapPage = () => {
 		},
 		{
 			className: "tavern",
-			link: "/nextpage",
+			link: "/taverngame/tavern-video",
 			classNameImg: "tavern-image",
 			id: "tavern",
 			src: tavernImg,
@@ -94,6 +95,14 @@ const MapPage = () => {
 			id: "christmas-tree",
 			src: christmasTreeImg,
 			alt: "christmas-tree-image",
+		},
+		{
+			className: "mountain",
+			link: "/mountain",
+			classNameImg: "mountain-image",
+			id: "mountain",
+			src: mountainImg,
+			alt: "mountain-image",
 		},
 	];
 

@@ -1,0 +1,28 @@
+.tavern-page-container {
+	width: 100%;
+	text-align: center;
+
+	.tavern-button-container {
+		display: inline-block;
+
+		.tavern-button-link {
+			text-decoration: none;
+
+			.tavern-button-start {
+				display: block;
+				padding: 0px 20px;
+
+				border-radius: 20px;
+
+				font-weight: 600;
+				font-size: 50px;
+
+				color: rgba(255, 255, 255, 1);
+				text-shadow: rgb(255, 255, 255) 1px 0 10px;
+				background-color: rgba(73, 29, 11, 1);
+
+				box-shadow: 0 0 3px 3px rgb(255, 255, 255);
+			}
+		}
+	}
+}

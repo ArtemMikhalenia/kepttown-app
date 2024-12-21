@@ -1,0 +1,604 @@
+.tavern-page-game {
+	font-family: Underdog;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	.tavern-content {
+		position: relative;
+		bottom: -200px;
+		max-width: 1200px;
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+
+		background-image: url("../../assets/images/tavern-page/table.png");
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		.tavern-dishes {
+			position: relative;
+			width: 100%;
+			height: 100%;
+
+			.nalisniki-container {
+				position: absolute;
+				width: 250px;
+				height: 150px;
+				top: 150px;
+				left: 50px;
+				z-index: 3;
+				cursor: pointer;
+
+				.tavern-dish-content {
+					position: relative;
+					width: 100%;
+					height: 100%;
+
+					.nalisniki-dish {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+					}
+
+					.food-cap-container {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						opacity: 1;
+						transition: all 0.5s ease 0s;
+
+						.food-cap {
+							position: absolute;
+							width: 100%;
+							top: -70px;
+							left: 0;
+						}
+
+						.food-cap-number {
+							position: relative;
+							width: 65px;
+							height: 65px;
+							border-radius: 50%;
+							border: 2px solid rgba(0, 0, 0, 1);
+							background-color: rgba(255, 255, 255, 1);
+							text-align: center;
+						}
+
+						&.active {
+							opacity: 0;
+							transform: translateY(-1000%);
+						}
+					}
+				}
+			}
+
+			.shkvarki-container {
+				position: absolute;
+				width: 250px;
+				height: 150px;
+				top: 400px;
+				left: 600px;
+				z-index: 5;
+				cursor: pointer;
+
+				.tavern-dish-content {
+					position: relative;
+					width: 100%;
+					height: 100%;
+
+					.shkvarki-dish {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+					}
+
+					.food-cap-container {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						opacity: 1;
+						transition: all 0.5s ease 0s;
+
+						.food-cap {
+							position: absolute;
+							width: 105%;
+							top: -70px;
+							left: -10px;
+						}
+						.food-cap-number {
+							position: relative;
+							top: 20px;
+							width: 65px;
+							height: 65px;
+							border-radius: 50%;
+							border: 2px solid rgba(0, 0, 0, 1);
+							background-color: rgba(255, 255, 255, 1);
+							text-align: center;
+						}
+
+						&.active {
+							opacity: 0;
+							transform: translateY(-1000%);
+						}
+					}
+				}
+			}
+
+			.holodnik-container {
+				position: absolute;
+				width: 250px;
+				height: 160px;
+				top: 310px;
+				left: 850px;
+				z-index: 5;
+				cursor: pointer;
+
+				.tavern-dish-content {
+					position: relative;
+					width: 100%;
+					height: 100%;
+
+					.holodnik-dish {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+					}
+					.food-cap-container {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						opacity: 1;
+						transition: all 0.5s ease 0s;
+
+						.food-cap {
+							position: absolute;
+							width: 110%;
+							top: -60px;
+							left: -10px;
+						}
+
+						.food-cap-number {
+							position: relative;
+							top: 40px;
+							width: 65px;
+							height: 65px;
+							border-radius: 50%;
+							border: 2px solid rgba(0, 0, 0, 1);
+							background-color: rgba(255, 255, 255, 1);
+							text-align: center;
+						}
+
+						&.active {
+							opacity: 0;
+							transform: translateY(-1000%);
+						}
+					}
+				}
+			}
+
+			.kolduny-container {
+				position: absolute;
+				width: 200px;
+				height: 150px;
+				top: 55px;
+				left: 730px;
+				z-index: 2;
+				cursor: pointer;
+
+				.tavern-dish-content {
+					position: relative;
+					width: 100%;
+					height: 100%;
+
+					.kolduny-dish {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+					}
+
+					.food-cap-container {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						opacity: 1;
+						transition: all 0.5s ease 0s;
+
+						.food-cap {
+							position: absolute;
+							width: 110%;
+							top: -40px;
+							left: -10px;
+						}
+
+						.food-cap-number {
+							position: relative;
+							top: 30px;
+							width: 65px;
+							height: 65px;
+							border-radius: 50%;
+							border: 2px solid rgba(0, 0, 0, 1);
+							background-color: rgba(255, 255, 255, 1);
+							text-align: center;
+						}
+
+						&.active {
+							opacity: 0;
+							transform: translateY(-1000%);
+						}
+					}
+				}
+			}
+
+			.babka-container {
+				position: absolute;
+				width: 250px;
+				height: 200px;
+				top: 110px;
+				left: 900px;
+				z-index: 3;
+				cursor: pointer;
+
+				.tavern-dish-content {
+					position: relative;
+					width: 100%;
+					height: 100%;
+
+					.babka-dish {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+					}
+
+					.food-cap-container {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						opacity: 1;
+						transition: all 0.5s ease 0s;
+
+						.food-cap {
+							position: absolute;
+							width: 110%;
+							top: -30px;
+							left: -10px;
+						}
+
+						.food-cap-number {
+							position: relative;
+							top: 60px;
+							width: 65px;
+							height: 65px;
+							border-radius: 50%;
+							border: 2px solid rgba(0, 0, 0, 1);
+							background-color: rgba(255, 255, 255, 1);
+							text-align: center;
+						}
+
+						&.active {
+							opacity: 0;
+							transform: translateY(-1000%);
+						}
+					}
+				}
+			}
+
+			.chepeliny-container {
+				position: absolute;
+				width: 250px;
+				height: 170px;
+				top: 330px;
+				left: 50px;
+				z-index: 4;
+				cursor: pointer;
+
+				.tavern-dish-content {
+					position: relative;
+					width: 100%;
+					height: 100%;
+
+					.chepeliny-dish {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+					}
+
+					.food-cap-container {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						opacity: 1;
+						transition: all 0.5s ease 0s;
+
+						.food-cap {
+							position: absolute;
+							width: 110%;
+							top: -50px;
+							left: -10px;
+						}
+
+						.food-cap-number {
+							position: relative;
+							top: 40px;
+							width: 65px;
+							height: 65px;
+							border-radius: 50%;
+							border: 2px solid rgba(0, 0, 0, 1);
+							background-color: rgba(255, 255, 255, 1);
+							text-align: center;
+						}
+
+						&.active {
+							opacity: 0;
+							transform: translateY(-1000%);
+						}
+					}
+				}
+			}
+
+			.machanka-container {
+				position: absolute;
+				width: 250px;
+				height: 150px;
+				top: 400px;
+				left: 310px;
+				z-index: 5;
+				cursor: pointer;
+
+				.tavern-dish-content {
+					position: relative;
+					width: 100%;
+					height: 100%;
+
+					.machanka-dish {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+					}
+
+					.food-cap-container {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						opacity: 1;
+						transition: all 0.5s ease 0s;
+
+						.food-cap {
+							position: absolute;
+							width: 105%;
+							top: -70px;
+							left: -5px;
+						}
+
+						.food-cap-number {
+							position: relative;
+							top: 20px;
+							width: 65px;
+							height: 65px;
+							border-radius: 50%;
+							border: 2px solid rgba(0, 0, 0, 1);
+							background-color: rgba(255, 255, 255, 1);
+							text-align: center;
+						}
+
+						&.active {
+							opacity: 0;
+							transform: translateY(-1000%);
+						}
+					}
+				}
+			}
+
+			.kulaga-container {
+				position: absolute;
+				width: 300px;
+				height: 180px;
+				top: 195px;
+				left: 550px;
+				z-index: 4;
+				cursor: pointer;
+
+				.tavern-dish-content {
+					position: relative;
+					width: 100%;
+					height: 100%;
+
+					.kulaga-dish {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+					}
+
+					.food-cap-container {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						opacity: 1;
+						transition: all 0.5s ease 0s;
+
+						.food-cap {
+							position: absolute;
+							width: 110%;
+							top: -80px;
+							left: -10px;
+						}
+
+						.food-cap-number {
+							position: relative;
+							top: 40px;
+							width: 65px;
+							height: 65px;
+							border-radius: 50%;
+							border: 2px solid rgba(0, 0, 0, 1);
+							background-color: rgba(255, 255, 255, 1);
+							text-align: center;
+						}
+
+						&.active {
+							opacity: 0;
+							transform: translateY(-1000%);
+						}
+					}
+				}
+			}
+
+			.sbiten-container {
+				position: absolute;
+				width: 150px;
+				height: 170px;
+				top: 160px;
+				left: 350px;
+				z-index: 2;
+				cursor: pointer;
+
+				.tavern-dish-content {
+					position: relative;
+					width: 100%;
+					height: 100%;
+
+					.sbiten-dish {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+					}
+
+					.food-cap-container {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						opacity: 1;
+						transition: all 0.5s ease 0s;
+
+						.food-cap {
+							position: absolute;
+							width: 160%;
+							top: -30px;
+							left: -40px;
+						}
+
+						.food-cap-number {
+							position: relative;
+							top: 50px;
+							width: 65px;
+							height: 65px;
+							border-radius: 50%;
+							border: 2px solid rgba(0, 0, 0, 1);
+							background-color: rgba(255, 255, 255, 1);
+							text-align: center;
+						}
+
+						&.active {
+							opacity: 0;
+							transform: translateY(-1000%);
+						}
+					}
+				}
+			}
+
+			.starka-container {
+				position: absolute;
+				width: 100px;
+				height: 200px;
+				top: -50px;
+				left: 560px;
+				z-index: 1;
+				cursor: pointer;
+
+				.tavern-dish-content {
+					position: relative;
+					width: 100%;
+					height: 100%;
+
+					.starka-dish {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+					}
+
+					.food-cap-container {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						cursor: pointer;
+						opacity: 1;
+						transition: all 0.5s ease 0s;
+
+						.food-cap {
+							position: absolute;
+							width: 270%;
+							top: -30px;
+							left: -70px;
+						}
+
+						.food-cap-number {
+							position: relative;
+							top: 40px;
+							left: 15px;
+							width: 65px;
+							height: 65px;
+							border-radius: 50%;
+							border: 2px solid rgba(0, 0, 0, 1);
+							background-color: rgba(255, 255, 255, 1);
+							text-align: center;
+						}
+
+						&.active {
+							opacity: 0;
+							transform: translateY(-1000%);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.tavern-button-block {
+		position: relative;
+		padding-right: 20px;
+		display: flex;
+		justify-content: end;
+
+		.tavern-button-next {
+			cursor: pointer;
+			max-width: 80px;
+
+			img {
+				max-width: 80px;
+				width: 100%;
+			}
+		}
+	}
+}

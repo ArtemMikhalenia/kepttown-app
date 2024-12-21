@@ -8,6 +8,7 @@ import { lazy, Suspense } from "react";
 import { AnimatePresence } from "motion/react";
 
 import Layout from "../Layout/Layout";
+import FrontPageLayout from "../FrontPageLayout/FrontPageLayout";
 import GhostsPageLayout from "../GhostsPageLayout/GhostsPageLayout";
 import PotionsPageLayout from "../PotionsPageLayout/PotionsPageLayout";
 import FortunePageLayout from "../FortunePageLayout/FortunePageLayout";
@@ -17,6 +18,7 @@ import BayGame2Layout from "../BayGame2Layout/BayGame2Layout";
 import BayGame3Layout from "../BayGame3Layout/BayGame3Layout";
 import BayGame4Layout from "../BayGame4Layout/BayGame4Layout";
 import BeastsPageLayout from "../BeastsPageLayout/BeastsPageLayout";
+import TavernLayout from "../TavernPageLayout/TavernPageLayout";
 
 import FrontPage from "../../pages/FrontPage/FrontPage";
 import MapPage from "../../pages/MapPage/MapPage";
@@ -35,6 +37,7 @@ import JobsPage from "../../pages/JobsPage/JobsPage";
 import MillennialsPage from "../../pages/MillennialsPage/MillennialsPage";
 import ZoomersPage from "../../pages/ZoomersPage/ZoomersPage";
 import BeastsPage from "../../pages/BeastsPage/BeastsPage";
+import TavernPage from "../../pages/TavernPage/TavernPage";
 
 import { TailSpin } from "react-loading-icons";
 
@@ -87,6 +90,8 @@ import {
 	beastsDataLvl6,
 	beastsDataLvl7,
 } from "../../data/beastsData";
+
+import { tavernData } from "../../data/tavernData";
 
 const ghostsDataLevels = [
 	ghostsDataLvl1,
@@ -150,6 +155,7 @@ const FortunePageGame = lazy(
 	() => import("../FortunePageGame/FortunePageGame")
 );
 const BeastsPageGame = lazy(() => import("../BeastsPageGame/BeastsPageGame"));
+const TavernPageGame = lazy(() => import("../TavernPageGame/TavernPageGame"));
 
 const generateGhostRoutes = (levelsData: GhostsData[]) => {
 	return levelsData.map((data, index) => (
@@ -239,14 +245,28 @@ const generateBeastsRoutes = (levelsData: BeastsData[]) => {
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path="/" element={<Layout />}>
-			<Route index element={<FrontPage />} />
+			<Route element={<FrontPageLayout />}>
+				<Route index element={<FrontPage />} />
+				<Route
+					path="front-video"
+					element={
+						<VideoPage
+							url="https://www.youtube.com/watch?v=0AzEO3DWWuA"
+							link="/map"
+						/>
+					}
+				/>
+			</Route>
 			<Route path="map" element={<MapPage />} />
 			<Route path="bay" element={<BayPageLayout />}>
 				<Route index element={<BayPage />} />
 				<Route
 					path="bay-video"
 					element={
-						<VideoPage url="https://youtu.be/JoDypYhwlcA?si=WELdZfV-IOeVee3f" />
+						<VideoPage
+							url="https://youtu.be/JoDypYhwlcA?si=WELdZfV-IOeVee3f"
+							link="/bay"
+						/>
 					}
 				/>
 				<Route path="round1" element={<BayGame1Layout />}>
@@ -283,7 +303,10 @@ const router = createBrowserRouter(
 				<Route
 					path="fortune-video"
 					element={
-						<VideoPage url="https://www.youtube.com/watch?v=A1agUoAGCnc" />
+						<VideoPage
+							url="https://www.youtube.com/watch?v=A1agUoAGCnc"
+							link="/fortunegame"
+						/>
 					}
 				/>
 				<Route
@@ -322,6 +345,19 @@ const router = createBrowserRouter(
 			<Route path="potionsgame" element={<PotionsPageLayout />}>
 				<Route index element={<PotionsPage />} />
 				{generatePotionsRoutes(potionsDataLevels)}
+				<Route
+					path="nowpage"
+					element={
+						<NowPage
+							title="Поиск искусного зельевара"
+							url="/potionsgame/nextpage"
+						/>
+					}
+				/>
+				<Route
+					path="nextpage"
+					element={<NextPage title="Поздравление от кого-то там" url="/map" />}
+				/>
 			</Route>
 			<Route path="beastsgame" element={<BeastsPageLayout />}>
 				<Route index element={<BeastsPage />} />
@@ -338,6 +374,27 @@ const router = createBrowserRouter(
 				<Route
 					path="nextpage"
 					element={<NextPage title="Поздравление от кого-то там" url="/map" />}
+				/>
+			</Route>
+			<Route path="taverngame" element={<TavernLayout />}>
+				<Route index element={<TavernPage />} />
+				<Route
+					path="tavern-video"
+					element={
+						<VideoPage
+							url="https://youtu.be/EWEM6j4d5hY?si=iJJ0icn5QbD5rjKt"
+							link="/taverngame"
+						/>
+					}
+				/>
+				<Route
+					path="game"
+					loader={() => tavernData}
+					element={
+						<Suspense fallback={<TailSpin />}>
+							<TavernPageGame />
+						</Suspense>
+					}
 				/>
 			</Route>
 		</Route>

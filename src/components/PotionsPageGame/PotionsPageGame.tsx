@@ -40,8 +40,8 @@ const PotionsPageGame = () => {
 
 	const isLastRound = round.round === 7;
 
-	let winAudio = new Audio(winSound);
-	let lostAudio = new Audio(lostSound);
+	const winAudio = new Audio(winSound);
+	const lostAudio = new Audio(lostSound);
 
 	useEffect(() => {
 		setPotions(round.roundItems);
@@ -184,7 +184,11 @@ const PotionsPageGame = () => {
 						Проверить ответ
 					</motion.button>
 					<Link
-						to={isLastRound ? "/map" : `/potionsgame/round${round.round + 1}`}
+						to={
+							isLastRound
+								? "/potionsgame/nowpage"
+								: `/potionsgame/round${round.round + 1}`
+						}
 					>
 						<motion.button
 							className="potions-next-round"

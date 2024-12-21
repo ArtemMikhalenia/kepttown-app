@@ -1,5 +1,8 @@
 import ReactPlayer from "react-player";
-import { VideoProps } from "../../pages/VideoPage/VideoPage";
+
+export type VideoProps = {
+	url: string;
+};
 
 const VideoPlayer = ({ url }: VideoProps) => {
 	return (

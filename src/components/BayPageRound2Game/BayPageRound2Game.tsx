@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useLoaderData, useLocation, Link } from "react-router-dom";
 
 import "./baypageround2game.scss";
-import mermaidIcon from "../../assets/images/icons/footer/mermaid.png";
+import mermaidIcon from "../../assets/images/icons/mermaid.png";
 import { BayRound2Card, BayRound2Round } from "../../interfaces/interfaces";
 
 type BayRound2Data = BayRound2Round;

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { useLoaderData, Link } from "react-router-dom";
-import mermaidIcon from "../../assets/images/icons/footer/mermaid.png";
+import mermaidIcon from "../../assets/images/icons/mermaid.png";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import "./baypageround4game.scss";
 

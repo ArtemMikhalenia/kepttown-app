@@ -27,7 +27,10 @@ const MapPopup = ({ name, isHovered }: MapPopupTypes) => {
 			name = "Зоопарк";
 			break;
 		case "christmas-tree":
-			name = "Главная ёлка Kepttown";
+			name = "Главная ёлка";
+			break;
+		case "mountain":
+			name = "Выгора";
 			break;
 		default:
 	}

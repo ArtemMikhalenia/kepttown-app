@@ -29,6 +29,7 @@ import beastsLvl6Background from "../../assets/images/beasts-page/level6/zastavk
 import beastsLvl7Background from "../../assets/images/beasts-page/level7/zastavka7.webp";
 import millennialsBackground from "../../assets/images/fortune-page/millennials.webp";
 import zoomersBackground from "../../assets/images/fortune-page/zoomers.webp";
+import tavernBackground from "../../assets/images/backgrounds/tavern-background.webp";
 
 import "./layout.scss";
 
@@ -55,7 +56,12 @@ const Layout = () => {
 	const bayRound3Links = ["bay/round3"];
 	const bayRound4Links = ["bay/round4", "bay/round4/video"];
 
-	const videoLinks = ["bay/bay-video", "fortunegame/fortune-video"];
+	const videoLinks = [
+		"bay/bay-video",
+		"fortunegame/fortune-video",
+		"taverngame/tavern-video",
+		"front-video",
+	];
 
 	const fortunePageLinks = ["fortunegame"];
 
@@ -83,6 +89,8 @@ const Layout = () => {
 		"ghostsgame/round10",
 	];
 
+	const tavernPageLinks = ["taverngame", "taverngame/game"];
+
 	const randomPageLinks = [
 		"nextpage",
 		"nowpage",
@@ -92,6 +100,8 @@ const Layout = () => {
 		"ghostsgame/nextpage",
 		"beastsgame/nowpage",
 		"beastsgame/nextpage",
+		"potionsgame/nowpage",
+		"potionsgame/nextpage",
 	];
 
 	useEffect(() => {
@@ -165,6 +175,9 @@ const Layout = () => {
 		} else if (currentLocation === "beastsgame/level7") {
 			setBackground(beastsLvl7Background);
 			setSnowfall(true);
+		} else if (tavernPageLinks.includes(currentLocation)) {
+			setBackground(tavernBackground);
+			setSnowfall(false);
 		}
 	}, [location]);
 

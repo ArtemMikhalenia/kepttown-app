@@ -374,31 +374,19 @@ export const bayDataRound4 = [
 	{
 		index: 4,
 		id: "bay-video-4",
-		url: "https://youtu.be/9PIHxNcjwyg?si=NqUIBZKvkUumbExM",
+		url: "https://youtu.be/xfCeb5pBy1c?si=7UtCiaT87q5tKvH6",
 		clicked: false,
 	},
 	{
 		index: 5,
 		id: "bay-video-5",
-		url: "https://youtu.be/xfCeb5pBy1c?si=7UtCiaT87q5tKvH6",
+		url: "https://youtu.be/6Zvm-v4r0vs?si=Hx14GyT61VUu5YT-",
 		clicked: false,
 	},
 	{
 		index: 6,
 		id: "bay-video-6",
-		url: "https://youtu.be/6Zvm-v4r0vs?si=Hx14GyT61VUu5YT-",
-		clicked: false,
-	},
-	{
-		index: 7,
-		id: "bay-video-7",
-		url: "https://youtu.be/GJ0q-9_WOW8?si=1z3rgbjY0L_wv-9K",
-		clicked: false,
-	},
-	{
-		index: 8,
-		id: "bay-video-8",
-		url: "https://youtu.be/VVbhpGaha28?si=_DokVWfekXL2kflE",
+		url: "https://youtu.be/9PIHxNcjwyg?si=NqUIBZKvkUumbExM",
 		clicked: false,
 	},
 ];
