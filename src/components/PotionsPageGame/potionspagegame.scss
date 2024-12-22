@@ -1,5 +1,22 @@
 .potions-page-game {
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.final-potion-container {
+		margin: 0 auto;
+		display: inline-block;
+		margin: 0 auto;
+
+		img {
+			width: 100%;
+			border-radius: 10px;
+			border: none;
+			animation: shadowAnimation 5s linear infinite;
+			box-shadow: 0 0 145px 145px rgba(0, 0, 0, 1);
+		}
+	}
 
 	.potions-content {
 		display: grid;
@@ -98,6 +115,7 @@
 				left: -10px;
 			}
 		}
+
 		.potions-ingredients {
 			grid-area: content;
 			display: grid;
@@ -143,5 +161,21 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes shadowAnimation {
+	0%,
+	100% {
+		box-shadow: 0 0 15px 15px rgba(0, 0, 0, 1);
+	}
+	25% {
+		box-shadow: 0 0 15px 15px rgba(0, 253, 253, 1);
+	}
+	50% {
+		box-shadow: 0 0 15px 15px rgba(0, 0, 0, 1);
+	}
+	75% {
+		box-shadow: 0 0 15px 15px rgba(9, 255, 0, 1);
 	}
 }

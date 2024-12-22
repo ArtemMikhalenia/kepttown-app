@@ -19,6 +19,7 @@ import BayGame3Layout from "../BayGame3Layout/BayGame3Layout";
 import BayGame4Layout from "../BayGame4Layout/BayGame4Layout";
 import BeastsPageLayout from "../BeastsPageLayout/BeastsPageLayout";
 import TavernLayout from "../TavernPageLayout/TavernPageLayout";
+import ParkPageLayout from "../ParkPageLayout/ParkPageLayout";
 
 import FrontPage from "../../pages/FrontPage/FrontPage";
 import MapPage from "../../pages/MapPage/MapPage";
@@ -38,6 +39,7 @@ import MillennialsPage from "../../pages/MillennialsPage/MillennialsPage";
 import ZoomersPage from "../../pages/ZoomersPage/ZoomersPage";
 import BeastsPage from "../../pages/BeastsPage/BeastsPage";
 import TavernPage from "../../pages/TavernPage/TavernPage";
+import ParkPage from "../../pages/ParkPage/ParkPage";
 
 import { TailSpin } from "react-loading-icons";
 
@@ -92,6 +94,8 @@ import {
 } from "../../data/beastsData";
 
 import { tavernData } from "../../data/tavernData";
+
+import { parkData } from "../../data/parkData";
 
 const ghostsDataLevels = [
 	ghostsDataLvl1,
@@ -156,6 +160,7 @@ const FortunePageGame = lazy(
 );
 const BeastsPageGame = lazy(() => import("../BeastsPageGame/BeastsPageGame"));
 const TavernPageGame = lazy(() => import("../TavernPageGame/TavernPageGame"));
+const ParkPageGame = lazy(() => import("../ParkPageGame/ParkPageGame"));
 
 const generateGhostRoutes = (levelsData: GhostsData[]) => {
 	return levelsData.map((data, index) => (
@@ -339,7 +344,7 @@ const router = createBrowserRouter(
 				/>
 				<Route
 					path="nextpage"
-					element={<NextPage title="Поздравление от кого-то там" url="/map" />}
+					element={<NextPage title="Поздравления отделов" url="/map" />}
 				/>
 			</Route>
 			<Route path="potionsgame" element={<PotionsPageLayout />}>
@@ -356,7 +361,7 @@ const router = createBrowserRouter(
 				/>
 				<Route
 					path="nextpage"
-					element={<NextPage title="Поздравление от кого-то там" url="/map" />}
+					element={<NextPage title="Поздравления отделов" url="/map" />}
 				/>
 			</Route>
 			<Route path="beastsgame" element={<BeastsPageLayout />}>
@@ -373,7 +378,7 @@ const router = createBrowserRouter(
 				/>
 				<Route
 					path="nextpage"
-					element={<NextPage title="Поздравление от кого-то там" url="/map" />}
+					element={<NextPage title="Поздравления отделов" url="/map" />}
 				/>
 			</Route>
 			<Route path="taverngame" element={<TavernLayout />}>
@@ -393,6 +398,31 @@ const router = createBrowserRouter(
 					element={
 						<Suspense fallback={<TailSpin />}>
 							<TavernPageGame />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="nowpage"
+					element={
+						<NowPage
+							title="Поиск истинного гурмана"
+							url="/taverngame/nextpage"
+						/>
+					}
+				/>
+				<Route
+					path="nextpage"
+					element={<NextPage title="Поздравления отделов" url="/map" />}
+				/>
+			</Route>
+			<Route path="parkgame" element={<ParkPageLayout />}>
+				<Route index element={<ParkPage />} />
+				<Route
+					path={"game"}
+					loader={() => parkData}
+					element={
+						<Suspense fallback={<TailSpin />}>
+							<ParkPageGame />
 						</Suspense>
 					}
 				/>

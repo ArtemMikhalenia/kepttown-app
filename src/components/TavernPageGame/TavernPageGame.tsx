@@ -81,14 +81,7 @@ const TavernPageGame = () => {
 				</motion.div>
 			</div>
 			<div className="tavern-button-block">
-				<Link
-					to={
-						// isLastRound
-						// ?
-						"/ghostsgame/nowpage"
-						// : `/ghostsgame/round${ghostCard.round + 1}`
-					}
-				>
+				<Link to="/taverngame/nowpage">
 					<motion.img
 						className="tavern-button-next"
 						initial={{ opacity: 0, x: "-100%" }}

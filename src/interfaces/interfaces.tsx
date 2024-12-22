@@ -75,3 +75,9 @@ export interface BeastsData {
 	level: number;
 	levelCards: BeastsCard[];
 }
+
+export interface ParkCard {
+	id: string;
+	src: string;
+	alt: string;
+}

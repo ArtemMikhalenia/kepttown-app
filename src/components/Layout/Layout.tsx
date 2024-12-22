@@ -30,13 +30,14 @@ import beastsLvl7Background from "../../assets/images/beasts-page/level7/zastavk
 import millennialsBackground from "../../assets/images/fortune-page/millennials.webp";
 import zoomersBackground from "../../assets/images/fortune-page/zoomers.webp";
 import tavernBackground from "../../assets/images/backgrounds/tavern-background.webp";
+import parkBackground from "../../assets/images/backgrounds/park-background.png";
 
 import "./layout.scss";
 
 const Layout = () => {
-	let [background, setBackground] = useState("");
-	const [snowfall, setSnowfall] = useState(true);
 	const location = useLocation();
+	const [background, setBackground] = useState("");
+	const [snowfall, setSnowfall] = useState(true);
 	const currentLocation: string = location.pathname.slice(1);
 
 	const bayPageLinks = ["bay", "bay/preround3"];
@@ -102,7 +103,11 @@ const Layout = () => {
 		"beastsgame/nextpage",
 		"potionsgame/nowpage",
 		"potionsgame/nextpage",
+		"taverngame/nowpage",
+		"taverngame/nextpage",
 	];
+
+	const parkPageLinks = ["parkgame", "parkgame/game"];
 
 	useEffect(() => {
 		if (currentLocation === "") {
@@ -177,6 +182,9 @@ const Layout = () => {
 			setSnowfall(true);
 		} else if (tavernPageLinks.includes(currentLocation)) {
 			setBackground(tavernBackground);
+			setSnowfall(false);
+		} else if (parkPageLinks.includes(currentLocation)) {
+			setBackground(parkBackground);
 			setSnowfall(false);
 		}
 	}, [location]);

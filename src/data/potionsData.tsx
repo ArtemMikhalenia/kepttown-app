@@ -363,7 +363,7 @@ export const potionsDataLvl6 = {
 export const potionsDataLvl7 = {
 	round: 7,
 	potion: batterflyImg,
-	correctAnswer: ["domovoi", "dwarf", "edinorog"],
+	correctAnswer: ["fairy", "dwarf", "edinorog"],
 	roundItems: [
 		{
 			name: "Будда",

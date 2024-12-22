@@ -32,7 +32,7 @@ const MapPage = () => {
 	const imageData = [
 		{
 			className: "amusement-park",
-			link: "/nextpage",
+			link: "/parkgame",
 			classNameImg: "amusement-park-image",
 			key: 1,
 			id: "amusement-park",
