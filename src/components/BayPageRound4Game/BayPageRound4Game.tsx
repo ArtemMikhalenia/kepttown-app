@@ -1,19 +1,14 @@
 import { motion } from "motion/react";
 import { useLoaderData, Link } from "react-router-dom";
-import mermaidIcon from "../../assets/images/icons/mermaid.png";
-import VideoPlayer from "../VideoPlayer/VideoPlayer";
-import "./baypageround4game.scss";
-
-import { BayRound4Card } from "../../interfaces/interfaces";
 import { useState } from "react";
 
-// export interface BayRound4Card {
-// 	index: number;
-// 	url: string;
-// 	clicked: boolean;
-// }
+import { BayRound4Card } from "../../interfaces/interfaces";
+import { BayRound4Data } from "../../types/types";
 
-type BayRound4Data = BayRound4Card[];
+import mermaidIcon from "../../assets/images/icons/mermaid.png";
+import VideoPlayer from "../VideoPlayer/VideoPlayer";
+
+import "./baypageround4game.scss";
 
 const BayPageRound4Game = () => {
 	const roundCard = useLoaderData() as BayRound4Data;

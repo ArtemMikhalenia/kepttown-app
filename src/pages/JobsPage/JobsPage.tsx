@@ -1,10 +1,11 @@
 import { motion } from "motion/react";
-import jobsImg from "../../assets/images/fortune-page/jobs.webp";
-import "./jobspage.scss";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
+import jobsImg from "../../assets/images/fortune-page/jobs.webp";
 import sphereIcon from "../../assets/images/icons/footer/sphere.png";
 import redCrossIcon from "../../assets/images/fortune-page/red-cross.png";
-import { useState } from "react";
+import "./jobspage.scss";
 
 const JobsPage = () => {
 	const [clicked, setClicked] = useState(false);

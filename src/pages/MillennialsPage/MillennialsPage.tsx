@@ -1,7 +1,9 @@
 import { motion } from "motion/react";
-import "./millennialspage.scss";
 import { Link } from "react-router-dom";
+
 import sphereIcon from "../../assets/images/icons/footer/sphere.png";
+
+import "./millennialspage.scss";
 
 const MillennialsPage = () => {
 	return (

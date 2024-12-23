@@ -1,9 +1,8 @@
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import Snowfall from "react-snowfall";
 import MapPopup from "../../components/MapPopup/MapPopup";
-import "./mappage.scss";
 
 import amusementParkImg from "../../assets/images/map-page/amusement-park.png";
 import bayImg from "../../assets/images/map-page/bay.png";
@@ -14,9 +13,8 @@ import tavernImg from "../../assets/images/map-page/tavern.png";
 import zooImg from "../../assets/images/map-page/zoo.png";
 import christmasTreeImg from "../../assets/images/map-page/christmas-tree.png";
 import mountainImg from "../../assets/images/map-page/mountain.png";
-
 import mapImg from "../../assets/images/map-page/map-image.webp";
-import { useState } from "react";
+import "./mappage.scss";
 
 const MapPage = () => {
 	const [isHovered, setIsHovered] = useState(false);
@@ -58,7 +56,7 @@ const MapPage = () => {
 		},
 		{
 			className: "haunted-house",
-			link: "/ghostsgame",
+			link: "/ghostsgame/ghosts-video",
 			classNameImg: "haunted-house-image",
 			id: "haunted-house",
 			src: hauntedHouseImg,
@@ -66,7 +64,7 @@ const MapPage = () => {
 		},
 		{
 			className: "research-center",
-			link: "/potionsgame",
+			link: "/potionsgame/potions-video",
 			classNameImg: "research-center-image",
 			id: "research-center",
 			src: researchCenterImg,

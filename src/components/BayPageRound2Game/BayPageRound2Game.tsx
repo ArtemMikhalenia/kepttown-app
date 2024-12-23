@@ -2,11 +2,12 @@ import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 import { useLoaderData, useLocation, Link } from "react-router-dom";
 
-import "./baypageround2game.scss";
-import mermaidIcon from "../../assets/images/icons/mermaid.png";
-import { BayRound2Card, BayRound2Round } from "../../interfaces/interfaces";
+import { BayRound2Card } from "../../interfaces/interfaces";
+import { BayRound2Data } from "../../types/types";
 
-type BayRound2Data = BayRound2Round;
+import mermaidIcon from "../../assets/images/icons/mermaid.png";
+
+import "./baypageround2game.scss";
 
 const BayPageRound2Game = () => {
 	const location = useLocation();

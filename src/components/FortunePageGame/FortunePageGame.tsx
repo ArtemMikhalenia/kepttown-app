@@ -1,14 +1,10 @@
 import { motion, Variants } from "motion/react";
-// import { useState, useEffect } from "react";
-import {
-	// useLoaderData,
-	//  useLocation,
-	Link,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { fortuneData } from "../../data/fortuneData";
+
 import allGenerationsImg from "../../assets/images/fortune-page/all-generations.webp";
+
 import "./fortunepagegame.scss";
-// import VideoPlayer from "../VideoPlayer/VideoPlayer";
 
 const animationVariants: Variants = {
 	scaleInitial: {
@@ -27,28 +23,6 @@ const animationVariants: Variants = {
 };
 
 const FortunePageGame = () => {
-	// const location = useLocation();
-	// const ghostCard = useLoaderData() as GhostsData;
-	// const [ghostCards, setGhostCards] = useState<GhostCard[]>(
-	// 	ghostCard.roundCards
-	// );
-	// const isLastRound = ghostCard.round === 10;
-
-	// useEffect(() => {
-	// 	setGhostCards(ghostCard.roundCards);
-	// }, [location.pathname]);
-
-	// const toggleCard = (id: string) => {
-	// 	setGhostCards((prevCards) => {
-	// 		return prevCards.map((card) => {
-	// 			if (card.id === id) {
-	// 				return { ...card, clicked: !card.clicked };
-	// 			}
-	// 			return card;
-	// 		});
-	// 	});
-	// };
-
 	return (
 		<motion.div className="fortune-page-game" key="fortune-page-game">
 			<div className="fortune-content">

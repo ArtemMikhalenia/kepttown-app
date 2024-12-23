@@ -1,17 +1,16 @@
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
+import { VideoPageProps } from "../../types/types";
+
 import mapIcon from "../../assets/images/icons/map-icon.png";
 import mermaidIcon from "../../assets/images/icons/mermaid.png";
 import sphereIcon from "../../assets/images/icons/footer/sphere.png";
 import tavernIcon from "../../assets/images/icons/tavern-icon.png";
+import ghostIcon from "../../assets/images/icons/footer/ghost.webp";
+import potionsIcon from "../../assets/images/icons/potions-icon.png";
 import "./videopage.scss";
-import { useEffect, useState } from "react";
-
-export type VideoPageProps = {
-	url: string;
-	link: string;
-};
 
 const VideoPage = ({ url, link }: VideoPageProps) => {
 	const location = useLocation();
@@ -28,6 +27,10 @@ const VideoPage = ({ url, link }: VideoPageProps) => {
 			setIcon(sphereIcon);
 		} else if (currentLocation === "taverngame/tavern-video") {
 			setIcon(tavernIcon);
+		} else if (currentLocation === "ghostsgame/ghosts-video") {
+			setIcon(ghostIcon);
+		} else if (currentLocation === "potionsgame/potions-video") {
+			setIcon(potionsIcon);
 		}
 	}, [location.pathname]);
 

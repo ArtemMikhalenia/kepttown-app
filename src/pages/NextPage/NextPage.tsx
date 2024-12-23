@@ -1,13 +1,11 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+
+import { NextPageProps } from "../../types/types";
+
 import santaHat from "../../assets/images/icons/front-page/santa-hat.png";
 import santaImg from "../../assets/images/icons/footer/next-page.gif";
 import "./nextpage.scss";
-
-export type NextPageProps = {
-	title: string;
-	url: string;
-};
 
 const NextPage = ({ title, url }: NextPageProps) => {
 	return (

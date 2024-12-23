@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+
 import "./beastspage.scss";
 
 const BeastsPage = () => {

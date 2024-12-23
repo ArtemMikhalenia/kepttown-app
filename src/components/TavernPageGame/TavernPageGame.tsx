@@ -1,21 +1,14 @@
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 import { useLoaderData, useLocation, Link } from "react-router-dom";
+
+import { DishCard } from "../../interfaces/interfaces";
+import { DishData } from "../../types/types";
+
 import tavernIcon from "../../assets/images/icons/tavern-icon.png";
 import foodCapImg from "../../assets/images/tavern-page/food-cap.png";
 
 import "./tavernpagegame.scss";
-
-interface DishCard {
-	index: number;
-	className: string;
-	imgClassName: string;
-	src: string;
-	alt: string;
-	clicked: boolean;
-}
-
-type DishData = DishCard[];
 
 const TavernPageGame = () => {
 	const location = useLocation();

@@ -1,6 +1,8 @@
 import { motion } from "motion/react";
-import { MapPopupTypes } from "../../types";
+import { MapPopupTypes } from "../../types/types";
+
 import tavernImg from "../../assets/images/icons/map-page/tavern-icon.webp";
+
 import "./mappopup.scss";
 
 const MapPopup = ({ name, isHovered }: MapPopupTypes) => {
@@ -30,7 +32,7 @@ const MapPopup = ({ name, isHovered }: MapPopupTypes) => {
 			name = "Главная ёлка";
 			break;
 		case "mountain":
-			name = "Выгора";
+			name = "НесГОРАемые";
 			break;
 		default:
 	}

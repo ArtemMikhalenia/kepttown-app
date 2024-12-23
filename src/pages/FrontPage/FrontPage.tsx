@@ -1,7 +1,9 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+
 import santaHat from "../../assets/images/icons/front-page/santa-hat.png";
 import videoIcon from "../../assets/images/icons/front-page/video-icon.png";
+
 import "./frontpage.scss";
 
 const FrontPage = () => {

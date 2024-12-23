@@ -1,28 +1,16 @@
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 import { useLoaderData, useLocation, Link } from "react-router-dom";
-import icon from "../../assets/images/beasts-page/gold_push_pin.webp";
+
+import { BeastsCard } from "../../interfaces/interfaces";
+import { BeastsData } from "../../types/types";
+
+import pinImg from "../../assets/images/beasts-page/gold_push_pin.webp";
 import suspectImg from "../../assets/images/beasts-page/suspect.webp";
 import notGuiltyImg from "../../assets/images/beasts-page/not-guilty.webp";
 import yetiIcon from "../../assets/images/icons/footer/yeti.webp";
 
 import "./beastspagegame.scss";
-
-export interface BeastsCard {
-	index: number;
-	classNameCard: string;
-	id: string;
-	src: string;
-	alt: string;
-	clicked: boolean;
-	correct: boolean;
-}
-export interface BeastsLevel {
-	level: number;
-	levelCards: BeastsCard[];
-}
-
-type BeastsData = BeastsLevel;
 
 const BeastsPageGame = () => {
 	const location = useLocation();
@@ -92,7 +80,7 @@ const BeastsPageGame = () => {
 							/>
 							<img
 								className="beasts-card-icon"
-								src={icon}
+								src={pinImg}
 								alt="beasts-card-icon"
 							/>
 							<div

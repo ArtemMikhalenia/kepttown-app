@@ -1,7 +1,8 @@
 import { motion } from "motion/react";
-import "./zoomerspage.scss";
 import { Link } from "react-router-dom";
+
 import sphereIcon from "../../assets/images/icons/footer/sphere.png";
+import "./zoomerspage.scss";
 
 const ZoomersPage = () => {
 	return (

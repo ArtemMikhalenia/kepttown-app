@@ -30,7 +30,8 @@ import beastsLvl7Background from "../../assets/images/beasts-page/level7/zastavk
 import millennialsBackground from "../../assets/images/fortune-page/millennials.webp";
 import zoomersBackground from "../../assets/images/fortune-page/zoomers.webp";
 import tavernBackground from "../../assets/images/backgrounds/tavern-background.webp";
-import parkBackground from "../../assets/images/backgrounds/park-background.png";
+import parkBackground from "../../assets/images/backgrounds/park-background.webp";
+import mountainBackground from "../../assets/images/backgrounds/mountain-background.webp";
 
 import "./layout.scss";
 
@@ -62,6 +63,8 @@ const Layout = () => {
 		"fortunegame/fortune-video",
 		"taverngame/tavern-video",
 		"front-video",
+		"potionsgame/potions-video",
+		"ghostsgame/ghosts-video",
 	];
 
 	const fortunePageLinks = ["fortunegame"];
@@ -92,6 +95,8 @@ const Layout = () => {
 
 	const tavernPageLinks = ["taverngame", "taverngame/game"];
 
+	const mountainPageLinks = ["mountain", "mountain/game"];
+
 	const randomPageLinks = [
 		"nextpage",
 		"nowpage",
@@ -105,6 +110,9 @@ const Layout = () => {
 		"potionsgame/nextpage",
 		"taverngame/nowpage",
 		"taverngame/nextpage",
+		"parkgame/nowpage",
+		"parkgame/nextpage",
+		"parkgame/relax",
 	];
 
 	const parkPageLinks = ["parkgame", "parkgame/game"];
@@ -185,6 +193,9 @@ const Layout = () => {
 			setSnowfall(false);
 		} else if (parkPageLinks.includes(currentLocation)) {
 			setBackground(parkBackground);
+			setSnowfall(false);
+		} else if (mountainPageLinks.includes(currentLocation)) {
+			setBackground(mountainBackground);
 			setSnowfall(false);
 		}
 	}, [location]);

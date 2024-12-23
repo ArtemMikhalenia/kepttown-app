@@ -1,11 +1,4 @@
-interface IngredientProps {
-	id: string;
-	src: string;
-	alt: string;
-	name: string;
-	clicked: boolean;
-	toggleCard: (id: string) => void;
-}
+import { IngredientProps } from "../../interfaces/interfaces";
 
 const PotionsCard = ({
 	id,

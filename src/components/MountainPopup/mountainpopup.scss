@@ -1,0 +1,42 @@
+.mountain-popup {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100px;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	.mountain-popup-image-block {
+		position: relative;
+
+		img {
+			max-width: 230px;
+			width: 100%;
+		}
+
+		.mountain-popup-name-container {
+			position: absolute;
+			max-width: 260px;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			top: 85px;
+			text-align: center;
+
+			font-family: "Pangolin", cursive;
+			font-weight: 400;
+			font-size: 28px;
+			line-height: 100%;
+			color: rgba(255, 255, 255, 1);
+			text-shadow: 2px 1px rgba(0, 0, 0, 1);
+
+			.mountain-popup-name {
+				max-width: 165px;
+			}
+		}
+	}
+}

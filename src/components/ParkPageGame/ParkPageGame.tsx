@@ -2,6 +2,9 @@ import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 import { Link, useLoaderData, useLocation } from "react-router-dom";
 
+import { ParkCard } from "../../interfaces/interfaces";
+import { ParkData } from "../../types/types";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import "swiper/css";
@@ -10,11 +13,9 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-cards";
 
+import parkIcon from "../../assets/images/icons/park-icon.png";
+
 import "./parkpagegame.scss";
-
-import { ParkCard } from "../../interfaces/interfaces";
-
-type ParkData = ParkCard[];
 
 const ParkPageGame = () => {
 	const location = useLocation();
@@ -54,10 +55,10 @@ const ParkPageGame = () => {
 					))}
 				</Swiper>
 			</motion.div>
-			<div className="ghost-button-block">
-				<Link to="/ghostsgame/nowpage">
-					{/* <motion.img
-						className="ghost-button-next-round"
+			<div className="park-button-block">
+				<Link to="/parkgame/nowpage">
+					<motion.img
+						className="park-button-next"
 						initial={{ opacity: 0, x: "-100%" }}
 						whileInView={{
 							opacity: 1,
@@ -66,9 +67,9 @@ const ParkPageGame = () => {
 						}}
 						whileHover={{ scale: 1.15 }}
 						whileTap={{ scale: 0.9 }}
-						src={ghostIconImg}
-						alt="ghost-icon"
-					/> */}
+						src={parkIcon}
+						alt="park-icon"
+					/>
 				</Link>
 			</div>
 		</motion.div>

@@ -1,28 +1,38 @@
-export interface PotionItem {
-	name: string;
+export interface IngredientProps {
 	id: string;
 	src: string;
 	alt: string;
+	name: string;
+	clicked: boolean;
+	toggleCard: (id: string) => void;
+}
+
+export interface Ingredient {
+	id: string;
+	src: string;
+	name: string;
+	alt: string;
 	clicked: boolean;
 }
-export interface PotionData {
+export interface PotionRound {
 	round: number;
 	potion: string;
+	roundItems: Ingredient[];
 	correctAnswer: string[];
-	roundItems: PotionItem[];
 }
 
 export interface GhostCard {
-	index: number;
-	text: string;
 	id: string;
+	index: number;
 	src: string;
 	alt: string;
+	cloudText: string;
+	text: string;
 	clicked: boolean;
 	correct: boolean;
-	cloudText: string;
 }
-export interface GhostsData {
+
+export interface GhostRound {
 	round: number;
 	roundPhoto: string;
 	roundQuestion: string;
@@ -71,7 +81,7 @@ export interface BeastsCard {
 	clicked: boolean;
 	correct: boolean;
 }
-export interface BeastsData {
+export interface BeastsLevel {
 	level: number;
 	levelCards: BeastsCard[];
 }
@@ -80,4 +90,23 @@ export interface ParkCard {
 	id: string;
 	src: string;
 	alt: string;
+}
+
+export interface Crystal {
+	className: string;
+	link: string;
+	classNameImg: string;
+	key: number;
+	id: string;
+	src: string;
+	alt: string;
+}
+
+export interface DishCard {
+  index: number;
+  className: string;
+  imgClassName: string;
+  src: string;
+  alt: string;
+  clicked: boolean;
 }

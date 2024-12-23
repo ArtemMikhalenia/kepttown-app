@@ -1,0 +1,32 @@
+.mountain-page-container {
+	width: 100%;
+	text-align: center;
+
+	.mountain-button-container {
+		display: inline-block;
+
+		.mountain-button-link {
+			text-decoration: none;
+
+			.mountain-button-start {
+				display: inline-block;
+				padding: 10px 20px;
+
+				border-radius: 50px;
+
+				font-family: "Underdog";
+				font-weight: 400;
+				font-size: 40px;
+				text-shadow: rgba(0, 0, 0, 1) 1px 0 10px;
+
+				color: rgba(255, 255, 255, 1);
+				background-image: url("../../assets/images/mountain-page/button-start-background.webp");
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+
+				box-shadow: 0 0 3px 3px rgba(255, 255, 255, 1);
+			}
+		}
+	}
+}

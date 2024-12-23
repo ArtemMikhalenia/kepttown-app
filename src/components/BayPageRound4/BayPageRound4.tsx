@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Link, Outlet } from "react-router-dom";
+
 import "./baypageround4.scss";
 
 const BayPageRound4 = () => {

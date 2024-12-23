@@ -8,18 +8,7 @@ import { lazy, Suspense } from "react";
 import { AnimatePresence } from "motion/react";
 
 import Layout from "../Layout/Layout";
-import FrontPageLayout from "../FrontPageLayout/FrontPageLayout";
-import GhostsPageLayout from "../GhostsPageLayout/GhostsPageLayout";
-import PotionsPageLayout from "../PotionsPageLayout/PotionsPageLayout";
-import FortunePageLayout from "../FortunePageLayout/FortunePageLayout";
-import BayPageLayout from "../BayPageLayout/BayPageLayout";
-import BayGame1Layout from "../BayGame1Layout/BayGame1Layout";
-import BayGame2Layout from "../BayGame2Layout/BayGame2Layout";
-import BayGame3Layout from "../BayGame3Layout/BayGame3Layout";
-import BayGame4Layout from "../BayGame4Layout/BayGame4Layout";
-import BeastsPageLayout from "../BeastsPageLayout/BeastsPageLayout";
-import TavernLayout from "../TavernPageLayout/TavernPageLayout";
-import ParkPageLayout from "../ParkPageLayout/ParkPageLayout";
+import PageLayout from "../PageLayout/PageLayout";
 
 import FrontPage from "../../pages/FrontPage/FrontPage";
 import MapPage from "../../pages/MapPage/MapPage";
@@ -40,14 +29,15 @@ import ZoomersPage from "../../pages/ZoomersPage/ZoomersPage";
 import BeastsPage from "../../pages/BeastsPage/BeastsPage";
 import TavernPage from "../../pages/TavernPage/TavernPage";
 import ParkPage from "../../pages/ParkPage/ParkPage";
+import MountainPage from "../../pages/MountainPage/MountainPage";
 
 import { TailSpin } from "react-loading-icons";
 
 import {
-	PotionData,
-	GhostsData,
+	PotionRound,
+	GhostRound,
 	BayRound1Round,
-	BeastsData,
+	BeastsLevel,
 } from "../../interfaces/interfaces";
 
 import {
@@ -62,7 +52,6 @@ import {
 	ghostsDataLvl9,
 	ghostsDataLvl10,
 } from "../../data/ghostsData";
-
 import {
 	potionsDataLvl1,
 	potionsDataLvl2,
@@ -72,7 +61,6 @@ import {
 	potionsDataLvl6,
 	potionsDataLvl7,
 } from "../../data/potionsData";
-
 import {
 	bayDataRound1Team1,
 	bayDataRound1Team2,
@@ -82,7 +70,6 @@ import {
 	bayDataRound2Team3,
 	bayDataRound4,
 } from "../../data/bayData";
-
 import {
 	beastsDataLvl1,
 	beastsDataLvl2,
@@ -92,10 +79,9 @@ import {
 	beastsDataLvl6,
 	beastsDataLvl7,
 } from "../../data/beastsData";
-
 import { tavernData } from "../../data/tavernData";
-
 import { parkData } from "../../data/parkData";
+import { mountainData } from "../../data/mountainData";
 
 const ghostsDataLevels = [
 	ghostsDataLvl1,
@@ -161,8 +147,11 @@ const FortunePageGame = lazy(
 const BeastsPageGame = lazy(() => import("../BeastsPageGame/BeastsPageGame"));
 const TavernPageGame = lazy(() => import("../TavernPageGame/TavernPageGame"));
 const ParkPageGame = lazy(() => import("../ParkPageGame/ParkPageGame"));
+const MountainPageGame = lazy(
+	() => import("../MountainPageGame/MountainPageGame")
+);
 
-const generateGhostRoutes = (levelsData: GhostsData[]) => {
+const generateGhostRoutes = (levelsData: GhostRound[]) => {
 	return levelsData.map((data, index) => (
 		<Route
 			key={`ghosts-round-${index + 1}`}
@@ -179,7 +168,7 @@ const generateGhostRoutes = (levelsData: GhostsData[]) => {
 	));
 };
 
-const generatePotionsRoutes = (levelsData: PotionData[]) => {
+const generatePotionsRoutes = (levelsData: PotionRound[]) => {
 	return levelsData.map((data, index) => (
 		<Route
 			key={`potions-round-${index + 1}`}
@@ -230,7 +219,7 @@ const generateBayRound2Routes = (levelsData: BayRound1Round[]) => {
 	));
 };
 
-const generateBeastsRoutes = (levelsData: BeastsData[]) => {
+const generateBeastsRoutes = (levelsData: BeastsLevel[]) => {
 	return levelsData.map((data, index) => (
 		<Route
 			key={`beasts-level-${index + 1}`}
@@ -250,7 +239,7 @@ const generateBeastsRoutes = (levelsData: BeastsData[]) => {
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path="/" element={<Layout />}>
-			<Route element={<FrontPageLayout />}>
+			<Route element={<PageLayout />}>
 				<Route index element={<FrontPage />} />
 				<Route
 					path="front-video"
@@ -263,7 +252,7 @@ const router = createBrowserRouter(
 				/>
 			</Route>
 			<Route path="map" element={<MapPage />} />
-			<Route path="bay" element={<BayPageLayout />}>
+			<Route path="bay" element={<PageLayout />}>
 				<Route index element={<BayPage />} />
 				<Route
 					path="bay-video"
@@ -274,19 +263,19 @@ const router = createBrowserRouter(
 						/>
 					}
 				/>
-				<Route path="round1" element={<BayGame1Layout />}>
+				<Route path="round1" element={<PageLayout />}>
 					<Route index element={<BayPageRound1 />} />
 					{generateBayRound1Routes(bayDataRound1Teams)}
 				</Route>
-				<Route path="round2" element={<BayGame2Layout />}>
+				<Route path="round2" element={<PageLayout />}>
 					<Route index element={<BayPageRound2 />} />
 					{generateBayRound2Routes(bayDataRound2Teams)}
 				</Route>
 				<Route path="preround3" element={<BayPage />} />
-				<Route path="round3" element={<BayGame3Layout />}>
+				<Route path="round3" element={<PageLayout />}>
 					<Route index element={<BayPageRound3 />} />
 				</Route>
-				<Route path="round4" element={<BayGame4Layout />}>
+				<Route path="round4" element={<PageLayout />}>
 					<Route index element={<BayPageRound4 />} />
 					<Route
 						path="video"
@@ -303,7 +292,7 @@ const router = createBrowserRouter(
 					element={<NextPage title="Поздравления именинников" url="/map" />}
 				/>
 			</Route>
-			<Route path="fortunegame" element={<FortunePageLayout />}>
+			<Route path="fortunegame" element={<PageLayout />}>
 				<Route index element={<FortunePage />} />
 				<Route
 					path="fortune-video"
@@ -330,8 +319,17 @@ const router = createBrowserRouter(
 				/>
 				<Route path="stevejobs" element={<JobsPage />} />
 			</Route>
-			<Route path="ghostsgame" element={<GhostsPageLayout />}>
+			<Route path="ghostsgame" element={<PageLayout />}>
 				<Route index element={<GhostsPage />} />
+				<Route
+					path="ghosts-video"
+					element={
+						<VideoPage
+							url="https://youtu.be/i8V7qe275_4?si=0vpSnaWeR86Z_hXM"
+							link="/ghostsgame"
+						/>
+					}
+				/>
 				{generateGhostRoutes(ghostsDataLevels)}
 				<Route
 					path="nowpage"
@@ -347,8 +345,17 @@ const router = createBrowserRouter(
 					element={<NextPage title="Поздравления отделов" url="/map" />}
 				/>
 			</Route>
-			<Route path="potionsgame" element={<PotionsPageLayout />}>
+			<Route path="potionsgame" element={<PageLayout />}>
 				<Route index element={<PotionsPage />} />
+				<Route
+					path="potions-video"
+					element={
+						<VideoPage
+							url="https://youtu.be/Hh4xTFVas-I?si=EsYSlv1KuGW2loce"
+							link="/potionsgame"
+						/>
+					}
+				/>
 				{generatePotionsRoutes(potionsDataLevels)}
 				<Route
 					path="nowpage"
@@ -364,7 +371,7 @@ const router = createBrowserRouter(
 					element={<NextPage title="Поздравления отделов" url="/map" />}
 				/>
 			</Route>
-			<Route path="beastsgame" element={<BeastsPageLayout />}>
+			<Route path="beastsgame" element={<PageLayout />}>
 				<Route index element={<BeastsPage />} />
 				{generateBeastsRoutes(beastsDataLevels)}
 				<Route
@@ -381,7 +388,7 @@ const router = createBrowserRouter(
 					element={<NextPage title="Поздравления отделов" url="/map" />}
 				/>
 			</Route>
-			<Route path="taverngame" element={<TavernLayout />}>
+			<Route path="taverngame" element={<PageLayout />}>
 				<Route index element={<TavernPage />} />
 				<Route
 					path="tavern-video"
@@ -415,7 +422,7 @@ const router = createBrowserRouter(
 					element={<NextPage title="Поздравления отделов" url="/map" />}
 				/>
 			</Route>
-			<Route path="parkgame" element={<ParkPageLayout />}>
+			<Route path="parkgame" element={<PageLayout />}>
 				<Route index element={<ParkPage />} />
 				<Route
 					path={"game"}
@@ -424,6 +431,50 @@ const router = createBrowserRouter(
 						<Suspense fallback={<TailSpin />}>
 							<ParkPageGame />
 						</Suspense>
+					}
+				/>
+				<Route
+					path="nowpage"
+					element={
+						<NowPage title="Поиск победителя" url="/parkgame/nextpage" />
+					}
+				/>
+				<Route
+					path="nextpage"
+					element={<NextPage title="Новогодний релакс" url="/parkgame/relax" />}
+				/>
+				<Route
+					path="relax"
+					element={
+						<NowPage title="Сейчас в эфире - Новогодний релакс" url="/map" />
+					}
+				/>
+			</Route>
+			<Route path="mountain" element={<PageLayout />}>
+				<Route index element={<MountainPage />} />
+				<Route
+					path={"game"}
+					loader={() => mountainData}
+					element={
+						<Suspense fallback={<TailSpin />}>
+							<MountainPageGame />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="nowpage"
+					element={
+						<NowPage title="Поиск победителя" url="/parkgame/nextpage" />
+					}
+				/>
+				<Route
+					path="nextpage"
+					element={<NextPage title="Новогодний релакс" url="/parkgame/relax" />}
+				/>
+				<Route
+					path="relax"
+					element={
+						<NowPage title="Сейчас в эфире - Новогодний релакс" url="/map" />
 					}
 				/>
 			</Route>

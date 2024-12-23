@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+
 import "./ghostspage.scss";
 
 const GhostsPage = () => {

@@ -1,7 +1,8 @@
 import { motion } from "motion/react";
 import { Link, useLocation } from "react-router-dom";
-import "./baypage.scss";
 import { useEffect } from "react";
+
+import "./baypage.scss";
 
 const BayPage = () => {
 	const location = useLocation();

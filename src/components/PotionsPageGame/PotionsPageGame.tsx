@@ -3,35 +3,20 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useLocation, Link } from "react-router-dom";
 import { useWindowSize } from "@custom-react-hooks/use-window-size";
 import Confetti from "react-confetti";
+import PotionsCard from "./PotionCard.tsx";
+
+import { Ingredient } from "../../interfaces/interfaces.tsx";
+import { PotionsData } from "../../types/types.tsx";
 
 import boilerImg from "../../assets/images/potions-page/boiler.webp";
 import scrollImg from "../../assets/images/potions-page/scroll.webp";
 import boilerSmoke from "../../assets/images/potions-page/smoke.gif";
+import finalPotionImg from "../../assets/images/potions-page/potion.gif";
 
 import winSound from "../../assets/sounds/potions-game/win_sound.wav";
 import lostSound from "../../assets/sounds/potions-game/lost_sound.wav";
 
-import finalPotionImg from "../../assets/images/potions-page/potion.gif";
-
 import "./potionspagegame.scss";
-import PotionsCard from "./PotionCard.tsx";
-
-interface Ingredient {
-	id: string;
-	src: string;
-	name: string;
-	alt: string;
-	clicked: boolean;
-}
-
-interface PotionRound {
-	round: number;
-	potion: string;
-	roundItems: Ingredient[];
-	correctAnswer: string[];
-}
-
-type PotionsData = PotionRound;
 
 const PotionsPageGame = () => {
 	const location = useLocation();

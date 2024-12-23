@@ -1,31 +1,15 @@
 import { motion } from "motion/react";
 import { useState, useEffect } from "react";
 import { useLoaderData, useLocation, Link } from "react-router-dom";
+
+import { GhostCard } from "../../interfaces/interfaces";
+import { GhostsData } from "../../types/types";
+
 import ghostHappyImg from "../../assets/images/ghosts-page/ghost-happy.webp";
 import ghostAngryImg from "../../assets/images/ghosts-page/ghost-angry.webp";
 import ghostIconImg from "../../assets/images/icons/footer/ghost.webp";
 
 import "./ghostspagegame.scss";
-
-interface GhostCard {
-	id: string;
-	index: number;
-	src: string;
-	alt: string;
-	cloudText: string;
-	text: string;
-	clicked: boolean;
-	correct: boolean;
-}
-
-interface GhostRound {
-	round: number;
-	roundPhoto: string;
-	roundQuestion: string;
-	roundCards: GhostCard[];
-}
-
-type GhostsData = GhostRound;
 
 const GhostsPageGame = () => {
 	const location = useLocation();

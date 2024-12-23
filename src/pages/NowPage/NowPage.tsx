@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+
 import santaHat from "../../assets/images/icons/front-page/santa-hat.png";
 import santaImg from "../../assets/images/icons/footer/next-page.gif";
 import "./nowpage.scss";
