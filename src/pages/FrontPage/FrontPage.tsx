@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 
 import santaHat from "../../assets/images/icons/front-page/santa-hat.png";
-import videoIcon from "../../assets/images/icons/front-page/video-icon.png";
+import mapIcon from "../../assets/images/icons/map-icon.png";
 
 import "./frontpage.scss";
 
@@ -35,7 +35,7 @@ const FrontPage = () => {
 				</motion.div>
 			</div>
 			<div className="front-button-block">
-				<Link to="front-video">
+				<Link to="map">
 					<motion.img
 						className="front-button"
 						initial={{ opacity: 0, x: "-100%" }}
@@ -46,8 +46,8 @@ const FrontPage = () => {
 						}}
 						whileHover={{ scale: 1.15 }}
 						whileTap={{ scale: 0.9 }}
-						src={videoIcon}
-						alt="video-icon"
+						src={mapIcon}
+						alt="map-icon"
 					/>
 				</Link>
 			</div>

@@ -8,6 +8,8 @@ import {
 	GhostRound,
 	PotionRound,
 	DishCard,
+	DepartmentInterface,
+	TreeCard,
 } from "../interfaces/interfaces";
 
 export type CrystalData = Crystal[];
@@ -19,6 +21,8 @@ export type BeastsData = BeastsLevel;
 export type GhostsData = GhostRound;
 export type PotionsData = PotionRound;
 export type DishData = DishCard[];
+export type DepartmentData = DepartmentInterface;
+export type TreeData = TreeCard[];
 
 export type VideoProps = {
 	url: string;

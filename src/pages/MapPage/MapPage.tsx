@@ -30,7 +30,7 @@ const MapPage = () => {
 	const imageData = [
 		{
 			className: "amusement-park",
-			link: "/parkgame",
+			link: "/parkgame/park-video",
 			classNameImg: "amusement-park-image",
 			key: 1,
 			id: "amusement-park",
@@ -80,7 +80,7 @@ const MapPage = () => {
 		},
 		{
 			className: "beasts",
-			link: "/beastsgame",
+			link: "/beastsgame/beasts-video",
 			classNameImg: "zoo-image",
 			id: "beasts",
 			src: zooImg,
@@ -88,7 +88,7 @@ const MapPage = () => {
 		},
 		{
 			className: "christmas-tree",
-			link: "/map",
+			link: "/treegame/tree-video",
 			classNameImg: "christmas-tree-image",
 			id: "christmas-tree",
 			src: christmasTreeImg,

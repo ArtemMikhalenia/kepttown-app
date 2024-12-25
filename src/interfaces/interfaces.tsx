@@ -92,6 +92,12 @@ export interface ParkCard {
 	alt: string;
 }
 
+export interface TreeCard {
+	id: string;
+	src: string;
+	alt: string;
+}
+
 export interface Crystal {
 	className: string;
 	link: string;
@@ -103,10 +109,18 @@ export interface Crystal {
 }
 
 export interface DishCard {
-  index: number;
-  className: string;
-  imgClassName: string;
-  src: string;
-  alt: string;
-  clicked: boolean;
+	index: number;
+	className: string;
+	imgClassName: string;
+	src: string;
+	alt: string;
+	clicked: boolean;
+}
+
+export interface DepartmentInterface {
+	src: string;
+	alt: string;
+	color: string;
+	benefits: string[];
+	videoLink: string;
 }

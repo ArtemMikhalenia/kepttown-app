@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import Snowfall from "react-snowfall";
 
 import "./parkpage.scss";
 
@@ -12,6 +13,8 @@ const ParkPage = () => {
 			exit={{ opacity: 0, transition: { duration: 0.2 } }}
 			viewport={{ once: true, amount: 0.1 }}
 		>
+			<Snowfall snowflakeCount={250} />
+
 			<motion.div
 				className="park-button-container"
 				initial={{ opacity: 0, scale: 0 }}

@@ -9,7 +9,7 @@ import crystal7 from "../assets/images/mountain-page/crystal-7.webp";
 export const mountainData = [
 	{
 		className: "audit-crystal",
-		link: "/mountain/game/audit",
+		link: "/mountain/audit",
 		classNameImg: "crystal-1-image",
 		key: 1,
 		id: "audit-crystal",
@@ -18,7 +18,7 @@ export const mountainData = [
 	},
 	{
 		className: "adc-crystal",
-		link: "/mountain/game/adc",
+		link: "/mountain/adc",
 		classNameImg: "crystal-2-image",
 		key: 2,
 		id: "adc-crystal",
@@ -27,7 +27,7 @@ export const mountainData = [
 	},
 	{
 		className: "taxes-crystal",
-		link: "/mountain/game/taxes",
+		link: "/mountain/taxes",
 		classNameImg: "crystal-3-image",
 		key: 3,
 		id: "taxes-crystal",
@@ -36,7 +36,7 @@ export const mountainData = [
 	},
 	{
 		className: "bookkeeping-crystal",
-		link: "/mountain/game/bookkeeping",
+		link: "/mountain/bookkeeping",
 		classNameImg: "crystal-4-image",
 		key: 4,
 		id: "bookkeeping-crystal",
@@ -45,7 +45,7 @@ export const mountainData = [
 	},
 	{
 		className: "director-crystal",
-		link: "/mountain/game/director",
+		link: "/mountain/director",
 		classNameImg: "crystal-5-image",
 		key: 5,
 		id: "director-crystal",
@@ -54,7 +54,7 @@ export const mountainData = [
 	},
 	{
 		className: "hr-crystal",
-		link: "/mountain/game/hr",
+		link: "/mountain/hr",
 		classNameImg: "crystal-6-image",
 		key: 6,
 		id: "hr-crystal",
@@ -63,7 +63,7 @@ export const mountainData = [
 	},
 	{
 		className: "consulting-crystal",
-		link: "/mountain/game/consulting",
+		link: "/mountain/consulting",
 		classNameImg: "crystal-7-image",
 		key: 7,
 		id: "consulting-crystal",

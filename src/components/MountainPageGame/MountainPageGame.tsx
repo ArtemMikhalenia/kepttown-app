@@ -5,7 +5,11 @@ import { useLoaderData, useLocation, Link } from "react-router-dom";
 import { Crystal } from "../../interfaces/interfaces";
 import { CrystalData } from "../../types/types";
 
-import mountainIcon from "../../assets/images/icons/mountain-icon.png";
+import tavernIcon from "../../assets/images/icons/tavern-icon.png";
+import lunchIcon from "../../assets/images/icons/lunch-icon.png";
+import potionsIcon from "../../assets/images/icons/potions-icon.png";
+import parkIcon from "../../assets/images/icons/footer/yeti.webp";
+
 import MountainPopup from "../MountainPopup/MountainPopup";
 
 import "./mountainpagegame.scss";
@@ -75,7 +79,7 @@ const MountainPageGame = () => {
 				</div>
 			</motion.div>
 			<div className="mountain-button-block">
-				<Link to="/parkgame/nowpage">
+				<Link to="/mountain/nextpagetavern">
 					<motion.img
 						className="mountain-button-next"
 						initial={{ opacity: 0, x: "-100%" }}
@@ -86,8 +90,53 @@ const MountainPageGame = () => {
 						}}
 						whileHover={{ scale: 1.15 }}
 						whileTap={{ scale: 0.9 }}
-						src={mountainIcon}
-						alt="mountain-icon"
+						src={tavernIcon}
+						alt="tavern-icon"
+					/>
+				</Link>
+				<Link to="/mountain/nextpagelunch">
+					<motion.img
+						className="mountain-button-next"
+						initial={{ opacity: 0, x: "-100%" }}
+						whileInView={{
+							opacity: 1,
+							x: 0,
+							transition: { duration: 1 },
+						}}
+						whileHover={{ scale: 1.15 }}
+						whileTap={{ scale: 0.9 }}
+						src={lunchIcon}
+						alt="lunch-icon"
+					/>
+				</Link>
+				<Link to="/mountain/nextpagepotions">
+					<motion.img
+						className="mountain-button-next"
+						initial={{ opacity: 0, x: "-100%" }}
+						whileInView={{
+							opacity: 1,
+							x: 0,
+							transition: { duration: 1 },
+						}}
+						whileHover={{ scale: 1.15 }}
+						whileTap={{ scale: 0.9 }}
+						src={potionsIcon}
+						alt="potions-icon"
+					/>
+				</Link>
+				<Link to="/mountain/nextpagepark">
+					<motion.img
+						className="mountain-button-next"
+						initial={{ opacity: 0, x: "-100%" }}
+						whileInView={{
+							opacity: 1,
+							x: 0,
+							transition: { duration: 1 },
+						}}
+						whileHover={{ scale: 1.15 }}
+						whileTap={{ scale: 0.9 }}
+						src={parkIcon}
+						alt="park-icon"
 					/>
 				</Link>
 			</div>

@@ -30,6 +30,8 @@ import BeastsPage from "../../pages/BeastsPage/BeastsPage";
 import TavernPage from "../../pages/TavernPage/TavernPage";
 import ParkPage from "../../pages/ParkPage/ParkPage";
 import MountainPage from "../../pages/MountainPage/MountainPage";
+import TreePage from "../../pages/TreePage/TreePage";
+import LastPage from "../../pages/LastPage/LastPage";
 
 import { TailSpin } from "react-loading-icons";
 
@@ -82,6 +84,16 @@ import {
 import { tavernData } from "../../data/tavernData";
 import { parkData } from "../../data/parkData";
 import { mountainData } from "../../data/mountainData";
+import {
+	adcDepartmentData,
+	auditDepartmentData,
+	bookDepartmentData,
+	consultDepartmentData,
+	directorDepartmentData,
+	hrDepartmentData,
+	taxesDepartmentData,
+} from "../../data/departmentsData";
+import { treeData } from "../../data/treeData";
 
 const ghostsDataLevels = [
 	ghostsDataLvl1,
@@ -150,6 +162,8 @@ const ParkPageGame = lazy(() => import("../ParkPageGame/ParkPageGame"));
 const MountainPageGame = lazy(
 	() => import("../MountainPageGame/MountainPageGame")
 );
+const DepartmentPage = lazy(() => import("../DepartmentPage/DepartmentPage"));
+const TreePageGame = lazy(() => import("../TreePageGame/TreePageGame"));
 
 const generateGhostRoutes = (levelsData: GhostRound[]) => {
 	return levelsData.map((data, index) => (
@@ -241,15 +255,6 @@ const router = createBrowserRouter(
 		<Route path="/" element={<Layout />}>
 			<Route element={<PageLayout />}>
 				<Route index element={<FrontPage />} />
-				<Route
-					path="front-video"
-					element={
-						<VideoPage
-							url="https://www.youtube.com/watch?v=0AzEO3DWWuA"
-							link="/map"
-						/>
-					}
-				/>
 			</Route>
 			<Route path="map" element={<MapPage />} />
 			<Route path="bay" element={<PageLayout />}>
@@ -289,7 +294,9 @@ const router = createBrowserRouter(
 				</Route>
 				<Route
 					path="nextpage"
-					element={<NextPage title="Поздравления именинников" url="/map" />}
+					element={
+						<NextPage title="Поздравление именинников" url="/birthday" />
+					}
 				/>
 			</Route>
 			<Route path="fortunegame" element={<PageLayout />}>
@@ -298,7 +305,7 @@ const router = createBrowserRouter(
 					path="fortune-video"
 					element={
 						<VideoPage
-							url="https://www.youtube.com/watch?v=A1agUoAGCnc"
+							url="https://youtu.be/cVkg0hwftoY?si=ZmBWyIFnwQ6BlYZ6"
 							link="/fortunegame"
 						/>
 					}
@@ -333,16 +340,7 @@ const router = createBrowserRouter(
 				{generateGhostRoutes(ghostsDataLevels)}
 				<Route
 					path="nowpage"
-					element={
-						<NowPage
-							title="Подсчет знатоков призраков"
-							url="/ghostsgame/nextpage"
-						/>
-					}
-				/>
-				<Route
-					path="nextpage"
-					element={<NextPage title="Поздравления отделов" url="/map" />}
+					element={<NowPage title="Подсчет знатоков призраков" url="/map" />}
 				/>
 			</Route>
 			<Route path="potionsgame" element={<PageLayout />}>
@@ -359,20 +357,20 @@ const router = createBrowserRouter(
 				{generatePotionsRoutes(potionsDataLevels)}
 				<Route
 					path="nowpage"
-					element={
-						<NowPage
-							title="Поиск искусного зельевара"
-							url="/potionsgame/nextpage"
-						/>
-					}
-				/>
-				<Route
-					path="nextpage"
-					element={<NextPage title="Поздравления отделов" url="/map" />}
+					element={<NowPage title="Поиск искусного зельевара" url="/map" />}
 				/>
 			</Route>
 			<Route path="beastsgame" element={<PageLayout />}>
 				<Route index element={<BeastsPage />} />
+				<Route
+					path="beasts-video"
+					element={
+						<VideoPage
+							url="https://youtu.be/Hh4xTFVas-I?si=EsYSlv1KuGW2loce"
+							link="/beastsgame"
+						/>
+					}
+				/>
 				{generateBeastsRoutes(beastsDataLevels)}
 				<Route
 					path="nowpage"
@@ -385,7 +383,7 @@ const router = createBrowserRouter(
 				/>
 				<Route
 					path="nextpage"
-					element={<NextPage title="Поздравления отделов" url="/map" />}
+					element={<NextPage title="Аттракцион" url="/map" />}
 				/>
 			</Route>
 			<Route path="taverngame" element={<PageLayout />}>
@@ -394,7 +392,7 @@ const router = createBrowserRouter(
 					path="tavern-video"
 					element={
 						<VideoPage
-							url="https://youtu.be/EWEM6j4d5hY?si=iJJ0icn5QbD5rjKt"
+							url="https://youtu.be/EWEM6j4d5hY?si=7F9TM6a_osIZYY9b"
 							link="/taverngame"
 						/>
 					}
@@ -410,20 +408,20 @@ const router = createBrowserRouter(
 				/>
 				<Route
 					path="nowpage"
-					element={
-						<NowPage
-							title="Поиск истинного гурмана"
-							url="/taverngame/nextpage"
-						/>
-					}
-				/>
-				<Route
-					path="nextpage"
-					element={<NextPage title="Поздравления отделов" url="/map" />}
+					element={<NowPage title="Поиск истинного гурмана" url="/map" />}
 				/>
 			</Route>
 			<Route path="parkgame" element={<PageLayout />}>
 				<Route index element={<ParkPage />} />
+				<Route
+					path="park-video"
+					element={
+						<VideoPage
+							url="https://youtu.be/M8jYhnf1tsM?si=LxqPNkd1G9RH0HfP"
+							link="/parkgame"
+						/>
+					}
+				/>
 				<Route
 					path={"game"}
 					loader={() => parkData}
@@ -441,7 +439,7 @@ const router = createBrowserRouter(
 				/>
 				<Route
 					path="nextpage"
-					element={<NextPage title="Новогодний релакс" url="/parkgame/relax" />}
+					element={<NextPage title="Завершение истории" url="/lastpage" />}
 				/>
 				<Route
 					path="relax"
@@ -462,20 +460,132 @@ const router = createBrowserRouter(
 					}
 				/>
 				<Route
-					path="nowpage"
+					path={"adc"}
+					loader={() => adcDepartmentData}
 					element={
-						<NowPage title="Поиск победителя" url="/parkgame/nextpage" />
+						<Suspense fallback={<TailSpin />}>
+							<DepartmentPage />
+						</Suspense>
 					}
+				/>
+				<Route
+					path={"audit"}
+					loader={() => auditDepartmentData}
+					element={
+						<Suspense fallback={<TailSpin />}>
+							<DepartmentPage />
+						</Suspense>
+					}
+				/>
+				<Route
+					path={"taxes"}
+					loader={() => taxesDepartmentData}
+					element={
+						<Suspense fallback={<TailSpin />}>
+							<DepartmentPage />
+						</Suspense>
+					}
+				/>
+				<Route
+					path={"bookkeeping"}
+					loader={() => bookDepartmentData}
+					element={
+						<Suspense fallback={<TailSpin />}>
+							<DepartmentPage />
+						</Suspense>
+					}
+				/>
+				<Route
+					path={"director"}
+					loader={() => directorDepartmentData}
+					element={
+						<Suspense fallback={<TailSpin />}>
+							<DepartmentPage />
+						</Suspense>
+					}
+				/>
+				<Route
+					path={"hr"}
+					loader={() => hrDepartmentData}
+					element={
+						<Suspense fallback={<TailSpin />}>
+							<DepartmentPage />
+						</Suspense>
+					}
+				/>
+				<Route
+					path={"consulting"}
+					loader={() => consultDepartmentData}
+					element={
+						<Suspense fallback={<TailSpin />}>
+							<DepartmentPage />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="nextpagetavern"
+					element={<NextPage title='Страўня "Сябры"' url="/map" />}
+				/>
+				<Route
+					path="nextpagelunch"
+					element={<NextPage title="Обед + Мемы" url="/lunch&memes" />}
+				/>
+				<Route
+					path="nextpagepotions"
+					element={<NextPage title="Институт разработки" url="/map" />}
+				/>
+				/*{" "}
+				<Route
+					path="nextpagepark"
+					element={<NextPage title="Зоопарк" url="/map" />}
+				/>
+			</Route>
+			<Route path="lunch&memes" element={<PageLayout />}>
+				<Route
+					index
+					element={<NowPage title="Обед & Конкурс мемов" url="nextpage" />}
 				/>
 				<Route
 					path="nextpage"
-					element={<NextPage title="Новогодний релакс" url="/parkgame/relax" />}
+					element={<NextPage title="Бухта сирен" url="/map" />}
+				/>
+			</Route>
+			<Route path="birthday" element={<PageLayout />}>
+				<Route
+					index
+					element={<NowPage title="С Днём Рождения!" url="nextpage" />}
 				/>
 				<Route
-					path="relax"
+					path="nextpage"
+					element={<NextPage title="Главная ёлка" url="/map" />}
+				/>
+			</Route>
+			<Route path="treegame" element={<PageLayout />}>
+				<Route index element={<TreePage />} />
+				<Route
+					path="tree-video"
 					element={
-						<NowPage title="Сейчас в эфире - Новогодний релакс" url="/map" />
+						<VideoPage
+							url="https://youtu.be/ECCQL32UU_Q?si=CYP5Qax1Sr5s2_XO"
+							link="/treegame"
+						/>
 					}
+				/>
+				<Route
+					path={"game"}
+					loader={() => treeData}
+					element={
+						<Suspense fallback={<TailSpin />}>
+							<TreePageGame />
+						</Suspense>
+					}
+				/>
+			</Route>
+			<Route path="lastpage" element={<PageLayout />}>
+				<Route index element={<LastPage />} />
+				<Route
+					path="nowpage"
+					element={<NowPage title="Новогодний релакс" url="/map" />}
 				/>
 			</Route>
 		</Route>

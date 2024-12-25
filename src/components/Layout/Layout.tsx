@@ -32,6 +32,9 @@ import zoomersBackground from "../../assets/images/fortune-page/zoomers.webp";
 import tavernBackground from "../../assets/images/backgrounds/tavern-background.webp";
 import parkBackground from "../../assets/images/backgrounds/park-background.webp";
 import mountainBackground from "../../assets/images/backgrounds/mountain-background.webp";
+import lunchBackground from "../../assets/images/backgrounds/lunch-background.webp";
+import birthdayBackground from "../../assets/images/backgrounds/birthday-background.webp";
+import treeBackground from "../../assets/images/backgrounds/tree-background.jpg";
 
 import "./layout.scss";
 
@@ -65,6 +68,9 @@ const Layout = () => {
 		"front-video",
 		"potionsgame/potions-video",
 		"ghostsgame/ghosts-video",
+		"parkgame/park-video",
+		"treegame/tree-video",
+		"beastsgame/beasts-video",
 	];
 
 	const fortunePageLinks = ["fortunegame"];
@@ -95,7 +101,7 @@ const Layout = () => {
 
 	const tavernPageLinks = ["taverngame", "taverngame/game"];
 
-	const mountainPageLinks = ["mountain", "mountain/game"];
+	const mountainPageLinks = ["mountain", "mountain/game", "mountain/adc"];
 
 	const randomPageLinks = [
 		"nextpage",
@@ -113,12 +119,22 @@ const Layout = () => {
 		"parkgame/nowpage",
 		"parkgame/nextpage",
 		"parkgame/relax",
+		"mountain/nextpagetavern",
+		"mountain/nextpagelunch",
+		"mountain/nextpagepotions",
+		"mountain/nextpagepark",
+		"lunch&memes/nextpage",
 	];
 
 	const parkPageLinks = ["parkgame", "parkgame/game"];
+	const treePageLinks = ["treegame", "treegame/game"];
 
 	useEffect(() => {
-		if (currentLocation === "") {
+		if (
+			currentLocation === "" ||
+			currentLocation === "lastpage" ||
+			currentLocation === "lastpage/nowpage"
+		) {
 			setBackground(frontBackground);
 		} else if (currentLocation === "map") {
 			setBackground(mapBackground);
@@ -197,6 +213,15 @@ const Layout = () => {
 		} else if (mountainPageLinks.includes(currentLocation)) {
 			setBackground(mountainBackground);
 			setSnowfall(false);
+		} else if (currentLocation === "lunch&memes") {
+			setBackground(lunchBackground);
+			setSnowfall(false);
+		} else if (currentLocation === "birthday") {
+			setBackground(birthdayBackground);
+			setSnowfall(true);
+		} else if (treePageLinks.includes(currentLocation)) {
+			setBackground(treeBackground);
+			setSnowfall(true);
 		}
 	}, [location]);
 

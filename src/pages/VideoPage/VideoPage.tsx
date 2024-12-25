@@ -10,13 +10,15 @@ import sphereIcon from "../../assets/images/icons/footer/sphere.png";
 import tavernIcon from "../../assets/images/icons/tavern-icon.png";
 import ghostIcon from "../../assets/images/icons/footer/ghost.webp";
 import potionsIcon from "../../assets/images/icons/potions-icon.png";
+import parkIcon from "../../assets/images/icons/park-icon.png";
+import treeIcon from "../../assets/images/icons/tree-icon.png";
+import yetiIcon from "../../assets/images/icons/footer/yeti.webp";
 import "./videopage.scss";
 
 const VideoPage = ({ url, link }: VideoPageProps) => {
 	const location = useLocation();
 	const currentLocation: string = location.pathname.slice(1);
 	const [icon, setIcon] = useState(mapIcon);
-	// let icon = mapIcon;
 
 	useEffect(() => {
 		if (currentLocation === "/front-video") {
@@ -31,6 +33,12 @@ const VideoPage = ({ url, link }: VideoPageProps) => {
 			setIcon(ghostIcon);
 		} else if (currentLocation === "potionsgame/potions-video") {
 			setIcon(potionsIcon);
+		} else if (currentLocation === "parkgame/park-video") {
+			setIcon(parkIcon);
+		} else if (currentLocation === "treegame/tree-video") {
+			setIcon(treeIcon);
+		} else if (currentLocation === "beastsgame/beasts-video") {
+			setIcon(yetiIcon);
 		}
 	}, [location.pathname]);
 

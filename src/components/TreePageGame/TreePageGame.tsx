@@ -3,33 +3,33 @@ import { useState, useEffect } from "react";
 import { Link, useLoaderData, useLocation } from "react-router-dom";
 import Snowfall from "react-snowfall";
 
-import { ParkCard } from "../../interfaces/interfaces";
-import { ParkData } from "../../types/types";
+import { TreeCard } from "../../interfaces/interfaces";
+import { TreeData } from "../../types/types";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
+import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import "swiper/css/effect-cards";
+import "swiper/css/effect-coverflow";
 
-import parkIcon from "../../assets/images/icons/park-icon.png";
+import treeIcon from "../../assets/images/icons/tree-icon.png";
 
-import "./parkpagegame.scss";
+import "./treepagegame.scss";
 
-const ParkPageGame = () => {
+const TreePageGame = () => {
 	const location = useLocation();
-	const parkCard = useLoaderData() as ParkData;
-	const [parkCards, setParkCards] = useState<ParkCard[]>(parkCard);
+	const treeCard = useLoaderData() as TreeData;
+	const [treeCards, setTreeCards] = useState<TreeCard[]>(treeCard);
 
 	useEffect(() => {
-		setParkCards(parkCard);
+		setTreeCards(treeCard);
 	}, [location.pathname]);
 
 	return (
 		<motion.div
-			className="park-page-game"
+			className="tree-page-game"
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1, transition: { duration: 0.2 } }}
 			exit={{ opacity: 0, transition: { duration: 0.2 } }}
@@ -37,7 +37,7 @@ const ParkPageGame = () => {
 		>
 			<Snowfall snowflakeCount={250} />
 			<motion.div
-				className="park-content"
+				className="tree-content"
 				initial={{ opacity: 0 }}
 				animate={{
 					opacity: 1,
@@ -49,18 +49,40 @@ const ParkPageGame = () => {
 					},
 				}}
 			>
-				<Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]}>
-					{parkCards.map((element) => (
+				<Swiper
+					effect={"coverflow"}
+					grabCursor={true}
+					autoHeight={true}
+					slidesPerView={2}
+					spaceBetween={50}
+					centeredSlides={true}
+					coverflowEffect={{
+						rotate: 50,
+						stretch: 0,
+						depth: 50,
+						modifier: 1,
+						slideShadows: true,
+					}}
+					autoplay={{
+						delay: 5000,
+						disableOnInteraction: false,
+					}}
+					pagination={true}
+					modules={[EffectCoverflow, Autoplay]}
+					className="treeSwiper"
+				>
+					{treeCards.map((element) => (
 						<SwiperSlide key={element.id}>
 							<img src={element.src} alt={element.alt} />
+							<span className="card-number">{element.id}</span>
 						</SwiperSlide>
 					))}
 				</Swiper>
 			</motion.div>
-			<div className="park-button-block">
-				<Link to="/parkgame/nowpage">
+			<div className="tree-button-block">
+				<Link to="/map">
 					<motion.img
-						className="park-button-next"
+						className="tree-button-next"
 						initial={{ opacity: 0, x: "-100%" }}
 						whileInView={{
 							opacity: 1,
@@ -69,8 +91,8 @@ const ParkPageGame = () => {
 						}}
 						whileHover={{ scale: 1.15 }}
 						whileTap={{ scale: 0.9 }}
-						src={parkIcon}
-						alt="park-icon"
+						src={treeIcon}
+						alt="tree-icon"
 					/>
 				</Link>
 			</div>
@@ -78,4 +100,4 @@ const ParkPageGame = () => {
 	);
 };
 
-export default ParkPageGame;
+export default TreePageGame;
