@@ -13,6 +13,7 @@ import potionsIcon from "../../assets/images/icons/potions-icon.png";
 import parkIcon from "../../assets/images/icons/park-icon.png";
 import treeIcon from "../../assets/images/icons/tree-icon.png";
 import yetiIcon from "../../assets/images/icons/footer/yeti.webp";
+import mountainIcon from "../../assets/images/icons/mountain-icon.png";
 import "./videopage.scss";
 
 const VideoPage = ({ url, link }: VideoPageProps) => {
@@ -39,6 +40,8 @@ const VideoPage = ({ url, link }: VideoPageProps) => {
 			setIcon(treeIcon);
 		} else if (currentLocation === "beastsgame/beasts-video") {
 			setIcon(yetiIcon);
+		} else if (currentLocation === "mountain/adc-video") {
+			setIcon(mountainIcon);
 		}
 	}, [location.pathname]);
 

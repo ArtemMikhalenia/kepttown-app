@@ -47,7 +47,7 @@ const TreePage = () => {
 							boxShadow: "0 5px 3px 3px rgba(255,255,255,1)",
 						}}
 					>
-						Забраться на самую красивую ёлку
+						Забраться на самый красивый рабочий стол
 					</motion.span>
 				</Link>
 			</motion.div>

@@ -9,6 +9,7 @@ import tavernIcon from "../../assets/images/icons/tavern-icon.png";
 import lunchIcon from "../../assets/images/icons/lunch-icon.png";
 import potionsIcon from "../../assets/images/icons/potions-icon.png";
 import parkIcon from "../../assets/images/icons/footer/yeti.webp";
+import logoIcon from "../../assets/images/icons/logo.svg";
 
 import MountainPopup from "../MountainPopup/MountainPopup";
 
@@ -122,6 +123,21 @@ const MountainPageGame = () => {
 						whileTap={{ scale: 0.9 }}
 						src={potionsIcon}
 						alt="potions-icon"
+					/>
+				</Link>
+				<Link to="/mountain/nowpagebewellwithkept">
+					<motion.img
+						className="mountain-button-next"
+						initial={{ opacity: 0, x: "-100%" }}
+						whileInView={{
+							opacity: 1,
+							x: 0,
+							transition: { duration: 1 },
+						}}
+						whileHover={{ scale: 1.15 }}
+						whileTap={{ scale: 0.9 }}
+						src={logoIcon}
+						alt="logo-icon"
 					/>
 				</Link>
 				<Link to="/mountain/nextpagepark">

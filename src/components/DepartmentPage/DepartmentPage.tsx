@@ -5,7 +5,7 @@ import { useLoaderData, useLocation, Link } from "react-router-dom";
 import { DepartmentData } from "../../types/types";
 
 import mountainIcon from "../../assets/images/icons/mountain-icon.png";
-import videoIcon from "../../assets/images/icons/front-page/video-icon.png";
+// import videoIcon from "../../assets/images/icons/front-page/video-icon.png";
 
 import "./departmentpage.scss";
 
@@ -54,15 +54,6 @@ const DepartmentPage = () => {
 							))}
 						</ul>
 					</motion.div>
-					<div className="department-link">
-						<Link className="department-link-video" to={department.videoLink}>
-							<motion.img
-								src={videoIcon}
-								alt="video-icon"
-								whileHover={{ scale: 1.15 }}
-							/>
-						</Link>
-					</div>
 				</motion.div>
 			</div>
 			<div className="department-button-block">

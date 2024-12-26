@@ -71,6 +71,7 @@ const Layout = () => {
 		"parkgame/park-video",
 		"treegame/tree-video",
 		"beastsgame/beasts-video",
+		"mountain/adc-video",
 	];
 
 	const fortunePageLinks = ["fortunegame"];
@@ -124,6 +125,7 @@ const Layout = () => {
 		"mountain/nextpagepotions",
 		"mountain/nextpagepark",
 		"lunch&memes/nextpage",
+		"mountain/nowpagebewellwithkept",
 	];
 
 	const parkPageLinks = ["parkgame", "parkgame/game"];

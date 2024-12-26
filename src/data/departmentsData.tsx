@@ -11,7 +11,7 @@ export const adcDepartmentData = {
 	alt: "adc-image",
 	color: "rgba(138, 62, 166, 1)",
 	benefits: ["Контроль над временем", "Универсальность"],
-	videoLink: "",
+	videoLink: "/mountain/adc-video",
 };
 
 export const auditDepartmentData = {

@@ -366,7 +366,7 @@ const router = createBrowserRouter(
 					path="beasts-video"
 					element={
 						<VideoPage
-							url="https://youtu.be/Hh4xTFVas-I?si=EsYSlv1KuGW2loce"
+							url="https://youtu.be/apHJwJXfmi4?si=jsaUsj6rEBX5Jd6m"
 							link="/beastsgame"
 						/>
 					}
@@ -469,6 +469,15 @@ const router = createBrowserRouter(
 					}
 				/>
 				<Route
+					path="adc-video"
+					element={
+						<VideoPage
+							url="https://youtu.be/-RWO4kX94PM?si=YLQ2R1ISwxiOCyPT"
+							link="/mountain/adc"
+						/>
+					}
+				/>
+				<Route
 					path={"audit"}
 					loader={() => auditDepartmentData}
 					element={
@@ -534,7 +543,15 @@ const router = createBrowserRouter(
 					path="nextpagepotions"
 					element={<NextPage title="Институт разработки" url="/map" />}
 				/>
-				/*{" "}
+				<Route
+					path="nowpagebewellwithkept"
+					element={
+						<NowPage
+							title='Результаты марафона "Be Well With Kept"'
+							url="/mountain/game"
+						/>
+					}
+				/>
 				<Route
 					path="nextpagepark"
 					element={<NextPage title="Зоопарк" url="/map" />}
@@ -585,7 +602,7 @@ const router = createBrowserRouter(
 				<Route index element={<LastPage />} />
 				<Route
 					path="nowpage"
-					element={<NowPage title="Новогодний релакс" url="/map" />}
+					element={<NowPage title="Новогодний релакс" url="/lastpage" />}
 				/>
 			</Route>
 		</Route>

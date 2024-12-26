@@ -14,7 +14,7 @@ const MapPopup = ({ name, isHovered }: MapPopupTypes) => {
 			name = "Бухта сирен";
 			break;
 		case "fortune":
-			name = "Дом гадалки";
+			name = "Шатёр гадалки";
 			break;
 		case "haunted-house":
 			name = "Дом с призраками";
