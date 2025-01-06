@@ -9,7 +9,7 @@
 
 	.tavern-content {
 		position: relative;
-		bottom: -200px;
+		bottom: -150px;
 		max-width: 1200px;
 		width: 100%;
 		height: 100%;
@@ -27,10 +27,10 @@
 
 			.nalisniki-container {
 				position: absolute;
-				width: 250px;
-				height: 150px;
-				top: 200px;
-				left: 50px;
+				width: 200px;
+				height: 100px;
+				top: 150px;
+				left: 100px;
 				z-index: 3;
 				cursor: pointer;
 
@@ -64,8 +64,9 @@
 
 						.food-cap-number {
 							position: relative;
-							width: 65px;
-							height: 65px;
+							width: 55px;
+							height: 55px;
+							font-size: 40px;
 							border-radius: 50%;
 							border: 2px solid rgba(0, 0, 0, 1);
 							background-color: rgba(255, 255, 255, 1);
@@ -82,9 +83,9 @@
 
 			.shkvarki-container {
 				position: absolute;
-				width: 250px;
-				height: 150px;
-				top: 440px;
+				width: 200px;
+				height: 100px;
+				top: 370px;
 				left: 600px;
 				z-index: 5;
 				cursor: pointer;
@@ -118,9 +119,9 @@
 						}
 						.food-cap-number {
 							position: relative;
-							top: 20px;
-							width: 65px;
-							height: 65px;
+							width: 55px;
+							height: 55px;
+							font-size: 40px;
 							border-radius: 50%;
 							border: 2px solid rgba(0, 0, 0, 1);
 							background-color: rgba(255, 255, 255, 1);
@@ -137,9 +138,9 @@
 
 			.holodnik-container {
 				position: absolute;
-				width: 250px;
-				height: 160px;
-				top: 370px;
+				width: 170px;
+				height: 110px;
+				top: 285px;
 				left: 850px;
 				z-index: 5;
 				cursor: pointer;
@@ -173,9 +174,9 @@
 
 						.food-cap-number {
 							position: relative;
-							top: 40px;
-							width: 65px;
-							height: 65px;
+							width: 55px;
+							height: 55px;
+							font-size: 40px;
 							border-radius: 50%;
 							border: 2px solid rgba(0, 0, 0, 1);
 							background-color: rgba(255, 255, 255, 1);
@@ -192,9 +193,9 @@
 
 			.kolduny-container {
 				position: absolute;
-				width: 200px;
-				height: 150px;
-				top: 100px;
+				width: 150px;
+				height: 100px;
+				top: 50px;
 				left: 730px;
 				z-index: 2;
 				cursor: pointer;
@@ -229,9 +230,10 @@
 
 						.food-cap-number {
 							position: relative;
-							top: 30px;
-							width: 65px;
-							height: 65px;
+							top: 10px;
+							width: 55px;
+							height: 55px;
+							font-size: 40px;
 							border-radius: 50%;
 							border: 2px solid rgba(0, 0, 0, 1);
 							background-color: rgba(255, 255, 255, 1);
@@ -248,9 +250,9 @@
 
 			.babka-container {
 				position: absolute;
-				width: 250px;
-				height: 200px;
-				top: 160px;
+				width: 200px;
+				height: 150px;
+				top: 110px;
 				left: 900px;
 				z-index: 3;
 				cursor: pointer;
@@ -285,9 +287,10 @@
 
 						.food-cap-number {
 							position: relative;
-							top: 60px;
-							width: 65px;
-							height: 65px;
+							top: 50px;
+							width: 55px;
+							height: 55px;
+							font-size: 40px;
 							border-radius: 50%;
 							border: 2px solid rgba(0, 0, 0, 1);
 							background-color: rgba(255, 255, 255, 1);
@@ -304,10 +307,10 @@
 
 			.chepeliny-container {
 				position: absolute;
-				width: 250px;
-				height: 170px;
-				top: 360px;
-				left: 50px;
+				width: 200px;
+				height: 120px;
+				top: 290px;
+				left: 150px;
 				z-index: 4;
 				cursor: pointer;
 
@@ -341,9 +344,10 @@
 
 						.food-cap-number {
 							position: relative;
-							top: 40px;
-							width: 65px;
-							height: 65px;
+							top: 30px;
+							width: 55px;
+							height: 55px;
+							font-size: 40px;
 							border-radius: 50%;
 							border: 2px solid rgba(0, 0, 0, 1);
 							background-color: rgba(255, 255, 255, 1);
@@ -360,10 +364,10 @@
 
 			.machanka-container {
 				position: absolute;
-				width: 250px;
-				height: 150px;
-				top: 435px;
-				left: 310px;
+				width: 200px;
+				height: 100px;
+				top: 365px;
+				left: 355px;
 				z-index: 5;
 				cursor: pointer;
 
@@ -397,9 +401,10 @@
 
 						.food-cap-number {
 							position: relative;
-							top: 20px;
-							width: 65px;
-							height: 65px;
+							top: 10px;
+							width: 55px;
+							height: 55px;
+							font-size: 40px;
 							border-radius: 50%;
 							border: 2px solid rgba(0, 0, 0, 1);
 							background-color: rgba(255, 255, 255, 1);
@@ -416,9 +421,9 @@
 
 			.kulaga-container {
 				position: absolute;
-				width: 300px;
-				height: 180px;
-				top: 250px;
+				width: 250px;
+				height: 130px;
+				top: 175px;
 				left: 550px;
 				z-index: 4;
 				cursor: pointer;
@@ -453,9 +458,10 @@
 
 						.food-cap-number {
 							position: relative;
-							top: 40px;
-							width: 65px;
-							height: 65px;
+							top: 30px;
+							width: 55px;
+							height: 55px;
+							font-size: 40px;
 							border-radius: 50%;
 							border: 2px solid rgba(0, 0, 0, 1);
 							background-color: rgba(255, 255, 255, 1);
@@ -472,9 +478,9 @@
 
 			.sbiten-container {
 				position: absolute;
-				width: 150px;
-				height: 170px;
-				top: 210px;
+				width: 100px;
+				height: 120px;
+				top: 160px;
 				left: 350px;
 				z-index: 2;
 				cursor: pointer;
@@ -502,16 +508,17 @@
 
 						.food-cap {
 							position: absolute;
-							width: 160%;
+							width: 180%;
 							top: -30px;
 							left: -40px;
 						}
 
 						.food-cap-number {
 							position: relative;
-							top: 50px;
-							width: 65px;
-							height: 65px;
+							top: 30px;
+							width: 55px;
+							height: 55px;
+							font-size: 40px;
 							border-radius: 50%;
 							border: 2px solid rgba(0, 0, 0, 1);
 							background-color: rgba(255, 255, 255, 1);
@@ -528,9 +535,9 @@
 
 			.starka-container {
 				position: absolute;
-				width: 100px;
-				height: 200px;
-				top: 20px;
+				width: 70px;
+				height: 150px;
+				top: -30px;
 				left: 560px;
 				z-index: 1;
 				cursor: pointer;
@@ -558,17 +565,17 @@
 
 						.food-cap {
 							position: absolute;
-							width: 270%;
+							width: 300%;
 							top: -30px;
 							left: -70px;
 						}
 
 						.food-cap-number {
 							position: relative;
-							top: 40px;
-							left: 15px;
-							width: 65px;
-							height: 65px;
+							top: 50px;
+							width: 55px;
+							height: 55px;
+							font-size: 40px;
 							border-radius: 50%;
 							border: 2px solid rgba(0, 0, 0, 1);
 							background-color: rgba(255, 255, 255, 1);

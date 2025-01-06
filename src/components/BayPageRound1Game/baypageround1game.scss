@@ -13,7 +13,7 @@
 		.bay-round1-game-title {
 			padding: 0px 0px 20px;
 
-			font-size: 50px;
+			font-size: 40px;
 			text-align: center;
 			color: rgba(255, 255, 255, 1);
 		}
@@ -37,14 +37,13 @@
 
 		.bay-round1-game-cards {
 			display: grid;
-			max-width: 730px;
+			max-width: 700px;
 			margin: 0 auto;
-			grid-template-columns: repeat(3, 230px);
-			grid-template-rows: repeat(2, 330px);
+			grid-template-columns: repeat(3, 170px);
+			grid-template-rows: repeat(2, 230px);
 			width: 100%;
 			justify-content: space-evenly;
 			row-gap: 30px;
-			column-gap: 50px;
 
 			.bay-round1-game-card {
 				position: relative;

@@ -32,7 +32,7 @@ const MapPopup = ({ name, isHovered }: MapPopupTypes) => {
 			name = "Главная ёлка";
 			break;
 		case "mountain":
-			name = "НесГОРАемые";
+			name = "ВыГора";
 			break;
 		default:
 	}
@@ -41,7 +41,7 @@ const MapPopup = ({ name, isHovered }: MapPopupTypes) => {
 			className="map-popup"
 			animate={{
 				opacity: isHovered ? 1 : 0,
-				y: isHovered ? "-20%" : "-100%",
+				y: isHovered ? "-40%" : "-100%",
 				transition: { type: "spring", stiffness: 200, damping: 10 },
 			}}
 			exit={{ opacity: 0, y: "-100%", transition: { duration: 0.5 } }}

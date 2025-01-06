@@ -19,8 +19,8 @@
 		.beasts-cards {
 			grid-area: content;
 			display: grid;
-			grid-template-columns: repeat(4, 290px);
-			grid-template-rows: repeat(2, 290px);
+			grid-template-columns: repeat(4, 250px);
+			grid-template-rows: repeat(2, 250px);
 			justify-content: center;
 			gap: 70px;
 			width: 100%;
@@ -63,7 +63,7 @@
 					transform: scale(0);
 
 					img {
-						max-width: 250px;
+						max-width: 210px;
 					}
 
 					&.active {

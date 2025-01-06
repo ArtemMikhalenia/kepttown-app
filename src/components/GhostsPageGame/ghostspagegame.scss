@@ -46,8 +46,8 @@
 		.ghosts-cards {
 			grid-area: content;
 			display: grid;
-			grid-template-columns: repeat(2, 300px);
-			grid-template-rows: repeat(2, 290px);
+			grid-template-columns: repeat(2, 285px);
+			grid-template-rows: repeat(2, 270px);
 			justify-content: center;
 			gap: 20px;
 			width: 100%;
@@ -65,7 +65,7 @@
 				.card-image-block {
 					position: relative;
 					width: 100%;
-					height: 260px;
+					height: 250px;
 
 					img {
 						width: 100%;
@@ -82,7 +82,7 @@
 
 				.card-img-ghost {
 					position: absolute;
-					max-width: 230px;
+					max-width: 130px;
 					top: 0;
 					left: 0;
 					z-index: 0;
@@ -90,7 +90,7 @@
 					transition: all 0.5s ease 0s;
 
 					&.active {
-						top: -60px;
+						top: -10px;
 						opacity: 1;
 					}
 				}
@@ -114,8 +114,8 @@
 					transition: all 0.5s ease;
 
 					.cloud-text {
-						max-width: 220px;
-						font-size: 16px;
+						max-width: 210px;
+						font-size: 14px;
 						color: black;
 					}
 

@@ -19,7 +19,7 @@
 
 		.department-image {
 			img {
-				max-width: 400px;
+				max-width: 300px;
 				width: 100%;
 				animation: pulse 1.5s infinite ease-in-out;
 			}
@@ -31,17 +31,17 @@
 			justify-content: space-between;
 			gap: 50px;
 
-			font-size: 50px;
+			font-size: 40px;
 			color: rgba(255, 255, 255, 1);
 
 			.department-text {
 				ul {
 					padding-top: 30px;
-					font-size: 40px;
+					font-size: 30px;
 					li::marker {
 						content: "🦄";
 						text-shadow: none;
-						font-size: 25px;
+						font-size: 20px;
 					}
 				}
 			}

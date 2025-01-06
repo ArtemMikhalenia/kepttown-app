@@ -54,7 +54,7 @@ const TreePageGame = () => {
 					grabCursor={true}
 					autoHeight={true}
 					slidesPerView={2}
-					spaceBetween={50}
+					spaceBetween={30}
 					centeredSlides={true}
 					coverflowEffect={{
 						rotate: 50,

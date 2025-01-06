@@ -47,3 +47,8 @@ export type MountainPopupTypes = {
 	name: string;
 	isHovered: boolean;
 };
+
+export type PageTemplateProps = {
+	url: string;
+	link: string;
+};

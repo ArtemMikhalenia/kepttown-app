@@ -45,7 +45,7 @@ const DepartmentPage = () => {
 				>
 					<motion.div
 						className="department-text"
-						style={{ textShadow: `2px 4px ${department.color}` }}
+						style={{ textShadow: `2px 2px ${department.color}` }}
 					>
 						Сильные стороны: <br />
 						<ul>
